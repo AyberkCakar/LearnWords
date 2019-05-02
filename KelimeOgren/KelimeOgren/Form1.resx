@@ -864,7 +864,7 @@
         f5TUCEhSKAeTCcrBZIJyMJmgHEwmKAeTCcrBZIJyMHlAKf8HCc5wqcI66L0AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="simpleButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnOgrenBack.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
         1wAADdcBQiibeAAAApBJREFUaEPV2D2L1FAUxvFB/AiWNlpqIb6tKFoIgiKu2AguWNpaaCHYLWgpli6W
@@ -881,7 +881,7 @@
         6IKpuTqbb9z8D+DHrVL8FOXxAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="simpleButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnOgrenNext.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
         1wAADdcBQiibeAAAAp5JREFUaEPV2buL1FAUx/FprAQLGyuxEQvFysZC8dXY+X6ilaDYCDaKhZVibTf4

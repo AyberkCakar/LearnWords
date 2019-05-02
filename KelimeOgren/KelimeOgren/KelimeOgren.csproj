@@ -33,12 +33,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.ExpressApp.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Persistent.Base.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.SpellChecker.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraSpellChecker.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -67,6 +71,18 @@
     <Compile Include="FrmGiris.Designer.cs">
       <DependentUpon>FrmGiris.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKayit.Designer.cs">
+      <DependentUpon>FrmKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUyeKelime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUyeKelime.Designer.cs">
+      <DependentUpon>FrmUyeKelime.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmYetkili.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +90,13 @@
       <DependentUpon>FrmYetkili.cs</DependentUpon>
     </Compile>
     <Compile Include="GirisServisi.cs" />
+    <Compile Include="IKelimeEkle.cs" />
+    <Compile Include="IOrneklenebilir.cs" />
+    <Compile Include="ITamamlanan.cs" />
+    <Compile Include="ITersCevir.cs" />
+    <Compile Include="IZamanHesapla.cs" />
+    <Compile Include="Kelime.cs" />
+    <Compile Include="KelimeOrnekleri.cs" />
     <Compile Include="Kisi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +108,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGiris.resx">
       <DependentUpon>FrmGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKayit.resx">
+      <DependentUpon>FrmKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUyeKelime.resx">
+      <DependentUpon>FrmUyeKelime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmYetkili.resx">
       <DependentUpon>FrmYetkili.cs</DependentUpon>

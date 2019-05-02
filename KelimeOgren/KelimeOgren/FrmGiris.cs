@@ -47,5 +47,11 @@ namespace KelimeOgren
         {
 
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            FrmKayit frKayit = new FrmKayit();
+            frKayit.Show();
+        }
     }
 }

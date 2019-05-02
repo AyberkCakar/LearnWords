@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KelimeOgren
 {
-    abstract public class Kisi
+    public abstract class Kisi
     {
         String Ad { get; set; }
         String Soyad { get; set; }

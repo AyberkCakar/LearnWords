@@ -42,13 +42,13 @@
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.button8 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.lblOrnTurk = new System.Windows.Forms.Label();
+            this.lblOrn = new System.Windows.Forms.Label();
+            this.lblTur = new System.Windows.Forms.Label();
+            this.lblIng = new System.Windows.Forms.Label();
+            this.lblKelime = new System.Windows.Forms.Label();
+            this.btnOgrenBack = new DevExpress.XtraEditors.SimpleButton();
+            this.btnOgrenNext = new DevExpress.XtraEditors.SimpleButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,7 +68,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button10 = new System.Windows.Forms.Button();
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
@@ -102,6 +102,7 @@
             this.xtraTabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.xtraTabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
@@ -268,13 +269,13 @@
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.Controls.Add(this.button8);
-            this.panelControl1.Controls.Add(this.label5);
-            this.panelControl1.Controls.Add(this.label6);
-            this.panelControl1.Controls.Add(this.label7);
-            this.panelControl1.Controls.Add(this.label8);
-            this.panelControl1.Controls.Add(this.label9);
-            this.panelControl1.Controls.Add(this.simpleButton2);
-            this.panelControl1.Controls.Add(this.simpleButton1);
+            this.panelControl1.Controls.Add(this.lblOrnTurk);
+            this.panelControl1.Controls.Add(this.lblOrn);
+            this.panelControl1.Controls.Add(this.lblTur);
+            this.panelControl1.Controls.Add(this.lblIng);
+            this.panelControl1.Controls.Add(this.lblKelime);
+            this.panelControl1.Controls.Add(this.btnOgrenBack);
+            this.panelControl1.Controls.Add(this.btnOgrenNext);
             this.panelControl1.Controls.Add(this.label4);
             this.panelControl1.Controls.Add(this.label3);
             this.panelControl1.Controls.Add(this.label2);
@@ -304,98 +305,100 @@
             this.button8.Text = "Kelime Öğren";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // lblOrnTurk
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(382, 508);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(246, 24);
-            this.label5.TabIndex = 66;
-            this.label5.Text = "Kitap masanın üzerinde";
+            this.lblOrnTurk.AutoSize = true;
+            this.lblOrnTurk.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblOrnTurk.ForeColor = System.Drawing.Color.White;
+            this.lblOrnTurk.Location = new System.Drawing.Point(382, 508);
+            this.lblOrnTurk.Name = "lblOrnTurk";
+            this.lblOrnTurk.Size = new System.Drawing.Size(246, 24);
+            this.lblOrnTurk.TabIndex = 66;
+            this.lblOrnTurk.Text = "Kitap masanın üzerinde";
             // 
-            // label6
+            // lblOrn
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(381, 476);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(254, 24);
-            this.label6.TabIndex = 65;
-            this.label6.Text = "The book is on the table";
+            this.lblOrn.AutoSize = true;
+            this.lblOrn.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblOrn.ForeColor = System.Drawing.Color.White;
+            this.lblOrn.Location = new System.Drawing.Point(381, 476);
+            this.lblOrn.Name = "lblOrn";
+            this.lblOrn.Size = new System.Drawing.Size(254, 24);
+            this.lblOrn.TabIndex = 65;
+            this.lblOrn.Text = "The book is on the table";
             // 
-            // label7
+            // lblTur
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(381, 444);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 24);
-            this.label7.TabIndex = 64;
-            this.label7.Text = "Noun";
+            this.lblTur.AutoSize = true;
+            this.lblTur.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTur.ForeColor = System.Drawing.Color.White;
+            this.lblTur.Location = new System.Drawing.Point(381, 444);
+            this.lblTur.Name = "lblTur";
+            this.lblTur.Size = new System.Drawing.Size(66, 24);
+            this.lblTur.TabIndex = 64;
+            this.lblTur.Text = "Noun";
             // 
-            // label8
+            // lblIng
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(381, 413);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 24);
-            this.label8.TabIndex = 63;
-            this.label8.Text = "Book";
+            this.lblIng.AutoSize = true;
+            this.lblIng.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblIng.ForeColor = System.Drawing.Color.White;
+            this.lblIng.Location = new System.Drawing.Point(381, 413);
+            this.lblIng.Name = "lblIng";
+            this.lblIng.Size = new System.Drawing.Size(61, 24);
+            this.lblIng.TabIndex = 63;
+            this.lblIng.Text = "Book";
             // 
-            // label9
+            // lblKelime
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(382, 379);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 24);
-            this.label9.TabIndex = 62;
-            this.label9.Text = "Kitap";
+            this.lblKelime.AutoSize = true;
+            this.lblKelime.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKelime.ForeColor = System.Drawing.Color.White;
+            this.lblKelime.Location = new System.Drawing.Point(382, 379);
+            this.lblKelime.Name = "lblKelime";
+            this.lblKelime.Size = new System.Drawing.Size(60, 24);
+            this.lblKelime.TabIndex = 62;
+            this.lblKelime.Text = "Kitap";
             // 
-            // simpleButton2
+            // btnOgrenBack
             // 
-            this.simpleButton2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.simpleButton2.Appearance.ForeColor = System.Drawing.Color.White;
-            this.simpleButton2.Appearance.Options.UseBackColor = true;
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Appearance.Options.UseForeColor = true;
-            this.simpleButton2.AppearancePressed.BackColor = System.Drawing.Color.Gray;
-            this.simpleButton2.AppearancePressed.Options.UseBackColor = true;
-            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton2.Location = new System.Drawing.Point(40, 577);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(123, 108);
-            this.simpleButton2.TabIndex = 61;
-            this.simpleButton2.Text = "Back";
+            this.btnOgrenBack.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.btnOgrenBack.Appearance.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.btnOgrenBack.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnOgrenBack.Appearance.Options.UseBackColor = true;
+            this.btnOgrenBack.Appearance.Options.UseFont = true;
+            this.btnOgrenBack.Appearance.Options.UseForeColor = true;
+            this.btnOgrenBack.AppearancePressed.BackColor = System.Drawing.Color.Gray;
+            this.btnOgrenBack.AppearancePressed.Options.UseBackColor = true;
+            this.btnOgrenBack.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.btnOgrenBack.Image = ((System.Drawing.Image)(resources.GetObject("btnOgrenBack.Image")));
+            this.btnOgrenBack.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnOgrenBack.Location = new System.Drawing.Point(40, 577);
+            this.btnOgrenBack.Name = "btnOgrenBack";
+            this.btnOgrenBack.Size = new System.Drawing.Size(123, 108);
+            this.btnOgrenBack.TabIndex = 61;
+            this.btnOgrenBack.Text = "Back";
+            this.btnOgrenBack.Click += new System.EventHandler(this.btnOgrenBack_Click);
             // 
-            // simpleButton1
+            // btnOgrenNext
             // 
-            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.White;
-            this.simpleButton1.Appearance.Options.UseBackColor = true;
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Appearance.Options.UseForeColor = true;
-            this.simpleButton1.AppearancePressed.BackColor = System.Drawing.Color.Gray;
-            this.simpleButton1.AppearancePressed.Options.UseBackColor = true;
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(788, 577);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(123, 108);
-            this.simpleButton1.TabIndex = 60;
-            this.simpleButton1.Text = "Next";
+            this.btnOgrenNext.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.btnOgrenNext.Appearance.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.btnOgrenNext.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnOgrenNext.Appearance.Options.UseBackColor = true;
+            this.btnOgrenNext.Appearance.Options.UseFont = true;
+            this.btnOgrenNext.Appearance.Options.UseForeColor = true;
+            this.btnOgrenNext.AppearancePressed.BackColor = System.Drawing.Color.Gray;
+            this.btnOgrenNext.AppearancePressed.Options.UseBackColor = true;
+            this.btnOgrenNext.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnOgrenNext.Image = ((System.Drawing.Image)(resources.GetObject("btnOgrenNext.Image")));
+            this.btnOgrenNext.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnOgrenNext.Location = new System.Drawing.Point(788, 577);
+            this.btnOgrenNext.Name = "btnOgrenNext";
+            this.btnOgrenNext.Size = new System.Drawing.Size(123, 108);
+            this.btnOgrenNext.TabIndex = 60;
+            this.btnOgrenNext.Text = "Next";
+            this.btnOgrenNext.Click += new System.EventHandler(this.btnOgrenNext_Click);
             // 
             // label4
             // 
@@ -625,7 +628,7 @@
             this.panelControl4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.panelControl4.Appearance.Options.UseBackColor = true;
             this.panelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl4.Controls.Add(this.listView1);
+            this.panelControl4.Controls.Add(this.dataGridView1);
             this.panelControl4.Controls.Add(this.button10);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
@@ -633,13 +636,13 @@
             this.panelControl4.Size = new System.Drawing.Size(954, 695);
             this.panelControl4.TabIndex = 7;
             // 
-            // listView1
+            // dataGridView1
             // 
-            this.listView1.Location = new System.Drawing.Point(-2, 169);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(952, 490);
-            this.listView1.TabIndex = 59;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 165);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(954, 530);
+            this.dataGridView1.TabIndex = 59;
             // 
             // button10
             // 
@@ -921,6 +924,7 @@
             this.xtraTabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.xtraTabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
@@ -944,13 +948,13 @@
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.Label lblOrnTurk;
+        private System.Windows.Forms.Label lblOrn;
+        private System.Windows.Forms.Label lblTur;
+        private System.Windows.Forms.Label lblIng;
+        private System.Windows.Forms.Label lblKelime;
+        private DevExpress.XtraEditors.SimpleButton btnOgrenBack;
+        private DevExpress.XtraEditors.SimpleButton btnOgrenNext;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -970,7 +974,6 @@
         private System.Windows.Forms.Label label10;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
         private DevExpress.XtraEditors.PanelControl panelControl4;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button button10;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage5;
         private DevExpress.XtraEditors.PanelControl panelControl5;
@@ -989,6 +992,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

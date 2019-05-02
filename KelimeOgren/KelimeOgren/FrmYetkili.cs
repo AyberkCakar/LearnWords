@@ -44,9 +44,10 @@ namespace KelimeOgren
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Kelime kelime = new Kelime();
             openFileDialog1.ShowDialog();
             pictureBox1.ImageLocation = openFileDialog1.FileName;
-            textBox6.Text = openFileDialog1.FileName;
+            kelime.Resim = openFileDialog1.FileName;
         }
     }
 }

@@ -51,5 +51,42 @@ namespace KelimeOgren
         {
             this.Close();
         }
+        int sayac = 0;
+
+        Kelime kelime = new Kelime();
+        private void btnOgrenBack_Click(object sender, EventArgs e)
+        {
+            sayac--;
+            kelime.UyeKelimeOgren(sayac);
+            foreach (Kelime sec in kelime.SeciliKelime )
+            {
+                lblTur.Text = sec.Turu;
+                lblKelime.Text = sec.Turkce;
+                lblIng.Text = sec.Ingilizce;
+                lblOrn.Text = sec.OrnCumle;
+                lblOrnTurk.Text = sec.TurkceCumle;
+                pictureBox1.ImageLocation = sec.Resim;
+            }
+            kelime.SeciliKelime.Clear();
+
+
+        }
+
+        private void btnOgrenNext_Click(object sender, EventArgs e)
+        {
+            kelime.UyeKelimeOgren(sayac);
+            foreach (Kelime sec in kelime.SeciliKelime)
+            {
+                lblTur.Text = sec.Turu;
+                lblKelime.Text = sec.Turkce;
+                lblIng.Text = sec.Ingilizce;
+                lblOrn.Text = sec.OrnCumle;
+                lblOrnTurk.Text = sec.TurkceCumle;
+                pictureBox1.ImageLocation = sec.Resim;
+                
+            }
+            sayac++;
+            kelime.SeciliKelime.Clear();
+        }
     }
 }
