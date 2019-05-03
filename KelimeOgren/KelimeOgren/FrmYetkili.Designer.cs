@@ -40,24 +40,26 @@
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtResim = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTurkceCumle = new System.Windows.Forms.TextBox();
+            this.txtOrnCumle = new System.Windows.Forms.TextBox();
+            this.txtTuru = new System.Windows.Forms.TextBox();
+            this.txtIngilizce = new System.Windows.Forms.TextBox();
+            this.txtKelime = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picKelimeEkle = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.button3 = new System.Windows.Forms.Button();
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
@@ -78,8 +80,30 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.btnWordUpdate = new System.Windows.Forms.Button();
+            this.picUpdate = new System.Windows.Forms.PictureBox();
+            this.txtUpResim = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.txtUpTurkCumle = new System.Windows.Forms.TextBox();
+            this.txtUpOrnCumle = new System.Windows.Forms.TextBox();
+            this.txtUpTur = new System.Windows.Forms.TextBox();
+            this.txtUpIngilizce = new System.Windows.Forms.TextBox();
+            this.txtUpKelime = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnKelimeGuncelle = new System.Windows.Forms.Button();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -87,14 +111,20 @@
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picKelimeEkle)).BeginInit();
             this.xtraTabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.xtraTabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.xtraTabPage5.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUpdate)).BeginInit();
             this.SuspendLayout();
             // 
             // btnYetkiliEVLA
@@ -107,7 +137,7 @@
             this.btnYetkiliEVLA.Location = new System.Drawing.Point(0, 0);
             this.btnYetkiliEVLA.Margin = new System.Windows.Forms.Padding(4);
             this.btnYetkiliEVLA.Name = "btnYetkiliEVLA";
-            this.btnYetkiliEVLA.Size = new System.Drawing.Size(264, 376);
+            this.btnYetkiliEVLA.Size = new System.Drawing.Size(264, 289);
             this.btnYetkiliEVLA.TabIndex = 19;
             this.btnYetkiliEVLA.Text = "English Vocabulary Learning App";
             this.btnYetkiliEVLA.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -122,7 +152,7 @@
             this.btnYetkiliBilgi.ForeColor = System.Drawing.Color.White;
             this.btnYetkiliBilgi.Image = ((System.Drawing.Image)(resources.GetObject("btnYetkiliBilgi.Image")));
             this.btnYetkiliBilgi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnYetkiliBilgi.Location = new System.Drawing.Point(0, 551);
+            this.btnYetkiliBilgi.Location = new System.Drawing.Point(0, 554);
             this.btnYetkiliBilgi.Margin = new System.Windows.Forms.Padding(4);
             this.btnYetkiliBilgi.Name = "btnYetkiliBilgi";
             this.btnYetkiliBilgi.Size = new System.Drawing.Size(264, 90);
@@ -139,7 +169,7 @@
             this.btnUyeler.ForeColor = System.Drawing.Color.White;
             this.btnUyeler.Image = ((System.Drawing.Image)(resources.GetObject("btnUyeler.Image")));
             this.btnUyeler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUyeler.Location = new System.Drawing.Point(0, 461);
+            this.btnUyeler.Location = new System.Drawing.Point(0, 464);
             this.btnUyeler.Margin = new System.Windows.Forms.Padding(4);
             this.btnUyeler.Name = "btnUyeler";
             this.btnUyeler.Size = new System.Drawing.Size(264, 90);
@@ -156,7 +186,7 @@
             this.btnCikis.ForeColor = System.Drawing.Color.White;
             this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
             this.btnCikis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCikis.Location = new System.Drawing.Point(0, 641);
+            this.btnCikis.Location = new System.Drawing.Point(0, 644);
             this.btnCikis.Margin = new System.Windows.Forms.Padding(4);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(264, 90);
@@ -173,7 +203,7 @@
             this.btnKelimeEkle.ForeColor = System.Drawing.Color.White;
             this.btnKelimeEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnKelimeEkle.Image")));
             this.btnKelimeEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKelimeEkle.Location = new System.Drawing.Point(0, 373);
+            this.btnKelimeEkle.Location = new System.Drawing.Point(0, 286);
             this.btnKelimeEkle.Margin = new System.Windows.Forms.Padding(4);
             this.btnKelimeEkle.Name = "btnKelimeEkle";
             this.btnKelimeEkle.Size = new System.Drawing.Size(264, 90);
@@ -207,7 +237,8 @@
             this.xtraTabPage1,
             this.xtraTabPage2,
             this.xtraTabPage3,
-            this.xtraTabPage4});
+            this.xtraTabPage4,
+            this.xtraTabPage5});
             // 
             // xtraTabPage1
             // 
@@ -239,21 +270,21 @@
             this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl1.Controls.Add(this.textBox6);
+            this.panelControl1.Controls.Add(this.txtResim);
             this.panelControl1.Controls.Add(this.label5);
             this.panelControl1.Controls.Add(this.button2);
             this.panelControl1.Controls.Add(this.button1);
-            this.panelControl1.Controls.Add(this.textBox5);
-            this.panelControl1.Controls.Add(this.textBox4);
-            this.panelControl1.Controls.Add(this.textBox3);
-            this.panelControl1.Controls.Add(this.textBox2);
-            this.panelControl1.Controls.Add(this.textBox1);
+            this.panelControl1.Controls.Add(this.txtTurkceCumle);
+            this.panelControl1.Controls.Add(this.txtOrnCumle);
+            this.panelControl1.Controls.Add(this.txtTuru);
+            this.panelControl1.Controls.Add(this.txtIngilizce);
+            this.panelControl1.Controls.Add(this.txtKelime);
             this.panelControl1.Controls.Add(this.label4);
             this.panelControl1.Controls.Add(this.label3);
             this.panelControl1.Controls.Add(this.label10);
             this.panelControl1.Controls.Add(this.label11);
             this.panelControl1.Controls.Add(this.label35);
-            this.panelControl1.Controls.Add(this.pictureBox1);
+            this.panelControl1.Controls.Add(this.picKelimeEkle);
             this.panelControl1.Controls.Add(this.button8);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
@@ -261,17 +292,17 @@
             this.panelControl1.Size = new System.Drawing.Size(958, 695);
             this.panelControl1.TabIndex = 2;
             // 
-            // textBox6
+            // txtResim
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox6.ForeColor = System.Drawing.Color.White;
-            this.textBox6.Location = new System.Drawing.Point(299, 616);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(334, 29);
-            this.textBox6.TabIndex = 128;
+            this.txtResim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.txtResim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtResim.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtResim.ForeColor = System.Drawing.Color.White;
+            this.txtResim.Location = new System.Drawing.Point(299, 616);
+            this.txtResim.Multiline = true;
+            this.txtResim.Name = "txtResim";
+            this.txtResim.Size = new System.Drawing.Size(334, 29);
+            this.txtResim.TabIndex = 128;
             // 
             // label5
             // 
@@ -318,66 +349,67 @@
             this.button1.TabIndex = 125;
             this.button1.Text = "Ekle";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox5
+            // txtTurkceCumle
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox5.ForeColor = System.Drawing.Color.White;
-            this.textBox5.Location = new System.Drawing.Point(215, 561);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(334, 29);
-            this.textBox5.TabIndex = 91;
+            this.txtTurkceCumle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.txtTurkceCumle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTurkceCumle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtTurkceCumle.ForeColor = System.Drawing.Color.White;
+            this.txtTurkceCumle.Location = new System.Drawing.Point(215, 561);
+            this.txtTurkceCumle.Multiline = true;
+            this.txtTurkceCumle.Name = "txtTurkceCumle";
+            this.txtTurkceCumle.Size = new System.Drawing.Size(334, 29);
+            this.txtTurkceCumle.TabIndex = 91;
             // 
-            // textBox4
+            // txtOrnCumle
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(215, 517);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(334, 29);
-            this.textBox4.TabIndex = 90;
+            this.txtOrnCumle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.txtOrnCumle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtOrnCumle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtOrnCumle.ForeColor = System.Drawing.Color.White;
+            this.txtOrnCumle.Location = new System.Drawing.Point(215, 517);
+            this.txtOrnCumle.Multiline = true;
+            this.txtOrnCumle.Name = "txtOrnCumle";
+            this.txtOrnCumle.Size = new System.Drawing.Size(334, 29);
+            this.txtOrnCumle.TabIndex = 90;
             // 
-            // textBox3
+            // txtTuru
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(215, 479);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(229, 29);
-            this.textBox3.TabIndex = 89;
+            this.txtTuru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.txtTuru.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTuru.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtTuru.ForeColor = System.Drawing.Color.White;
+            this.txtTuru.Location = new System.Drawing.Point(215, 479);
+            this.txtTuru.Multiline = true;
+            this.txtTuru.Name = "txtTuru";
+            this.txtTuru.Size = new System.Drawing.Size(229, 29);
+            this.txtTuru.TabIndex = 89;
             // 
-            // textBox2
+            // txtIngilizce
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(215, 439);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(229, 29);
-            this.textBox2.TabIndex = 88;
+            this.txtIngilizce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.txtIngilizce.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIngilizce.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtIngilizce.ForeColor = System.Drawing.Color.White;
+            this.txtIngilizce.Location = new System.Drawing.Point(215, 439);
+            this.txtIngilizce.Multiline = true;
+            this.txtIngilizce.Name = "txtIngilizce";
+            this.txtIngilizce.Size = new System.Drawing.Size(229, 29);
+            this.txtIngilizce.TabIndex = 88;
             // 
-            // textBox1
+            // txtKelime
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(215, 399);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(229, 29);
-            this.textBox1.TabIndex = 87;
+            this.txtKelime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.txtKelime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKelime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtKelime.ForeColor = System.Drawing.Color.White;
+            this.txtKelime.Location = new System.Drawing.Point(215, 399);
+            this.txtKelime.Multiline = true;
+            this.txtKelime.Name = "txtKelime";
+            this.txtKelime.Size = new System.Drawing.Size(229, 29);
+            this.txtKelime.TabIndex = 87;
             // 
             // label4
             // 
@@ -434,15 +466,15 @@
             this.label35.TabIndex = 68;
             this.label35.Text = "Kelime:";
             // 
-            // pictureBox1
+            // picKelimeEkle
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(377, 125);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 231);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 67;
-            this.pictureBox1.TabStop = false;
+            this.picKelimeEkle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picKelimeEkle.Location = new System.Drawing.Point(377, 125);
+            this.picKelimeEkle.Name = "picKelimeEkle";
+            this.picKelimeEkle.Size = new System.Drawing.Size(256, 231);
+            this.picKelimeEkle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picKelimeEkle.TabIndex = 67;
+            this.picKelimeEkle.TabStop = false;
             // 
             // button8
             // 
@@ -453,7 +485,7 @@
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(277, 10);
+            this.button8.Location = new System.Drawing.Point(280, 10);
             this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(382, 90);
@@ -473,13 +505,29 @@
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.dataGridView1);
+            this.panelControl2.Controls.Add(this.gridControl2);
             this.panelControl2.Controls.Add(this.button3);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(958, 695);
             this.panelControl2.TabIndex = 7;
+            // 
+            // gridControl2
+            // 
+            this.gridControl2.Location = new System.Drawing.Point(-1, 107);
+            this.gridControl2.MainView = this.gridView2;
+            this.gridControl2.Name = "gridControl2";
+            this.gridControl2.Size = new System.Drawing.Size(956, 588);
+            this.gridControl2.TabIndex = 57;
+            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // button3
             // 
@@ -490,7 +538,7 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(312, 10);
+            this.button3.Location = new System.Drawing.Point(313, 10);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(316, 90);
@@ -580,7 +628,7 @@
             this.button11.ForeColor = System.Drawing.Color.White;
             this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
             this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(272, 31);
+            this.button11.Location = new System.Drawing.Point(268, 10);
             this.button11.Margin = new System.Windows.Forms.Padding(4);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(428, 90);
@@ -746,17 +794,294 @@
             this.label20.TabIndex = 110;
             this.label20.Text = "Kullanici ID:";
             // 
+            // xtraTabPage5
+            // 
+            this.xtraTabPage5.Controls.Add(this.panel1);
+            this.xtraTabPage5.Name = "xtraTabPage5";
+            this.xtraTabPage5.Size = new System.Drawing.Size(958, 695);
+            this.xtraTabPage5.Text = "xtraTabPage5";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.gridControl1);
+            this.panel1.Controls.Add(this.btnWordUpdate);
+            this.panel1.Controls.Add(this.picUpdate);
+            this.panel1.Controls.Add(this.txtUpResim);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.txtUpTurkCumle);
+            this.panel1.Controls.Add(this.txtUpOrnCumle);
+            this.panel1.Controls.Add(this.txtUpTur);
+            this.panel1.Controls.Add(this.txtUpIngilizce);
+            this.panel1.Controls.Add(this.txtUpKelime);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(958, 695);
+            this.panel1.TabIndex = 1;
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.Location = new System.Drawing.Point(0, 107);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(954, 350);
+            this.gridControl1.TabIndex = 144;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Appearance.Row.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gridView1.Appearance.Row.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(197)))));
+            this.gridView1.Appearance.Row.Options.UseBackColor = true;
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedRow = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
+            // 
+            // btnWordUpdate
+            // 
+            this.btnWordUpdate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnWordUpdate.FlatAppearance.BorderSize = 0;
+            this.btnWordUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWordUpdate.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnWordUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnWordUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnWordUpdate.Image")));
+            this.btnWordUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnWordUpdate.Location = new System.Drawing.Point(716, 532);
+            this.btnWordUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnWordUpdate.Name = "btnWordUpdate";
+            this.btnWordUpdate.Size = new System.Drawing.Size(238, 90);
+            this.btnWordUpdate.TabIndex = 143;
+            this.btnWordUpdate.Text = "Güncelle";
+            this.btnWordUpdate.UseVisualStyleBackColor = true;
+            // 
+            // picUpdate
+            // 
+            this.picUpdate.Location = new System.Drawing.Point(498, 466);
+            this.picUpdate.Name = "picUpdate";
+            this.picUpdate.Size = new System.Drawing.Size(211, 226);
+            this.picUpdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUpdate.TabIndex = 142;
+            this.picUpdate.TabStop = false;
+            // 
+            // txtUpResim
+            // 
+            this.txtUpResim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.txtUpResim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpResim.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUpResim.ForeColor = System.Drawing.Color.White;
+            this.txtUpResim.Location = new System.Drawing.Point(246, 650);
+            this.txtUpResim.Multiline = true;
+            this.txtUpResim.Name = "txtUpResim";
+            this.txtUpResim.Size = new System.Drawing.Size(235, 29);
+            this.txtUpResim.TabIndex = 141;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.label6.Location = new System.Drawing.Point(60, 650);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(121, 24);
+            this.label6.TabIndex = 140;
+            this.label6.Text = "Resim Ekle:";
+            // 
+            // button6
+            // 
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button6.FlatAppearance.BorderSize = 3;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(188, 644);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(51, 47);
+            this.button6.TabIndex = 139;
+            this.button6.Text = "...";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // txtUpTurkCumle
+            // 
+            this.txtUpTurkCumle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.txtUpTurkCumle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpTurkCumle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUpTurkCumle.ForeColor = System.Drawing.Color.White;
+            this.txtUpTurkCumle.Location = new System.Drawing.Point(187, 600);
+            this.txtUpTurkCumle.Multiline = true;
+            this.txtUpTurkCumle.Name = "txtUpTurkCumle";
+            this.txtUpTurkCumle.Size = new System.Drawing.Size(294, 29);
+            this.txtUpTurkCumle.TabIndex = 138;
+            // 
+            // txtUpOrnCumle
+            // 
+            this.txtUpOrnCumle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.txtUpOrnCumle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpOrnCumle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUpOrnCumle.ForeColor = System.Drawing.Color.White;
+            this.txtUpOrnCumle.Location = new System.Drawing.Point(187, 565);
+            this.txtUpOrnCumle.Multiline = true;
+            this.txtUpOrnCumle.Name = "txtUpOrnCumle";
+            this.txtUpOrnCumle.Size = new System.Drawing.Size(294, 29);
+            this.txtUpOrnCumle.TabIndex = 137;
+            // 
+            // txtUpTur
+            // 
+            this.txtUpTur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.txtUpTur.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpTur.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUpTur.ForeColor = System.Drawing.Color.White;
+            this.txtUpTur.Location = new System.Drawing.Point(187, 531);
+            this.txtUpTur.Multiline = true;
+            this.txtUpTur.Name = "txtUpTur";
+            this.txtUpTur.Size = new System.Drawing.Size(229, 29);
+            this.txtUpTur.TabIndex = 136;
+            // 
+            // txtUpIngilizce
+            // 
+            this.txtUpIngilizce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.txtUpIngilizce.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpIngilizce.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUpIngilizce.ForeColor = System.Drawing.Color.White;
+            this.txtUpIngilizce.Location = new System.Drawing.Point(187, 497);
+            this.txtUpIngilizce.Multiline = true;
+            this.txtUpIngilizce.Name = "txtUpIngilizce";
+            this.txtUpIngilizce.Size = new System.Drawing.Size(229, 29);
+            this.txtUpIngilizce.TabIndex = 135;
+            // 
+            // txtUpKelime
+            // 
+            this.txtUpKelime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.txtUpKelime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpKelime.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUpKelime.ForeColor = System.Drawing.Color.White;
+            this.txtUpKelime.Location = new System.Drawing.Point(187, 463);
+            this.txtUpKelime.Multiline = true;
+            this.txtUpKelime.Name = "txtUpKelime";
+            this.txtUpKelime.Size = new System.Drawing.Size(229, 29);
+            this.txtUpKelime.TabIndex = 134;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.label7.Location = new System.Drawing.Point(5, 600);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(176, 22);
+            this.label7.TabIndex = 133;
+            this.label7.Text = "Cümlenin Türkçesi:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.label8.Location = new System.Drawing.Point(45, 565);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(136, 22);
+            this.label8.TabIndex = 132;
+            this.label8.Text = "Örnek Cümle:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.label9.Location = new System.Drawing.Point(128, 531);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 22);
+            this.label9.TabIndex = 131;
+            this.label9.Text = "Türü:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.label14.Location = new System.Drawing.Point(85, 497);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(96, 22);
+            this.label14.TabIndex = 130;
+            this.label14.Text = "İngilizcesi:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.label15.Location = new System.Drawing.Point(108, 463);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(73, 22);
+            this.label15.TabIndex = 129;
+            this.label15.Text = "Kelime:";
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(266, 10);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(428, 90);
+            this.button4.TabIndex = 124;
+            this.button4.Text = "Kelime Güncelle";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // dataGridView1
+            // btnKelimeGuncelle
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 129);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(955, 563);
-            this.dataGridView1.TabIndex = 57;
+            this.btnKelimeGuncelle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnKelimeGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKelimeGuncelle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKelimeGuncelle.ForeColor = System.Drawing.Color.White;
+            this.btnKelimeGuncelle.Image = ((System.Drawing.Image)(resources.GetObject("btnKelimeGuncelle.Image")));
+            this.btnKelimeGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKelimeGuncelle.Location = new System.Drawing.Point(0, 374);
+            this.btnKelimeGuncelle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKelimeGuncelle.Name = "btnKelimeGuncelle";
+            this.btnKelimeGuncelle.Size = new System.Drawing.Size(264, 90);
+            this.btnKelimeGuncelle.TabIndex = 24;
+            this.btnKelimeGuncelle.Text = "Kelime Güncelle";
+            this.btnKelimeGuncelle.UseVisualStyleBackColor = true;
+            this.btnKelimeGuncelle.Click += new System.EventHandler(this.btnKelimeGuncelle_Click);
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "gridColumn2";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 1;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "gridColumn2";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 1;
             // 
             // FrmYetkili
             // 
@@ -764,12 +1089,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1220, 736);
+            this.Controls.Add(this.btnKelimeGuncelle);
             this.Controls.Add(this.xtraTabControl1);
+            this.Controls.Add(this.btnKelimeEkle);
             this.Controls.Add(this.btnYetkiliEVLA);
             this.Controls.Add(this.btnYetkiliBilgi);
             this.Controls.Add(this.btnUyeler);
             this.Controls.Add(this.btnCikis);
-            this.Controls.Add(this.btnKelimeEkle);
             this.Controls.Add(this.button5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -777,6 +1103,7 @@
             this.Name = "FrmYetkili";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmYetkili";
+            this.Load += new System.EventHandler(this.FrmYetkili_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
@@ -785,15 +1112,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picKelimeEkle)).EndInit();
             this.xtraTabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.xtraTabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             this.panelControl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.xtraTabPage5.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUpdate)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -838,18 +1172,42 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picKelimeEkle;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTurkceCumle;
+        private System.Windows.Forms.TextBox txtOrnCumle;
+        private System.Windows.Forms.TextBox txtTuru;
+        private System.Windows.Forms.TextBox txtIngilizce;
+        private System.Windows.Forms.TextBox txtKelime;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtResim;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage5;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnKelimeGuncelle;
+        private System.Windows.Forms.Button btnWordUpdate;
+        private System.Windows.Forms.PictureBox picUpdate;
+        private System.Windows.Forms.TextBox txtUpResim;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox txtUpTurkCumle;
+        private System.Windows.Forms.TextBox txtUpOrnCumle;
+        private System.Windows.Forms.TextBox txtUpTur;
+        private System.Windows.Forms.TextBox txtUpIngilizce;
+        private System.Windows.Forms.TextBox txtUpKelime;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
     }
 }

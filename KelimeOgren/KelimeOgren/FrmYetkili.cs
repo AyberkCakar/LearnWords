@@ -36,18 +36,95 @@ namespace KelimeOgren
         {
             xtraTabControl1.SelectedTabPageIndex = 3;
         }
-
+        private void btnKelimeGuncelle_Click(object sender, EventArgs e)
+        {
+            xtraTabControl1.SelectedTabPageIndex = 4;
+            GridDoldur();
+        }
         private void btnCikis_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        Kelime kelime = new Kelime();
         private void button2_Click(object sender, EventArgs e)
         {
-            Kelime kelime = new Kelime();
             openFileDialog1.ShowDialog();
-            pictureBox1.ImageLocation = openFileDialog1.FileName;
+            picKelimeEkle.ImageLocation = openFileDialog1.FileName;
+            txtResim.Text = openFileDialog1.FileName;
             kelime.Resim = openFileDialog1.FileName;
+        }
+        void KelimeEkle()
+        {
+            Yetkili KelimeEkle = new Yetkili();
+            Kelime word = new Kelime();
+            word.Turkce = txtKelime.Text;
+            word.Ingilizce = txtIngilizce.Text;
+            word.Turu = txtTuru.Text;
+            word.OrnCumle = txtOrnCumle.Text;
+            word.TurkceCumle = txtTurkceCumle.Text;
+            word.Resim = txtResim.Text;
+            KelimeEkle.KelimeEkle(word);
+        }
+        void KelimeEkleTemizle()
+        {
+            txtKelime.Text="";
+            txtIngilizce.Text = "";
+            txtTuru.Text = "";
+            txtOrnCumle.Text = "";
+            txtTurkceCumle.Text = "";
+            txtResim.Text = "";
+            picKelimeEkle.ImageLocation = null;
+            openFileDialog1.FileName = null;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            KelimeEkle();
+            MessageBox.Show("Yeni Kelime Eklenmiştir...","Bilgi",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            KelimeEkleTemizle();
+        }
+        void GridDoldur()
+        {
+            DataTable tablo = new DataTable();
+            tablo.Columns.Add("KelimeID", typeof(int));
+            tablo.Columns.Add("Kelime", typeof(string));
+            tablo.Columns.Add("İngilizce", typeof(string));
+            tablo.Columns.Add("Türü", typeof(string));
+            tablo.Columns.Add("Örnek Cümle", typeof(string));
+            tablo.Columns.Add("Cümle Türkçe", typeof(string));
+            tablo.Columns.Add("Resim", typeof(string));
+            foreach(Kelime klm in kelime.Kelimeler)
+            {
+                tablo.Rows.Add(klm.KelimeId,klm.Turkce,klm.Ingilizce,klm.Turu,klm.OrnCumle,klm.TurkceCumle,klm.Resim);
+                gridControl1.DataSource = tablo;
+            }
+            gridView1.OptionsBehavior.Editable = false;
+        }
+        
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            picUpdate.ImageLocation = openFileDialog1.FileName;
+            txtResim.Text = openFileDialog1.FileName;
+            kelime.Resim = openFileDialog1.FileName;
+        }
+
+        private void FrmYetkili_Load(object sender, EventArgs e)
+        {
+            kelime.KelimeOgren();
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            txtUpKelime.Text = dr[1].ToString();
+            txtUpIngilizce.Text = dr[2].ToString();
+            txtUpTur.Text = dr[3].ToString();
+            txtUpOrnCumle.Text = dr[4].ToString();
+            txtUpTurkCumle.Text = dr[5].ToString();
+            txtUpResim.Text = dr[6].ToString();
+            picUpdate.ImageLocation = dr[6].ToString();
         }
     }
 }

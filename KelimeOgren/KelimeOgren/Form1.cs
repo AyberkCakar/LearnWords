@@ -16,10 +16,12 @@ namespace KelimeOgren
         {
             InitializeComponent();
         }
-
+        Kelime kelime = new Kelime();
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            kelime.KelimeOgren();
+            KelimeGetir(0);
         }
 
         private void btnEVLA_Click(object sender, EventArgs e)
@@ -53,40 +55,37 @@ namespace KelimeOgren
         }
         int sayac = 0;
 
-        Kelime kelime = new Kelime();
+        void KelimeGetir(int say)
+        {
+            Kelime kelime = new Kelime();
+            kelime= this.kelime.UyeKelimeOgren(say);
+            lblTur.Text =kelime.Turu;
+            lblKelime.Text = kelime.Turkce;
+            lblIng.Text = kelime.Ingilizce;
+            lblOrn.Text = kelime.OrnCumle;
+            lblOrnTurk.Text = kelime.TurkceCumle;
+            pictureBox1.ImageLocation = kelime.Resim;          
+        }
         private void btnOgrenBack_Click(object sender, EventArgs e)
         {
             sayac--;
-            kelime.UyeKelimeOgren(sayac);
-            foreach (Kelime sec in kelime.SeciliKelime )
+            if(sayac==-1)
             {
-                lblTur.Text = sec.Turu;
-                lblKelime.Text = sec.Turkce;
-                lblIng.Text = sec.Ingilizce;
-                lblOrn.Text = sec.OrnCumle;
-                lblOrnTurk.Text = sec.TurkceCumle;
-                pictureBox1.ImageLocation = sec.Resim;
+                sayac = 0;
             }
-            kelime.SeciliKelime.Clear();
-
-
+            else
+            {
+                KelimeGetir(sayac);
+            }  
         }
 
         private void btnOgrenNext_Click(object sender, EventArgs e)
         {
-            kelime.UyeKelimeOgren(sayac);
-            foreach (Kelime sec in kelime.SeciliKelime)
-            {
-                lblTur.Text = sec.Turu;
-                lblKelime.Text = sec.Turkce;
-                lblIng.Text = sec.Ingilizce;
-                lblOrn.Text = sec.OrnCumle;
-                lblOrnTurk.Text = sec.TurkceCumle;
-                pictureBox1.ImageLocation = sec.Resim;
-                
-            }
             sayac++;
-            kelime.SeciliKelime.Clear();
+            if (sayac >= kelime.Kelimeler.Count()  || sayac == kelime.Kelimeler.Count() )
+                sayac = kelime.Kelimeler.Count() - 1;
+            else
+                KelimeGetir(sayac);  
         }
     }
 }

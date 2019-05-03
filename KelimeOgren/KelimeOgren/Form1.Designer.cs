@@ -892,6 +892,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1220, 736);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.btnEVLA);
             this.Controls.Add(this.btnBilgi);
@@ -899,7 +900,6 @@
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.btnKelimeOgren);
             this.Controls.Add(this.btnOgrenmismiyim);
-            this.Controls.Add(this.button5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

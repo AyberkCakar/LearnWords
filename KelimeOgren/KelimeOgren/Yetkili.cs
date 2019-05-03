@@ -16,12 +16,16 @@ namespace KelimeOgren
             this.kullaniciAdi = kullaniciAdi;
         }
 
+        public Yetkili()
+        {
+        }
+
         string Yetki { get; set; }
         double YetkiliId { get; set; }
         sqlBaglanti connect = new sqlBaglanti();
         public void KelimeEkle(Kelime kelime)
         {
-            SqlCommand command = new SqlCommand("insert into Tbl_Kelime(Kelime,İngilizcesi,Türü,OrnCümle,OrnCümleTürk,Resim) values(@a1, @a2, @a3, @a4, @a5, @a6)", connect.baglanti() );
+            SqlCommand command = new SqlCommand("insert into Tbl_Kelime(Kelime,İngilizcesi,Türü,OrnCümle,OrnCumleTürk,Resim) values(@a1, @a2, @a3, @a4, @a5, @a6)", connect.baglanti() );
             command.Parameters.AddWithValue("@a1", kelime.Turkce);
             command.Parameters.AddWithValue("@a2", kelime.Ingilizce);
             command.Parameters.AddWithValue("@a3", kelime.Turu);
