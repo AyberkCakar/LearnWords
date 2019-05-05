@@ -360,7 +360,7 @@
             this.txtTurkceCumle.Location = new System.Drawing.Point(215, 561);
             this.txtTurkceCumle.Multiline = true;
             this.txtTurkceCumle.Name = "txtTurkceCumle";
-            this.txtTurkceCumle.Size = new System.Drawing.Size(334, 29);
+            this.txtTurkceCumle.Size = new System.Drawing.Size(418, 29);
             this.txtTurkceCumle.TabIndex = 91;
             // 
             // txtOrnCumle
@@ -372,7 +372,7 @@
             this.txtOrnCumle.Location = new System.Drawing.Point(215, 517);
             this.txtOrnCumle.Multiline = true;
             this.txtOrnCumle.Name = "txtOrnCumle";
-            this.txtOrnCumle.Size = new System.Drawing.Size(334, 29);
+            this.txtOrnCumle.Size = new System.Drawing.Size(603, 29);
             this.txtOrnCumle.TabIndex = 90;
             // 
             // txtTuru

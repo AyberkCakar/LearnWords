@@ -7,20 +7,21 @@ using System.Data.SqlClient;
 
 namespace KelimeOgren
 {
-    public class Kelime : IOrneklenebilir, ITersCevir, IZamanHesapla, ITamamlanan
+    public class Kelime : IOrneklenebilir ,ITersCevir, ITamamlanan
     {
         public int KelimeId { get; set; }
         public int KelimeKontrol { get; set; }
         public string Turkce { get; set; }
         public string Ingilizce { get; set; }
         public string Turu { get; set; }
+        public string OrnCumle { get; set; }
+        public string TurkceCumle { get; set; }
+        public string Resim { get; set; }
         public void TersCevir()
         {
 
         }
-        public string OrnCumle { get; set; }
-        public string TurkceCumle { get; set; }
-        public string Resim { get; set; }
+
         public List<Kelime> Kelimeler = new List<Kelime>();
         public List<Kelime> OgrendigimKelimeler = new List<Kelime>();
         int say=0;

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace KelimeOgren
 {
-    public interface IZamanHesapla
+    public interface IOyunOyna
     {
-        bool ZamanHesapla(DateTime dt,int KelimeSeviyesi);
-
+        void OyunBilgileriniGetir(OyunOyna Oyun);
+        void OyunBilgileriniKaydet(OyunOyna Oyun);
     }
 }

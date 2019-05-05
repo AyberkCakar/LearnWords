@@ -46,6 +46,7 @@
     <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraSpellChecker.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -94,12 +95,13 @@
     <Compile Include="GirisServisi.cs" />
     <Compile Include="IKelimeEkle.cs" />
     <Compile Include="IOrneklenebilir.cs" />
+    <Compile Include="IOyunOyna.cs" />
     <Compile Include="ITamamlanan.cs" />
     <Compile Include="ITersCevir.cs" />
     <Compile Include="IZamanHesapla.cs" />
     <Compile Include="Kelime.cs" />
-    <Compile Include="KelimeOrnekleri.cs" />
     <Compile Include="Kisi.cs" />
+    <Compile Include="OyunOyna.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sqlBaglanti.cs" />

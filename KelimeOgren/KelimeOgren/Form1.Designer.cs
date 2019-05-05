@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnEVLA = new System.Windows.Forms.Button();
             this.btnBilgi = new System.Windows.Forms.Button();
@@ -57,15 +58,24 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBasla = new DevExpress.XtraEditors.SimpleButton();
+            this.lblSaniye = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.picFalse = new System.Windows.Forms.PictureBox();
+            this.picTrue = new System.Windows.Forms.PictureBox();
+            this.lblD = new System.Windows.Forms.Label();
+            this.lblC = new System.Windows.Forms.Label();
+            this.lblB = new System.Windows.Forms.Label();
+            this.lblA = new System.Windows.Forms.Label();
+            this.rdD = new System.Windows.Forms.RadioButton();
+            this.rdC = new System.Windows.Forms.RadioButton();
+            this.rdA = new System.Windows.Forms.RadioButton();
+            this.rdB = new System.Windows.Forms.RadioButton();
+            this.btnKelimeNext = new DevExpress.XtraEditors.SimpleButton();
             this.button9 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.label10 = new System.Windows.Forms.Label();
+            this.picOyun = new System.Windows.Forms.PictureBox();
+            this.lblSeciliKelime = new System.Windows.Forms.Label();
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -87,6 +97,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblSon = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -98,7 +110,10 @@
             this.xtraTabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFalse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTrue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picOyun)).BeginInit();
             this.xtraTabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
@@ -477,58 +492,214 @@
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.simpleButton7);
-            this.panelControl2.Controls.Add(this.simpleButton8);
+            this.panelControl2.Controls.Add(this.panel1);
+            this.panelControl2.Controls.Add(this.lblSaniye);
+            this.panelControl2.Controls.Add(this.label9);
+            this.panelControl2.Controls.Add(this.picFalse);
+            this.panelControl2.Controls.Add(this.picTrue);
+            this.panelControl2.Controls.Add(this.lblD);
+            this.panelControl2.Controls.Add(this.lblC);
+            this.panelControl2.Controls.Add(this.lblB);
+            this.panelControl2.Controls.Add(this.lblA);
+            this.panelControl2.Controls.Add(this.rdD);
+            this.panelControl2.Controls.Add(this.rdC);
+            this.panelControl2.Controls.Add(this.rdA);
+            this.panelControl2.Controls.Add(this.rdB);
+            this.panelControl2.Controls.Add(this.btnKelimeNext);
             this.panelControl2.Controls.Add(this.button9);
-            this.panelControl2.Controls.Add(this.pictureBox2);
-            this.panelControl2.Controls.Add(this.simpleButton6);
-            this.panelControl2.Controls.Add(this.simpleButton5);
-            this.panelControl2.Controls.Add(this.simpleButton4);
-            this.panelControl2.Controls.Add(this.simpleButton3);
-            this.panelControl2.Controls.Add(this.label10);
+            this.panelControl2.Controls.Add(this.picOyun);
+            this.panelControl2.Controls.Add(this.lblSeciliKelime);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(954, 695);
             this.panelControl2.TabIndex = 7;
             // 
-            // simpleButton7
+            // panel1
             // 
-            this.simpleButton7.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.simpleButton7.Appearance.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.simpleButton7.Appearance.ForeColor = System.Drawing.Color.White;
-            this.simpleButton7.Appearance.Options.UseBackColor = true;
-            this.simpleButton7.Appearance.Options.UseFont = true;
-            this.simpleButton7.Appearance.Options.UseForeColor = true;
-            this.simpleButton7.AppearancePressed.BackColor = System.Drawing.Color.Gray;
-            this.simpleButton7.AppearancePressed.Options.UseBackColor = true;
-            this.simpleButton7.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.simpleButton7.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton7.Image")));
-            this.simpleButton7.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton7.Location = new System.Drawing.Point(40, 573);
-            this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(123, 108);
-            this.simpleButton7.TabIndex = 66;
-            this.simpleButton7.Text = "Back";
+            this.panel1.Controls.Add(this.lblSon);
+            this.panel1.Controls.Add(this.btnBasla);
+            this.panel1.Location = new System.Drawing.Point(3, 111);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(951, 589);
+            this.panel1.TabIndex = 78;
             // 
-            // simpleButton8
+            // btnBasla
             // 
-            this.simpleButton8.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.simpleButton8.Appearance.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.simpleButton8.Appearance.ForeColor = System.Drawing.Color.White;
-            this.simpleButton8.Appearance.Options.UseBackColor = true;
-            this.simpleButton8.Appearance.Options.UseFont = true;
-            this.simpleButton8.Appearance.Options.UseForeColor = true;
-            this.simpleButton8.AppearancePressed.BackColor = System.Drawing.Color.Gray;
-            this.simpleButton8.AppearancePressed.Options.UseBackColor = true;
-            this.simpleButton8.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton8.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton8.Image")));
-            this.simpleButton8.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton8.Location = new System.Drawing.Point(788, 573);
-            this.simpleButton8.Name = "simpleButton8";
-            this.simpleButton8.Size = new System.Drawing.Size(123, 108);
-            this.simpleButton8.TabIndex = 65;
-            this.simpleButton8.Text = "Next";
+            this.btnBasla.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.btnBasla.Appearance.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBasla.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnBasla.Appearance.Options.UseBackColor = true;
+            this.btnBasla.Appearance.Options.UseFont = true;
+            this.btnBasla.Appearance.Options.UseForeColor = true;
+            this.btnBasla.AppearancePressed.BackColor = System.Drawing.Color.Gray;
+            this.btnBasla.AppearancePressed.Options.UseBackColor = true;
+            this.btnBasla.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnBasla.Image = ((System.Drawing.Image)(resources.GetObject("btnBasla.Image")));
+            this.btnBasla.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnBasla.Location = new System.Drawing.Point(220, 364);
+            this.btnBasla.Name = "btnBasla";
+            this.btnBasla.Size = new System.Drawing.Size(436, 108);
+            this.btnBasla.TabIndex = 79;
+            this.btnBasla.Text = "Kontrole Başla";
+            this.btnBasla.Click += new System.EventHandler(this.btnBasla_Click);
+            // 
+            // lblSaniye
+            // 
+            this.lblSaniye.AutoSize = true;
+            this.lblSaniye.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSaniye.ForeColor = System.Drawing.Color.White;
+            this.lblSaniye.Location = new System.Drawing.Point(870, 131);
+            this.lblSaniye.Name = "lblSaniye";
+            this.lblSaniye.Size = new System.Drawing.Size(0, 39);
+            this.lblSaniye.TabIndex = 77;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.label9.Location = new System.Drawing.Point(746, 131);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(129, 39);
+            this.label9.TabIndex = 76;
+            this.label9.Text = "Saniye:";
+            // 
+            // picFalse
+            // 
+            this.picFalse.Image = ((System.Drawing.Image)(resources.GetObject("picFalse.Image")));
+            this.picFalse.Location = new System.Drawing.Point(772, 356);
+            this.picFalse.Name = "picFalse";
+            this.picFalse.Size = new System.Drawing.Size(155, 119);
+            this.picFalse.TabIndex = 75;
+            this.picFalse.TabStop = false;
+            this.picFalse.Visible = false;
+            // 
+            // picTrue
+            // 
+            this.picTrue.Image = ((System.Drawing.Image)(resources.GetObject("picTrue.Image")));
+            this.picTrue.Location = new System.Drawing.Point(772, 356);
+            this.picTrue.Name = "picTrue";
+            this.picTrue.Size = new System.Drawing.Size(155, 119);
+            this.picTrue.TabIndex = 74;
+            this.picTrue.TabStop = false;
+            this.picTrue.Visible = false;
+            // 
+            // lblD
+            // 
+            this.lblD.AutoSize = true;
+            this.lblD.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblD.ForeColor = System.Drawing.Color.White;
+            this.lblD.Location = new System.Drawing.Point(393, 539);
+            this.lblD.Name = "lblD";
+            this.lblD.Size = new System.Drawing.Size(61, 24);
+            this.lblD.TabIndex = 73;
+            this.lblD.Text = "Book";
+            // 
+            // lblC
+            // 
+            this.lblC.AutoSize = true;
+            this.lblC.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblC.ForeColor = System.Drawing.Color.White;
+            this.lblC.Location = new System.Drawing.Point(393, 491);
+            this.lblC.Name = "lblC";
+            this.lblC.Size = new System.Drawing.Size(61, 24);
+            this.lblC.TabIndex = 72;
+            this.lblC.Text = "Book";
+            // 
+            // lblB
+            // 
+            this.lblB.AutoSize = true;
+            this.lblB.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblB.ForeColor = System.Drawing.Color.White;
+            this.lblB.Location = new System.Drawing.Point(393, 445);
+            this.lblB.Name = "lblB";
+            this.lblB.Size = new System.Drawing.Size(61, 24);
+            this.lblB.TabIndex = 71;
+            this.lblB.Text = "Book";
+            // 
+            // lblA
+            // 
+            this.lblA.AutoSize = true;
+            this.lblA.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblA.ForeColor = System.Drawing.Color.White;
+            this.lblA.Location = new System.Drawing.Point(393, 396);
+            this.lblA.Name = "lblA";
+            this.lblA.Size = new System.Drawing.Size(61, 24);
+            this.lblA.TabIndex = 70;
+            this.lblA.Text = "Book";
+            // 
+            // rdD
+            // 
+            this.rdD.AutoSize = true;
+            this.rdD.Font = new System.Drawing.Font("Tahoma", 500.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rdD.Location = new System.Drawing.Point(361, 550);
+            this.rdD.MaximumSize = new System.Drawing.Size(60, 90);
+            this.rdD.Name = "rdD";
+            this.rdD.Size = new System.Drawing.Size(14, 13);
+            this.rdD.TabIndex = 69;
+            this.rdD.TabStop = true;
+            this.rdD.UseVisualStyleBackColor = true;
+            this.rdD.CheckedChanged += new System.EventHandler(this.rdD_CheckedChanged);
+            // 
+            // rdC
+            // 
+            this.rdC.AutoSize = true;
+            this.rdC.Font = new System.Drawing.Font("Tahoma", 500.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rdC.Location = new System.Drawing.Point(361, 502);
+            this.rdC.MaximumSize = new System.Drawing.Size(60, 90);
+            this.rdC.Name = "rdC";
+            this.rdC.Size = new System.Drawing.Size(14, 13);
+            this.rdC.TabIndex = 68;
+            this.rdC.TabStop = true;
+            this.rdC.UseVisualStyleBackColor = true;
+            this.rdC.CheckedChanged += new System.EventHandler(this.rdC_CheckedChanged);
+            // 
+            // rdA
+            // 
+            this.rdA.AutoSize = true;
+            this.rdA.Font = new System.Drawing.Font("Tahoma", 500.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rdA.Location = new System.Drawing.Point(361, 407);
+            this.rdA.MaximumSize = new System.Drawing.Size(60, 90);
+            this.rdA.Name = "rdA";
+            this.rdA.Size = new System.Drawing.Size(14, 13);
+            this.rdA.TabIndex = 67;
+            this.rdA.TabStop = true;
+            this.rdA.UseVisualStyleBackColor = true;
+            this.rdA.CheckedChanged += new System.EventHandler(this.rdA_CheckedChanged);
+            // 
+            // rdB
+            // 
+            this.rdB.AutoSize = true;
+            this.rdB.Font = new System.Drawing.Font("Tahoma", 500.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rdB.Location = new System.Drawing.Point(361, 456);
+            this.rdB.MaximumSize = new System.Drawing.Size(60, 90);
+            this.rdB.Name = "rdB";
+            this.rdB.Size = new System.Drawing.Size(14, 13);
+            this.rdB.TabIndex = 5;
+            this.rdB.TabStop = true;
+            this.rdB.UseVisualStyleBackColor = true;
+            this.rdB.CheckedChanged += new System.EventHandler(this.rdB_CheckedChanged);
+            // 
+            // btnKelimeNext
+            // 
+            this.btnKelimeNext.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.btnKelimeNext.Appearance.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.btnKelimeNext.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnKelimeNext.Appearance.Options.UseBackColor = true;
+            this.btnKelimeNext.Appearance.Options.UseFont = true;
+            this.btnKelimeNext.Appearance.Options.UseForeColor = true;
+            this.btnKelimeNext.AppearancePressed.BackColor = System.Drawing.Color.Gray;
+            this.btnKelimeNext.AppearancePressed.Options.UseBackColor = true;
+            this.btnKelimeNext.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnKelimeNext.Image = ((System.Drawing.Image)(resources.GetObject("btnKelimeNext.Image")));
+            this.btnKelimeNext.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnKelimeNext.Location = new System.Drawing.Point(788, 573);
+            this.btnKelimeNext.Name = "btnKelimeNext";
+            this.btnKelimeNext.Size = new System.Drawing.Size(123, 108);
+            this.btnKelimeNext.TabIndex = 65;
+            this.btnKelimeNext.Text = "Next";
+            this.btnKelimeNext.Click += new System.EventHandler(this.btnKelimeNext_Click);
             // 
             // button9
             // 
@@ -547,74 +718,26 @@
             this.button9.Text = "Kelime Öğrenmişmiyim ?";
             this.button9.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
+            // picOyun
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(363, 148);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(215, 182);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 63;
-            this.pictureBox2.TabStop = false;
+            this.picOyun.Image = ((System.Drawing.Image)(resources.GetObject("picOyun.Image")));
+            this.picOyun.Location = new System.Drawing.Point(363, 148);
+            this.picOyun.Name = "picOyun";
+            this.picOyun.Size = new System.Drawing.Size(215, 182);
+            this.picOyun.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picOyun.TabIndex = 63;
+            this.picOyun.TabStop = false;
             // 
-            // simpleButton6
+            // lblSeciliKelime
             // 
-            this.simpleButton6.Appearance.BackColor = System.Drawing.Color.Gray;
-            this.simpleButton6.Appearance.Options.UseBackColor = true;
-            this.simpleButton6.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton6.Location = new System.Drawing.Point(312, 553);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.ShowToolTips = false;
-            this.simpleButton6.Size = new System.Drawing.Size(323, 41);
-            this.simpleButton6.TabIndex = 62;
-            this.simpleButton6.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Application;
-            // 
-            // simpleButton5
-            // 
-            this.simpleButton5.Appearance.BackColor = System.Drawing.Color.Gray;
-            this.simpleButton5.Appearance.Options.UseBackColor = true;
-            this.simpleButton5.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton5.Location = new System.Drawing.Point(312, 497);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.ShowToolTips = false;
-            this.simpleButton5.Size = new System.Drawing.Size(323, 41);
-            this.simpleButton5.TabIndex = 61;
-            this.simpleButton5.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Application;
-            // 
-            // simpleButton4
-            // 
-            this.simpleButton4.Appearance.BackColor = System.Drawing.Color.Gray;
-            this.simpleButton4.Appearance.Options.UseBackColor = true;
-            this.simpleButton4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton4.Location = new System.Drawing.Point(312, 441);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.ShowToolTips = false;
-            this.simpleButton4.Size = new System.Drawing.Size(323, 41);
-            this.simpleButton4.TabIndex = 60;
-            this.simpleButton4.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Application;
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.Appearance.BackColor = System.Drawing.Color.Gray;
-            this.simpleButton3.Appearance.Options.UseBackColor = true;
-            this.simpleButton3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton3.Location = new System.Drawing.Point(312, 385);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.ShowToolTips = false;
-            this.simpleButton3.Size = new System.Drawing.Size(323, 41);
-            this.simpleButton3.TabIndex = 59;
-            this.simpleButton3.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Application;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(438, 343);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 24);
-            this.label10.TabIndex = 58;
-            this.label10.Text = "Kitap";
+            this.lblSeciliKelime.AutoSize = true;
+            this.lblSeciliKelime.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSeciliKelime.ForeColor = System.Drawing.Color.White;
+            this.lblSeciliKelime.Location = new System.Drawing.Point(438, 343);
+            this.lblSeciliKelime.Name = "lblSeciliKelime";
+            this.lblSeciliKelime.Size = new System.Drawing.Size(60, 24);
+            this.lblSeciliKelime.TabIndex = 58;
+            this.lblSeciliKelime.Text = "Kitap";
             // 
             // xtraTabPage4
             // 
@@ -886,13 +1009,28 @@
             this.label20.TabIndex = 78;
             this.label20.Text = "Kullanici ID:";
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblSon
+            // 
+            this.lblSon.AutoSize = true;
+            this.lblSon.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.lblSon.Location = new System.Drawing.Point(81, 149);
+            this.lblSon.Name = "lblSon";
+            this.lblSon.Size = new System.Drawing.Size(763, 116);
+            this.lblSon.TabIndex = 80;
+            this.lblSon.Text = "Kontrol Edebileceğiniz \r\n                       Kelimeler Bitmiştir....";
+            this.lblSon.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1220, 736);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.btnEVLA);
             this.Controls.Add(this.btnBilgi);
@@ -900,6 +1038,7 @@
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.btnKelimeOgren);
             this.Controls.Add(this.btnOgrenmismiyim);
+            this.Controls.Add(this.button5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -920,7 +1059,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFalse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTrue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picOyun)).EndInit();
             this.xtraTabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
@@ -963,15 +1106,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
         private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton7;
-        private DevExpress.XtraEditors.SimpleButton simpleButton8;
+        private DevExpress.XtraEditors.SimpleButton btnKelimeNext;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox picOyun;
+        private System.Windows.Forms.Label lblSeciliKelime;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private System.Windows.Forms.Button button10;
@@ -993,6 +1131,22 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.PictureBox picFalse;
+        private System.Windows.Forms.PictureBox picTrue;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblSaniye;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblD;
+        private System.Windows.Forms.Label lblC;
+        private System.Windows.Forms.Label lblB;
+        private System.Windows.Forms.Label lblA;
+        private System.Windows.Forms.RadioButton rdD;
+        private System.Windows.Forms.RadioButton rdC;
+        private System.Windows.Forms.RadioButton rdA;
+        private System.Windows.Forms.RadioButton rdB;
+        private System.Windows.Forms.Panel panel1;
+        private DevExpress.XtraEditors.SimpleButton btnBasla;
+        private System.Windows.Forms.Label lblSon;
     }
 }
 
