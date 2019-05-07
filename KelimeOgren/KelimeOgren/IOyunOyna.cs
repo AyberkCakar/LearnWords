@@ -9,6 +9,7 @@ namespace KelimeOgren
     public interface IOyunOyna
     {
         void OyunBilgileriniGetir(OyunOyna Oyun);
-        void OyunBilgileriniKaydet(OyunOyna Oyun);
+        void OyunBilgileriniUpdate(OyunOyna Oyun);
+        void OyunBilgisiGir(OyunOyna Oyun);
     }
 }

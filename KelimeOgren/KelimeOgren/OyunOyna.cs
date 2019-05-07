@@ -17,6 +17,7 @@ namespace KelimeOgren
         public DateTime Dt { get; set; }
         public int KelimeSeviyesi { get; set; }
         public List<OyunOyna> Game = new List<OyunOyna>();
+        public List<OyunOyna> TamamlananKelimeler = new List<OyunOyna>();
         public OyunOyna Oyun(int _sayac)
         {
             foreach (OyunOyna oyn in Game)

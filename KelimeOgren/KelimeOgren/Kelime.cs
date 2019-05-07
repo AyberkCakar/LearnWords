@@ -27,11 +27,16 @@ namespace KelimeOgren
         int say=0;
         public void KelimeOgren()
         {
+            OyunOyna oyun = new OyunOyna();
+            Uye uye = new Uye("ayberk");
+            uye.OyunBilgileriniGetir(oyun);
             sqlBaglanti connect = new sqlBaglanti();
-            SqlCommand select = new SqlCommand("Select * from Tbl_Kelime", connect.baglanti());
+            SqlCommand select = new SqlCommand("select * from Tbl_Kelime where not KelimeId in (select KelimeID from Tbl_Oyun where KullaniciID=@a1) ", connect.baglanti());
+            select.Parameters.AddWithValue("@a1","ayberk");
             SqlDataReader Dtr = select.ExecuteReader();
-            while(Dtr.Read())
+            while (Dtr.Read())
             {
+
                 Kelime kelime = new Kelime();
                 kelime.KelimeKontrol = say;
                 kelime.KelimeId = Convert.ToInt32(Dtr[0]);
@@ -41,8 +46,21 @@ namespace KelimeOgren
                 kelime.OrnCumle = Dtr[4].ToString();
                 kelime.TurkceCumle = Dtr[5].ToString();
                 kelime.Resim = Dtr[6].ToString();
-                Kelimeler.Add(kelime);
-                say++;
+                for(int i=say;i<uye.Kontrol.Length;i++)
+                {
+                    if (kelime.KelimeId == uye.Kontrol[i])
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        Kelimeler.Add(kelime);
+                        say++;
+                        break;
+                    }
+                        
+                }
+
             }
         }     
         public Kelime UyeKelimeOgren(int _sayac)

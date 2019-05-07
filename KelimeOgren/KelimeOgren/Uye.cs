@@ -15,14 +15,14 @@ namespace KelimeOgren
         {
             this.kullaniciAdi = kullaniciAdi;
         }
-
+        public int[] Kontrol = new int[100];
         double UyeId { get; set; }
         sqlBaglanti connect = new sqlBaglanti();
         public void OyunBilgileriniGetir(OyunOyna Oyunlar)
         {
             
             int sayac = 1;
-            SqlCommand command = new SqlCommand("Select * From Tbl_KimBilmis where KullaniciID= @a1 ", connect.baglanti());
+            SqlCommand command = new SqlCommand("Select * From Tbl_Oyun where KullaniciID= @a1 ", connect.baglanti());
             command.Parameters.AddWithValue("@a1", kullaniciAdi);
             SqlDataReader dr = command.ExecuteReader();
             while(dr.Read())
@@ -38,20 +38,42 @@ namespace KelimeOgren
                 if(Oyun.ZamanHesapla(Oyun.Dt, Oyun.KelimeSeviyesi)==true)
                 {
                     Oyunlar.Game.Add(Oyun);
+                    Kontrol[sayac] = Convert.ToInt32(Oyun.KelimeID);
                     sayac++;
-                }   
+                }
+                else if(Oyun.KelimeSeviyesi == 5)
+                {
+                    Oyunlar.TamamlananKelimeler.Add(Oyun);
+                }
+                else
+                {
+                    continue;
+                }
                 
             }
             connect.baglanti().Close();
         }
-        public void OyunBilgileriniKaydet(OyunOyna Oyun)
+        public void OyunBilgileriniUpdate(OyunOyna Oyun)
         {
-            SqlCommand Update = new SqlCommand("Update Tbl_KimBilmis set Tarih=@p3,Kademe=@p4 where KullaniciID=@p2,KelimeID=@p1");
+            SqlCommand Update = new SqlCommand("Update Tbl_Oyun set Tarih=@p3,Kademe=@p4 where KullaniciID=@p2 and KelimeID=@p1",connect.baglanti());
             Update.Parameters.AddWithValue("@p1", Oyun.KelimeID);
-            Update.Parameters.AddWithValue("@a2", Oyun.KullanıcıID);
-            Update.Parameters.AddWithValue("@a3", Oyun.Dt);
-            Update.Parameters.AddWithValue("@a4", Oyun.KelimeSeviyesi);
+            Update.Parameters.AddWithValue("@p2", Oyun.KullanıcıID);
+            Update.Parameters.AddWithValue("@p3", Oyun.Dt);
+            Update.Parameters.AddWithValue("@p4", Oyun.KelimeSeviyesi);
             Update.ExecuteNonQuery();
+            connect.baglanti().Close();
+        }
+        public void OyunBilgisiGir(OyunOyna Oyun)
+        {
+            SqlCommand insert = new SqlCommand("insert into Tbl_Oyun (KelimeID,Kelime,İngilizce,Resim,KullaniciID,Tarih,Kademe) values (@a1,@a2,@a3,@a4,@a5, @a6,@a7)", connect.baglanti());
+            insert.Parameters.AddWithValue("@a1",Oyun.KelimeID);
+            insert.Parameters.AddWithValue("@a2", Oyun.Kelime);
+            insert.Parameters.AddWithValue("@a3", Oyun.Ingilizce);
+            insert.Parameters.AddWithValue("@a4", Oyun.Resim);
+            insert.Parameters.AddWithValue("@a5", Oyun.KullanıcıID);
+            insert.Parameters.AddWithValue("@a6", Oyun.Dt);
+            insert.Parameters.AddWithValue("@a7", Oyun.KelimeSeviyesi);
+            insert.ExecuteNonQuery();
             connect.baglanti().Close();
         }
     }

@@ -85,6 +85,7 @@ namespace KelimeOgren
         }
         void GridDoldur()
         {
+            kelime.KelimeOgren();
             DataTable tablo = new DataTable();
             tablo.Columns.Add("KelimeID", typeof(int));
             tablo.Columns.Add("Kelime", typeof(string));
@@ -98,6 +99,7 @@ namespace KelimeOgren
                 tablo.Rows.Add(klm.KelimeId,klm.Turkce,klm.Ingilizce,klm.Turu,klm.OrnCumle,klm.TurkceCumle,klm.Resim);
                 gridControl1.DataSource = tablo;
             }
+            kelime.Kelimeler.Clear();
             gridView1.OptionsBehavior.Editable = false;
         }
         
@@ -112,7 +114,7 @@ namespace KelimeOgren
 
         private void FrmYetkili_Load(object sender, EventArgs e)
         {
-            kelime.KelimeOgren();
+            
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
