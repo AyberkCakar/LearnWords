@@ -104,6 +104,8 @@
             this.btnKelimeGuncelle = new System.Windows.Forms.Button();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.txtUpKelimeID = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -804,6 +806,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.txtUpKelimeID);
+            this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.gridControl1);
             this.panel1.Controls.Add(this.btnWordUpdate);
             this.panel1.Controls.Add(this.picUpdate);
@@ -865,6 +869,7 @@
             this.btnWordUpdate.TabIndex = 143;
             this.btnWordUpdate.Text = "Güncelle";
             this.btnWordUpdate.UseVisualStyleBackColor = true;
+            this.btnWordUpdate.Click += new System.EventHandler(this.btnWordUpdate_Click);
             // 
             // picUpdate
             // 
@@ -1083,6 +1088,30 @@
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 1;
             // 
+            // txtUpKelimeID
+            // 
+            this.txtUpKelimeID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.txtUpKelimeID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpKelimeID.Enabled = false;
+            this.txtUpKelimeID.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUpKelimeID.ForeColor = System.Drawing.Color.White;
+            this.txtUpKelimeID.Location = new System.Drawing.Point(596, 463);
+            this.txtUpKelimeID.Multiline = true;
+            this.txtUpKelimeID.Name = "txtUpKelimeID";
+            this.txtUpKelimeID.Size = new System.Drawing.Size(60, 29);
+            this.txtUpKelimeID.TabIndex = 146;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.label19.Location = new System.Drawing.Point(493, 470);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(97, 22);
+            this.label19.TabIndex = 145;
+            this.label19.Text = "Kelime ID:";
+            // 
             // FrmYetkili
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1209,5 +1238,7 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.GridControl gridControl2;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private System.Windows.Forms.TextBox txtUpKelimeID;
+        private System.Windows.Forms.Label label19;
     }
 }

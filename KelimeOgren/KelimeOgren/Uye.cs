@@ -9,11 +9,14 @@ namespace KelimeOgren
 {
     public class Uye:Kisi,IOyunOyna
     {
-        private string kullaniciAdi;
+        public string kullaniciAdi;
 
         public Uye(string kullaniciAdi)
         {
             this.kullaniciAdi = kullaniciAdi;
+        }
+        public Uye()
+        {
         }
         public int[] Kontrol = new int[100];
         double UyeId { get; set; }
@@ -48,8 +51,7 @@ namespace KelimeOgren
                 else
                 {
                     continue;
-                }
-                
+                }              
             }
             connect.baglanti().Close();
         }
@@ -74,6 +76,18 @@ namespace KelimeOgren
             insert.Parameters.AddWithValue("@a6", Oyun.Dt);
             insert.Parameters.AddWithValue("@a7", Oyun.KelimeSeviyesi);
             insert.ExecuteNonQuery();
+            connect.baglanti().Close();
+        }
+        public override void KisiEkle()
+        {
+            SqlCommand Ekle = new SqlCommand("insert into Tbl_Uye (UyeAd,Soyad,Telefon,Mail,KullaniciAdi,Sifre) values (@p1,@p2,@p3,@p4,@p5,@p6)",connect.baglanti());
+            Ekle.Parameters.AddWithValue("@p1", Ad);
+            Ekle.Parameters.AddWithValue("@p2", Soyad);
+            Ekle.Parameters.AddWithValue("@p3", Telefon);
+            Ekle.Parameters.AddWithValue("@p4", Mail);
+            Ekle.Parameters.AddWithValue("@p5", KullaniciID);
+            Ekle.Parameters.AddWithValue("@p6", Sifre);
+            Ekle.ExecuteNonQuery();
             connect.baglanti().Close();
         }
     }

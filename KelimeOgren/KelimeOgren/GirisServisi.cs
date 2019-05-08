@@ -3,26 +3,55 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace KelimeOgren
 {
-    public static class GirisServisi
+    public class GirisServisi
     {
-        public static bool KullaniciDogrula(string kullaniciAdi,string sifre)
+        public static bool KullaniciUyeDogrula(string kullaniciAdi,string sifre)
         {
-            return true;
+            sqlBaglanti connect = new sqlBaglanti();
+            SqlCommand komut = new SqlCommand("Select * From Tbl_Uye where KullaniciAdi =@p1 and Sifre = @p2", connect.baglanti());
+            komut.Parameters.AddWithValue("@p1",kullaniciAdi);
+            komut.Parameters.AddWithValue("@p2", sifre);
+            SqlDataReader dr1 = komut.ExecuteReader();
+            if (dr1.Read())
+            {
+                return true;
+            }
+            else
+                return false;
+            
+        }
+        public static bool KullaniciYetkiliDogrula(string kullaniciAdi, string sifre)
+        {
+            sqlBaglanti connect = new sqlBaglanti();
+            SqlCommand komut = new SqlCommand("Select * From Tbl_Yetkili where KullaniciAdi =@p1 and Sifre = @p2", connect.baglanti());
+            komut.Parameters.AddWithValue("@p1", kullaniciAdi);
+            komut.Parameters.AddWithValue("@p2", sifre);
+            SqlDataReader dr1 = komut.ExecuteReader();
+            if (dr1.Read())
+            {
+                return true;
+            }
+            else
+                return false;
+
         }
 
-        public static Kisi GirisYap(string kullaniciAdi,string sifre)
+        public  Kisi GirisYap(string kullaniciAdi,string sifre)
         {
-            if (KullaniciDogrula(kullaniciAdi, sifre))
+            if (KullaniciUyeDogrula(kullaniciAdi, sifre))
                 return new Uye(kullaniciAdi);
             else
-                return null;
+            {
+                return null;  
+            }
         }
-        public static Kisi GirisYapYetkili(string kullaniciAdi, string sifre)
+        public  Kisi GirisYapYetkili(string kullaniciAdi, string sifre)
         {
-            if (KullaniciDogrula(kullaniciAdi, sifre))
+            if (KullaniciYetkiliDogrula(kullaniciAdi, sifre))
                 return new Yetkili(kullaniciAdi);
             else
                 return null;

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmKayit));
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdbYetkili = new System.Windows.Forms.RadioButton();
+            this.rdbUye = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,48 +39,48 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtAd = new System.Windows.Forms.TextBox();
+            this.txtSoyad = new System.Windows.Forms.TextBox();
+            this.txtMail = new System.Windows.Forms.TextBox();
+            this.txtKullaniciID = new System.Windows.Forms.TextBox();
+            this.txtSifre = new System.Windows.Forms.TextBox();
             this.txtYetki = new System.Windows.Forms.TextBox();
             this.lblYetki = new System.Windows.Forms.Label();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.mskTelefon = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
-            // radioButton2
+            // rdbYetkili
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
-            this.radioButton2.Location = new System.Drawing.Point(248, 125);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(105, 25);
-            this.radioButton2.TabIndex = 98;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Yetkili";
-            this.radioButton2.UseVisualStyleBackColor = false;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.rdbYetkili.AutoSize = true;
+            this.rdbYetkili.BackColor = System.Drawing.Color.Transparent;
+            this.rdbYetkili.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rdbYetkili.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
+            this.rdbYetkili.Location = new System.Drawing.Point(248, 125);
+            this.rdbYetkili.Name = "rdbYetkili";
+            this.rdbYetkili.Size = new System.Drawing.Size(105, 25);
+            this.rdbYetkili.TabIndex = 98;
+            this.rdbYetkili.TabStop = true;
+            this.rdbYetkili.Text = "Yetkili";
+            this.rdbYetkili.UseVisualStyleBackColor = false;
+            this.rdbYetkili.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // radioButton1
+            // rdbUye
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.radioButton1.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
-            this.radioButton1.Location = new System.Drawing.Point(151, 125);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(61, 25);
-            this.radioButton1.TabIndex = 97;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Üye";
-            this.radioButton1.UseVisualStyleBackColor = false;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rdbUye.AutoSize = true;
+            this.rdbUye.BackColor = System.Drawing.Color.Transparent;
+            this.rdbUye.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rdbUye.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rdbUye.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
+            this.rdbUye.Location = new System.Drawing.Point(151, 125);
+            this.rdbUye.Name = "rdbUye";
+            this.rdbUye.Size = new System.Drawing.Size(61, 25);
+            this.rdbUye.TabIndex = 97;
+            this.rdbUye.TabStop = true;
+            this.rdbUye.Text = "Üye";
+            this.rdbUye.UseVisualStyleBackColor = false;
+            this.rdbUye.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // label1
             // 
@@ -172,89 +172,75 @@
             this.label8.TabIndex = 106;
             this.label8.Text = "Soyad:";
             // 
-            // textBox1
+            // txtAd
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
-            this.textBox1.Location = new System.Drawing.Point(164, 208);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 28);
-            this.textBox1.TabIndex = 107;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
+            this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAd.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtAd.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
+            this.txtAd.Location = new System.Drawing.Point(164, 208);
+            this.txtAd.Multiline = true;
+            this.txtAd.Name = "txtAd";
+            this.txtAd.Size = new System.Drawing.Size(210, 28);
+            this.txtAd.TabIndex = 107;
+            this.txtAd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox2
+            // txtSoyad
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox2.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
-            this.textBox2.Location = new System.Drawing.Point(164, 248);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(210, 28);
-            this.textBox2.TabIndex = 108;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
+            this.txtSoyad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSoyad.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtSoyad.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSoyad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
+            this.txtSoyad.Location = new System.Drawing.Point(164, 248);
+            this.txtSoyad.Multiline = true;
+            this.txtSoyad.Name = "txtSoyad";
+            this.txtSoyad.Size = new System.Drawing.Size(210, 28);
+            this.txtSoyad.TabIndex = 108;
+            this.txtSoyad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox3
+            // txtMail
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox3.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
-            this.textBox3.Location = new System.Drawing.Point(164, 287);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(210, 28);
-            this.textBox3.TabIndex = 109;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
+            this.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMail.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtMail.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtMail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
+            this.txtMail.Location = new System.Drawing.Point(164, 324);
+            this.txtMail.Multiline = true;
+            this.txtMail.Name = "txtMail";
+            this.txtMail.Size = new System.Drawing.Size(210, 28);
+            this.txtMail.TabIndex = 110;
+            this.txtMail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox4
+            // txtKullaniciID
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox4.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
-            this.textBox4.Location = new System.Drawing.Point(164, 324);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(210, 28);
-            this.textBox4.TabIndex = 110;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtKullaniciID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
+            this.txtKullaniciID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKullaniciID.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtKullaniciID.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtKullaniciID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
+            this.txtKullaniciID.Location = new System.Drawing.Point(164, 362);
+            this.txtKullaniciID.Multiline = true;
+            this.txtKullaniciID.Name = "txtKullaniciID";
+            this.txtKullaniciID.Size = new System.Drawing.Size(210, 28);
+            this.txtKullaniciID.TabIndex = 111;
+            this.txtKullaniciID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox5
+            // txtSifre
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox5.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
-            this.textBox5.Location = new System.Drawing.Point(164, 362);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(210, 28);
-            this.textBox5.TabIndex = 111;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox6.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
-            this.textBox6.Location = new System.Drawing.Point(164, 400);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(210, 28);
-            this.textBox6.TabIndex = 112;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSifre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
+            this.txtSifre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSifre.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtSifre.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSifre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
+            this.txtSifre.Location = new System.Drawing.Point(164, 400);
+            this.txtSifre.Multiline = true;
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Size = new System.Drawing.Size(210, 28);
+            this.txtSifre.TabIndex = 112;
+            this.txtSifre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtYetki
             // 
@@ -311,6 +297,19 @@
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(315, 50);
             this.simpleButton2.TabIndex = 116;
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // mskTelefon
+            // 
+            this.mskTelefon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
+            this.mskTelefon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mskTelefon.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mskTelefon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
+            this.mskTelefon.Location = new System.Drawing.Point(164, 287);
+            this.mskTelefon.Mask = "(999) 000-0000";
+            this.mskTelefon.Name = "mskTelefon";
+            this.mskTelefon.Size = new System.Drawing.Size(210, 27);
+            this.mskTelefon.TabIndex = 117;
             // 
             // FrmKayit
             // 
@@ -318,16 +317,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(73)))), ((int)(((byte)(77)))));
             this.ClientSize = new System.Drawing.Size(530, 678);
+            this.Controls.Add(this.mskTelefon);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.txtYetki);
             this.Controls.Add(this.lblYetki);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSifre);
+            this.Controls.Add(this.txtKullaniciID);
+            this.Controls.Add(this.txtMail);
+            this.Controls.Add(this.txtSoyad);
+            this.Controls.Add(this.txtAd);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -335,8 +334,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rdbYetkili);
+            this.Controls.Add(this.rdbUye);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -350,8 +349,8 @@
 
         #endregion
 
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdbYetkili;
+        private System.Windows.Forms.RadioButton rdbUye;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -360,15 +359,15 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtAd;
+        private System.Windows.Forms.TextBox txtSoyad;
+        private System.Windows.Forms.TextBox txtMail;
+        private System.Windows.Forms.TextBox txtKullaniciID;
+        private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.TextBox txtYetki;
         private System.Windows.Forms.Label lblYetki;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.MaskedTextBox mskTelefon;
     }
 }

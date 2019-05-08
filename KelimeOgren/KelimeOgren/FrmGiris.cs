@@ -19,21 +19,21 @@ namespace KelimeOgren
 
         private void textBox1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Kullanıcı ID")
-                textBox1.Text = "";
-            if (textBox2.Text == "")
+            if (txtKullaniciID.Text == "Kullanıcı ID")
+                txtKullaniciID.Text = "";
+            if (txtSifre.Text == "")
             {
-                textBox2.Text = "Sifre";
+                txtSifre.Text = "Sifre";
             }
         }
 
         private void textBox2_Click(object sender, EventArgs e)
         {
-            if(textBox2.Text=="Sifre")
-                textBox2.Text = "";
-            if(textBox1.Text=="")
+            if(txtSifre.Text=="Sifre")
+                txtSifre.Text = "";
+            if(txtKullaniciID.Text=="")
             {
-                textBox1.Text = "Kullanıcı ID";
+                txtKullaniciID.Text = "Kullanıcı ID";
                 
             }
         }
@@ -52,6 +52,41 @@ namespace KelimeOgren
         {
             FrmKayit frKayit = new FrmKayit();
             frKayit.Show();
+        }
+
+        private void btnGiris_Click(object sender, EventArgs e)
+        {
+            if(rdbUye.Checked == true)
+            {
+                
+                GirisServisi giris = new GirisServisi();
+                if (giris.GirisYap(txtKullaniciID.Text, txtSifre.Text) != null)
+                {
+                    Form1 Uye = new Form1();
+                    Uye.kullanici = txtKullaniciID.Text;
+                    Uye.Show();
+                    this.Hide();
+                }
+                else
+                    MessageBox.Show("Hatalı Kullanıcı...");
+                
+            }
+            else if( rdbYetkili.Checked ==true)
+            {
+                GirisServisi giris = new GirisServisi();
+                if( giris.GirisYapYetkili(txtKullaniciID.Text, txtSifre.Text) != null)
+                {
+                    FrmYetkili Yetkili = new FrmYetkili();
+                    Yetkili.Show();
+                    this.Hide();
+                }
+                else
+                    MessageBox.Show("Hatalı Kullanıcı..."); 
+            }
+            else
+            {
+                MessageBox.Show("Giriş Türü Seçiniz.");
+            }
         }
     }
 }

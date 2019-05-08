@@ -8,10 +8,12 @@ namespace KelimeOgren
 {
     public abstract class Kisi
     {
-        String Ad { get; set; }
-        String Soyad { get; set; }
-        string Telefon { get; set; }
-        string Mail { get; set; }
-        string Sifre { get; set; }
+        public string Ad { get; set; }
+        public string Soyad { get; set; }
+        public string Telefon { get; set; }
+        public string Mail { get; set; }
+        public string KullaniciID { get; set; }
+        public string Sifre { get; set; }
+        public abstract void KisiEkle();
     }
 }

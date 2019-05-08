@@ -20,7 +20,7 @@ namespace KelimeOgren
         {
         }
 
-        string Yetki { get; set; }
+        public string Yetki { get; set; }
         double YetkiliId { get; set; }
         sqlBaglanti connect = new sqlBaglanti();
         public void KelimeEkle(Kelime kelime)
@@ -37,7 +37,7 @@ namespace KelimeOgren
         }
         public void KelimeGuncelle(Kelime kelime)
         {
-            SqlCommand update = new SqlCommand("update Tbl_Kelime set Kelime=@a2,İngilizcesi=@a3,Türü=@a4,OrnCümle=@a5,OrnCümleTürk=@a6,Resim=@a7 where KelimeId=@a1 ", connect.baglanti());
+            SqlCommand update = new SqlCommand("update Tbl_Kelime set Kelime=@a2,İngilizcesi=@a3,Türü=@a4,OrnCümle=@a5,OrnCumleTürk=@a6,Resim=@a7 where KelimeId=@a1 ", connect.baglanti());
             update.Parameters.AddWithValue("@a1", kelime.KelimeId);
             update.Parameters.AddWithValue("@a2", kelime.Turkce);
             update.Parameters.AddWithValue("@a3", kelime.Ingilizce);
@@ -45,6 +45,21 @@ namespace KelimeOgren
             update.Parameters.AddWithValue("@a5", kelime.OrnCumle);
             update.Parameters.AddWithValue("@a6", kelime.TurkceCumle);
             update.Parameters.AddWithValue("@a7", kelime.Resim);
+            update.ExecuteNonQuery();
+            connect.baglanti().Close();
+        }
+        public override void KisiEkle()
+        {
+            SqlCommand Ekle = new SqlCommand("insert into Tbl_Yetkili (YetkiliAd,Soyad,Telefon,Mail,KullaniciAdi,Sifre,Yetki) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)", connect.baglanti());
+            Ekle.Parameters.AddWithValue("@p1", Ad);
+            Ekle.Parameters.AddWithValue("@p2", Soyad);
+            Ekle.Parameters.AddWithValue("@p3", Telefon);
+            Ekle.Parameters.AddWithValue("@p4", Mail);
+            Ekle.Parameters.AddWithValue("@p5", KullaniciID);
+            Ekle.Parameters.AddWithValue("@p6", Sifre);
+            Ekle.Parameters.AddWithValue("@p7", Yetki);
+            Ekle.ExecuteNonQuery();
+            connect.baglanti().Close();
         }
     }
 }

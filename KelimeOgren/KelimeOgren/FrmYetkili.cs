@@ -65,6 +65,31 @@ namespace KelimeOgren
             word.Resim = txtResim.Text;
             KelimeEkle.KelimeEkle(word);
         }
+        void KelimeGuncelle()
+        {
+            Yetkili KelimeGuncelle = new Yetkili();
+            Kelime word = new Kelime();
+            word.KelimeId = Convert.ToInt32(txtUpKelimeID.Text);
+            word.Turkce = txtUpKelime.Text;
+            word.Ingilizce = txtUpIngilizce.Text;
+            word.Turu = txtUpTur.Text;
+            word.OrnCumle = txtUpOrnCumle.Text;
+            word.TurkceCumle = txtUpTurkCumle.Text;
+            word.Resim = txtUpResim.Text;
+            KelimeGuncelle.KelimeGuncelle(word);
+        }
+        void KelimeGuncelleTemizle()
+        {
+            txtUpKelime.Text = "";
+            txtUpKelime.Text = "";
+            txtUpIngilizce.Text = "";
+            txtUpTur.Text = "";
+            txtUpOrnCumle.Text = "";
+            txtUpTurkCumle.Text = "";
+            txtUpKelimeID.Text = "";
+            picUpdate.ImageLocation = null;
+            openFileDialog1.FileName = null;
+        }
         void KelimeEkleTemizle()
         {
             txtKelime.Text="";
@@ -85,7 +110,7 @@ namespace KelimeOgren
         }
         void GridDoldur()
         {
-            kelime.KelimeOgren();
+            kelime.YetkiliKelime();
             DataTable tablo = new DataTable();
             tablo.Columns.Add("KelimeID", typeof(int));
             tablo.Columns.Add("Kelime", typeof(string));
@@ -120,6 +145,7 @@ namespace KelimeOgren
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            txtUpKelimeID.Text = Convert.ToInt32(dr[0]).ToString();
             txtUpKelime.Text = dr[1].ToString();
             txtUpIngilizce.Text = dr[2].ToString();
             txtUpTur.Text = dr[3].ToString();
@@ -127,6 +153,13 @@ namespace KelimeOgren
             txtUpTurkCumle.Text = dr[5].ToString();
             txtUpResim.Text = dr[6].ToString();
             picUpdate.ImageLocation = dr[6].ToString();
+        }
+
+        private void btnWordUpdate_Click(object sender, EventArgs e)
+        {
+            KelimeGuncelle();
+            MessageBox.Show("Kelime Güncellenmiştir...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            KelimeGuncelleTemizle();
         }
     }
 }

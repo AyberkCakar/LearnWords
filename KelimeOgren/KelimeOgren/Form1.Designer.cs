@@ -36,7 +36,7 @@
             this.btnCikis = new System.Windows.Forms.Button();
             this.btnKelimeOgren = new System.Windows.Forms.Button();
             this.btnOgrenmismiyim = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnUye = new System.Windows.Forms.Button();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
@@ -227,19 +227,19 @@
             this.btnOgrenmismiyim.UseVisualStyleBackColor = true;
             this.btnOgrenmismiyim.Click += new System.EventHandler(this.btnOgrenmismiyim_Click);
             // 
-            // button5
+            // btnUye
             // 
-            this.button5.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(264, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(956, 38);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "Sayın Üyemiz, Ayberk Çakar";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnUye.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnUye.FlatAppearance.BorderSize = 0;
+            this.btnUye.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUye.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUye.ForeColor = System.Drawing.Color.White;
+            this.btnUye.Location = new System.Drawing.Point(264, 0);
+            this.btnUye.Name = "btnUye";
+            this.btnUye.Size = new System.Drawing.Size(956, 38);
+            this.btnUye.TabIndex = 16;
+            this.btnUye.Text = "Sayın Üyemiz, Ayberk Çakar";
+            this.btnUye.UseVisualStyleBackColor = false;
             // 
             // xtraTabControl1
             // 
@@ -1048,6 +1048,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1220, 736);
+            this.Controls.Add(this.btnUye);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.btnEVLA);
             this.Controls.Add(this.btnBilgi);
@@ -1055,7 +1056,6 @@
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.btnKelimeOgren);
             this.Controls.Add(this.btnOgrenmismiyim);
-            this.Controls.Add(this.button5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -1102,7 +1102,7 @@
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.Button btnKelimeOgren;
         private System.Windows.Forms.Button btnOgrenmismiyim;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnUye;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
         private DevExpress.XtraEditors.PanelControl panelControl3;

@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGiris));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtKullaniciID = new System.Windows.Forms.TextBox();
+            this.txtSifre = new System.Windows.Forms.TextBox();
+            this.btnKayit = new DevExpress.XtraEditors.SimpleButton();
+            this.btnGiris = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rdbUye = new System.Windows.Forms.RadioButton();
+            this.rdbYetkili = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -52,66 +52,67 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Login";
             // 
-            // textBox1
+            // txtKullaniciID
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
-            this.textBox1.Location = new System.Drawing.Point(256, 235);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(301, 28);
-            this.textBox1.TabIndex = 88;
-            this.textBox1.Text = "Kullanıcı ID";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
+            this.txtKullaniciID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
+            this.txtKullaniciID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKullaniciID.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtKullaniciID.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtKullaniciID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
+            this.txtKullaniciID.Location = new System.Drawing.Point(256, 235);
+            this.txtKullaniciID.Multiline = true;
+            this.txtKullaniciID.Name = "txtKullaniciID";
+            this.txtKullaniciID.Size = new System.Drawing.Size(301, 28);
+            this.txtKullaniciID.TabIndex = 88;
+            this.txtKullaniciID.Text = "Kullanıcı ID";
+            this.txtKullaniciID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtKullaniciID.Click += new System.EventHandler(this.textBox1_Click);
             // 
-            // textBox2
+            // txtSifre
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox2.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
-            this.textBox2.Location = new System.Drawing.Point(256, 277);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox2.Size = new System.Drawing.Size(301, 28);
-            this.textBox2.TabIndex = 89;
-            this.textBox2.Text = "Sifre";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
+            this.txtSifre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
+            this.txtSifre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSifre.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtSifre.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSifre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
+            this.txtSifre.Location = new System.Drawing.Point(256, 277);
+            this.txtSifre.Multiline = true;
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.PasswordChar = '*';
+            this.txtSifre.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtSifre.Size = new System.Drawing.Size(301, 28);
+            this.txtSifre.TabIndex = 89;
+            this.txtSifre.Text = "Sifre";
+            this.txtSifre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSifre.Click += new System.EventHandler(this.textBox2_Click);
             // 
-            // simpleButton1
+            // btnKayit
             // 
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(243, 400);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(319, 52);
-            this.simpleButton1.TabIndex = 91;
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.btnKayit.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnKayit.Image")));
+            this.btnKayit.Location = new System.Drawing.Point(243, 400);
+            this.btnKayit.Name = "btnKayit";
+            this.btnKayit.Size = new System.Drawing.Size(319, 52);
+            this.btnKayit.TabIndex = 91;
+            this.btnKayit.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // simpleButton2
+            // btnGiris
             // 
-            this.simpleButton2.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(75)))), ((int)(((byte)(77)))));
-            this.simpleButton2.AppearanceHovered.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(75)))), ((int)(((byte)(77)))));
-            this.simpleButton2.AppearanceHovered.Options.UseBackColor = true;
-            this.simpleButton2.AppearanceHovered.Options.UseBorderColor = true;
-            this.simpleButton2.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(75)))), ((int)(((byte)(77)))));
-            this.simpleButton2.AppearancePressed.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(75)))), ((int)(((byte)(77)))));
-            this.simpleButton2.AppearancePressed.Options.UseBackColor = true;
-            this.simpleButton2.AppearancePressed.Options.UseBorderColor = true;
-            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(245, 338);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(319, 52);
-            this.simpleButton2.TabIndex = 92;
+            this.btnGiris.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(75)))), ((int)(((byte)(77)))));
+            this.btnGiris.AppearanceHovered.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(75)))), ((int)(((byte)(77)))));
+            this.btnGiris.AppearanceHovered.Options.UseBackColor = true;
+            this.btnGiris.AppearanceHovered.Options.UseBorderColor = true;
+            this.btnGiris.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(75)))), ((int)(((byte)(77)))));
+            this.btnGiris.AppearancePressed.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(75)))), ((int)(((byte)(77)))));
+            this.btnGiris.AppearancePressed.Options.UseBackColor = true;
+            this.btnGiris.AppearancePressed.Options.UseBorderColor = true;
+            this.btnGiris.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnGiris.Image = ((System.Drawing.Image)(resources.GetObject("btnGiris.Image")));
+            this.btnGiris.Location = new System.Drawing.Point(245, 338);
+            this.btnGiris.Name = "btnGiris";
+            this.btnGiris.Size = new System.Drawing.Size(319, 52);
+            this.btnGiris.TabIndex = 92;
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // simpleButton3
             // 
@@ -127,34 +128,34 @@
             this.simpleButton3.TabIndex = 93;
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
-            // radioButton1
+            // rdbUye
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.radioButton1.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
-            this.radioButton1.Location = new System.Drawing.Point(311, 192);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(61, 25);
-            this.radioButton1.TabIndex = 95;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Üye";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.rdbUye.AutoSize = true;
+            this.rdbUye.BackColor = System.Drawing.Color.Transparent;
+            this.rdbUye.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rdbUye.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rdbUye.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
+            this.rdbUye.Location = new System.Drawing.Point(311, 192);
+            this.rdbUye.Name = "rdbUye";
+            this.rdbUye.Size = new System.Drawing.Size(61, 25);
+            this.rdbUye.TabIndex = 95;
+            this.rdbUye.TabStop = true;
+            this.rdbUye.Text = "Üye";
+            this.rdbUye.UseVisualStyleBackColor = false;
             // 
-            // radioButton2
+            // rdbYetkili
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
-            this.radioButton2.Location = new System.Drawing.Point(408, 192);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(105, 25);
-            this.radioButton2.TabIndex = 96;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Yetkili";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.rdbYetkili.AutoSize = true;
+            this.rdbYetkili.BackColor = System.Drawing.Color.Transparent;
+            this.rdbYetkili.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rdbYetkili.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
+            this.rdbYetkili.Location = new System.Drawing.Point(408, 192);
+            this.rdbYetkili.Name = "rdbYetkili";
+            this.rdbYetkili.Size = new System.Drawing.Size(105, 25);
+            this.rdbYetkili.TabIndex = 96;
+            this.rdbYetkili.TabStop = true;
+            this.rdbYetkili.Text = "Yetkili";
+            this.rdbYetkili.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -170,18 +171,18 @@
             // 
             // FrmGiris
             // 
-            this.AcceptButton = this.simpleButton2;
+            this.AcceptButton = this.btnGiris;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(820, 657);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rdbYetkili);
+            this.Controls.Add(this.rdbUye);
             this.Controls.Add(this.simpleButton3);
-            this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnGiris);
+            this.Controls.Add(this.btnKayit);
+            this.Controls.Add(this.txtSifre);
+            this.Controls.Add(this.txtKullaniciID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -199,13 +200,13 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.TextBox txtKullaniciID;
+        private System.Windows.Forms.TextBox txtSifre;
+        private DevExpress.XtraEditors.SimpleButton btnKayit;
+        private DevExpress.XtraEditors.SimpleButton btnGiris;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rdbUye;
+        private System.Windows.Forms.RadioButton rdbYetkili;
         private System.Windows.Forms.Label label2;
     }
 }

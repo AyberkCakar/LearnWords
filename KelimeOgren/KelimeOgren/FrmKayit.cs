@@ -34,5 +34,39 @@ namespace KelimeOgren
         {
             this.Close();
         }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+
+            if (rdbUye.Checked == true)
+            {
+                Uye newUye = new Uye();
+                newUye.Ad = txtAd.Text;
+                newUye.Soyad = txtSoyad.Text;
+                newUye.Telefon = mskTelefon.Text;
+                newUye.Mail = txtMail.Text;
+                newUye.KullaniciID = txtKullaniciID.Text;
+                newUye.Sifre = txtSifre.Text;
+                newUye.KisiEkle();
+                MessageBox.Show("Üye Eklendi...");
+                this.Close();
+            }
+            else if (rdbYetkili.Checked == true)
+            {
+                Yetkili newYetkili = new Yetkili();
+                newYetkili.Yetki = txtYetki.Text;
+                newYetkili.Ad = txtAd.Text;
+                newYetkili.Soyad = txtSoyad.Text;
+                newYetkili.Telefon = mskTelefon.Text;
+                newYetkili.Mail = txtMail.Text;
+                newYetkili.KullaniciID = txtKullaniciID.Text;
+                newYetkili.Sifre = txtSifre.Text;
+                newYetkili.KisiEkle();
+                MessageBox.Show("Yetkili Eklendi...");
+                this.Close();
+            }
+            else
+                MessageBox.Show("Kayıt türü seçiniz");
+        }
     }
 }

@@ -16,13 +16,15 @@ namespace KelimeOgren
         {
             InitializeComponent();
         }
+        public string kullanici { get; set; }
         Kelime kelime = new Kelime();
-        Uye oyun = new Uye("ayberk");
         OyunOyna oyun1 = new OyunOyna();
         private void Form1_Load(object sender, EventArgs e)
         {
+            Uye oyun = new Uye(kullanici);
+            btnUye.Text="Sayin Üyemiz,  "+kullanici+ "   Hoş Geldiniz...";
             RadioSıfırla();
-            kelime.KelimeOgren();
+            kelime.KelimeOgren(oyun);
             KelimeGetir(0);
             oyun.OyunBilgileriniGetir(oyun1);
 
@@ -76,6 +78,7 @@ namespace KelimeOgren
         }
         void KelimeOgrenmeKaydet(int say)
         {
+            Uye oyun = new Uye(kullanici);
             DateTime dt = DateTime.Today;
             Kelime kelime = new Kelime();
             kelime = this.kelime.UyeKelimeOgren(say);
@@ -83,7 +86,7 @@ namespace KelimeOgren
             oyun1.Kelime = kelime.Turkce;
             oyun1.Ingilizce = kelime.Ingilizce;
             oyun1.Resim = kelime.Resim;
-            oyun1.KullanıcıID = "ayberk";
+            oyun1.KullanıcıID = oyun.kullaniciAdi;
             oyun1.Dt = dt;
             oyun1.KelimeSeviyesi = 1;
             oyun.OyunBilgisiGir(oyun1);
@@ -320,20 +323,22 @@ namespace KelimeOgren
         }
         void KelimeKontrolUpdateTrue(int KelimeID,int Kademe)
         {
+            Uye oyun = new Uye(kullanici);
             DateTime dt = DateTime.Today;
             oyun1.KelimeID = KelimeID;
             oyun1.KelimeSeviyesi = Kademe + 1;
             oyun1.Dt = Convert.ToDateTime(dt);
-            oyun1.KullanıcıID = "ayberk";
+            oyun1.KullanıcıID = oyun.kullaniciAdi;
             oyun.OyunBilgileriniUpdate(oyun1);
         }
         void KelimeKontrolUpdateFalse(int KelimeID, int Kademe)
         {
+            Uye oyun = new Uye(kullanici);
             DateTime dt = DateTime.Today;
             oyun1.KelimeID = KelimeID;
             oyun1.KelimeSeviyesi = 1;
             oyun1.Dt = Convert.ToDateTime(dt);
-            oyun1.KullanıcıID = "ayberk";
+            oyun1.KullanıcıID = oyun.kullaniciAdi;
             oyun.OyunBilgileriniUpdate(oyun1);
         }
         void RastgeleKelime(string kelime)
