@@ -16,7 +16,7 @@ namespace KelimeOgren
         {
             InitializeComponent();
         }
-
+        public string kullanici;
         private void btnYetkiliEVLA_Click(object sender, EventArgs e)
         {
             xtraTabControl1.SelectedTabPageIndex = 0;
@@ -26,19 +26,14 @@ namespace KelimeOgren
         {
             xtraTabControl1.SelectedTabPageIndex = 1;
         }
-
-        private void btnUyeler_Click(object sender, EventArgs e)
-        {
-            xtraTabControl1.SelectedTabPageIndex = 2;
-        }
-
         private void btnYetkiliBilgi_Click(object sender, EventArgs e)
         {
-            xtraTabControl1.SelectedTabPageIndex = 3;
+            xtraTabControl1.SelectedTabPageIndex =2;
+            YetkiliBilgiGetir(kullanici);
         }
         private void btnKelimeGuncelle_Click(object sender, EventArgs e)
         {
-            xtraTabControl1.SelectedTabPageIndex = 4;
+            xtraTabControl1.SelectedTabPageIndex = 3;
             GridDoldur();
         }
         private void btnCikis_Click(object sender, EventArgs e)
@@ -55,7 +50,7 @@ namespace KelimeOgren
         }
         void KelimeEkle()
         {
-            Yetkili KelimeEkle = new Yetkili();
+            Yetkili KelimeEkle = new Yetkili(kullanici);
             Kelime word = new Kelime();
             word.Turkce = txtKelime.Text;
             word.Ingilizce = txtIngilizce.Text;
@@ -67,7 +62,7 @@ namespace KelimeOgren
         }
         void KelimeGuncelle()
         {
-            Yetkili KelimeGuncelle = new Yetkili();
+            Yetkili KelimeGuncelle = new Yetkili(kullanici);
             Kelime word = new Kelime();
             word.KelimeId = Convert.ToInt32(txtUpKelimeID.Text);
             word.Turkce = txtUpKelime.Text;
@@ -92,7 +87,7 @@ namespace KelimeOgren
         }
         void KelimeEkleTemizle()
         {
-            txtKelime.Text="";
+            txtKelime.Text = "";
             txtIngilizce.Text = "";
             txtTuru.Text = "";
             txtOrnCumle.Text = "";
@@ -105,7 +100,7 @@ namespace KelimeOgren
         private void button1_Click(object sender, EventArgs e)
         {
             KelimeEkle();
-            MessageBox.Show("Yeni Kelime Eklenmiştir...","Bilgi",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Yeni Kelime Eklenmiştir...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             KelimeEkleTemizle();
         }
         void GridDoldur()
@@ -119,15 +114,15 @@ namespace KelimeOgren
             tablo.Columns.Add("Örnek Cümle", typeof(string));
             tablo.Columns.Add("Cümle Türkçe", typeof(string));
             tablo.Columns.Add("Resim", typeof(string));
-            foreach(Kelime klm in kelime.Kelimeler)
+            foreach (Kelime klm in kelime.Kelimeler)
             {
-                tablo.Rows.Add(klm.KelimeId,klm.Turkce,klm.Ingilizce,klm.Turu,klm.OrnCumle,klm.TurkceCumle,klm.Resim);
+                tablo.Rows.Add(klm.KelimeId, klm.Turkce, klm.Ingilizce, klm.Turu, klm.OrnCumle, klm.TurkceCumle, klm.Resim);
                 gridControl1.DataSource = tablo;
             }
             kelime.Kelimeler.Clear();
             gridView1.OptionsBehavior.Editable = false;
         }
-        
+
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -139,7 +134,7 @@ namespace KelimeOgren
 
         private void FrmYetkili_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -160,6 +155,43 @@ namespace KelimeOgren
             KelimeGuncelle();
             MessageBox.Show("Kelime Güncellenmiştir...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             KelimeGuncelleTemizle();
+        }
+        void YetkiliBilgiGetir(string kullaniciAdi)
+        {
+            Yetkili yetkiliBilgi = new Yetkili(kullaniciAdi);
+            yetkiliBilgi.KisiBilgiGetir(kullaniciAdi);
+            txtYAd.Text = yetkiliBilgi.Ad;
+            txtYSoyad.Text = yetkiliBilgi.Soyad;
+            txtYMail.Text = yetkiliBilgi.Mail;
+            txtYSifre.Text = yetkiliBilgi.Sifre;
+            mskYTelefon.Text = yetkiliBilgi.Telefon;
+            lblYID.Text = yetkiliBilgi.KullaniciID;
+            txtYetkiliNo.Text = yetkiliBilgi.YetkiliNo.ToString();
+            btnYetkili.Text = "Sayın "+yetkiliBilgi.Yetki +" , "+yetkiliBilgi.Ad + " " + yetkiliBilgi.Soyad;
+        }
+        void YetkiliBilgiGuncelle()
+        {
+            Yetkili yetkiliBilgi = new Yetkili(kullanici);
+            yetkiliBilgi.Mail = txtYMail.Text;
+            yetkiliBilgi.Sifre = txtYSifre.Text;
+            yetkiliBilgi.Telefon = mskYTelefon.Text;
+            yetkiliBilgi.YetkiliNo = Convert.ToInt32(txtYetkiliNo.Text);
+            yetkiliBilgi.KisiBilgiGuncelle();
+            MessageBox.Show("Bilgileriniz Güncellendi...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnYetkiliGuncelle_Click(object sender, EventArgs e)
+        {
+            YetkiliBilgiGuncelle();
+            YetkiliBilgiGetir(kullanici);
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (txtYSifre.UseSystemPasswordChar == false)
+                txtYSifre.UseSystemPasswordChar = true;
+            else if (txtYSifre.UseSystemPasswordChar == true)
+                txtYSifre.UseSystemPasswordChar = false;
         }
     }
 }

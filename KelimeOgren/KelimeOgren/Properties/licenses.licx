@@ -1,7 +1,11 @@
-DevExpress.XtraDataLayout.DataLayoutControl, DevExpress.XtraLayout.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.XtraTreeList.TreeList, DevExpress.XtraTreeList.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.XtraSpellChecker.SpellChecker, DevExpress.XtraSpellChecker.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.XtraEditors.ButtonEdit, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraBars.Ribbon.RibbonControl, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraSpellChecker.SpellChecker, DevExpress.XtraSpellChecker.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraCharts.ChartControl, DevExpress.XtraCharts.v16.2.UI, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraTreeList.TreeList, DevExpress.XtraTreeList.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraEditors.ButtonEdit, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraDataLayout.DataLayoutControl, DevExpress.XtraLayout.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a

@@ -19,7 +19,7 @@ namespace KelimeOgren
         {
         }
         public int[] Kontrol = new int[100];
-        double UyeId { get; set; }
+        public double UyeNo { get; set; }
         sqlBaglanti connect = new sqlBaglanti();
         public void OyunBilgileriniGetir(OyunOyna Oyunlar)
         {
@@ -88,6 +88,33 @@ namespace KelimeOgren
             Ekle.Parameters.AddWithValue("@p5", KullaniciID);
             Ekle.Parameters.AddWithValue("@p6", Sifre);
             Ekle.ExecuteNonQuery();
+            connect.baglanti().Close();
+        }
+        public override void KisiBilgiGetir(string kullaniciAdi)
+        {
+            SqlCommand UyeBilgiGetir = new SqlCommand("Select * From Tbl_Uye where KullaniciAdi=@p1", connect.baglanti());
+            UyeBilgiGetir.Parameters.AddWithValue("@p1",kullaniciAdi);
+            SqlDataReader dr = UyeBilgiGetir.ExecuteReader();
+            if (dr.Read())
+            {
+                Ad = dr[1].ToString();
+                Soyad = dr[2].ToString();
+                Mail = dr[4].ToString();
+                Telefon = dr[3].ToString();
+                KullaniciID = dr[5].ToString();
+                Sifre = dr[6].ToString();
+                UyeNo = Convert.ToInt32(dr[0]);
+            }
+            connect.baglanti().Close();
+        }
+        public override void KisiBilgiGuncelle()
+        {
+            SqlCommand UyeBilgiGuncelle = new SqlCommand("update Tbl_Uye set Telefon =@a1,Mail=@a2,Sifre=@a3 where UyeID=@a4", connect.baglanti());
+            UyeBilgiGuncelle.Parameters.AddWithValue("@a1", Telefon);
+            UyeBilgiGuncelle.Parameters.AddWithValue("@a2", Mail);
+            UyeBilgiGuncelle.Parameters.AddWithValue("@a3", Sifre);
+            UyeBilgiGuncelle.Parameters.AddWithValue("@a4", UyeNo);
+            UyeBilgiGuncelle.ExecuteNonQuery();
             connect.baglanti().Close();
         }
     }

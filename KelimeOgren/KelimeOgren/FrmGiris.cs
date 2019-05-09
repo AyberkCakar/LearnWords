@@ -45,10 +45,9 @@ namespace KelimeOgren
 
         private void FrmGiris_Load(object sender, EventArgs e)
         {
-
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void btnKayit_Click(object sender, EventArgs e)
         {
             FrmKayit frKayit = new FrmKayit();
             frKayit.Show();
@@ -60,32 +59,33 @@ namespace KelimeOgren
             {
                 
                 GirisServisi giris = new GirisServisi();
-                if (giris.GirisYap(txtKullaniciID.Text, txtSifre.Text) != null)
+                if (giris.GirisYap(txtKullaniciID.Text.ToLower(), txtSifre.Text) != null)
                 {
                     Form1 Uye = new Form1();
-                    Uye.kullanici = txtKullaniciID.Text;
+                    Uye.kullanici = txtKullaniciID.Text.ToLower();
                     Uye.Show();
                     this.Hide();
                 }
                 else
-                    MessageBox.Show("Hatalı Kullanıcı...");
+                    MessageBox.Show("Hatalı Kullanıcı...","Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
             }
             else if( rdbYetkili.Checked ==true)
             {
                 GirisServisi giris = new GirisServisi();
-                if( giris.GirisYapYetkili(txtKullaniciID.Text, txtSifre.Text) != null)
+                if( giris.GirisYapYetkili(txtKullaniciID.Text.ToLower(), txtSifre.Text) != null)
                 {
                     FrmYetkili Yetkili = new FrmYetkili();
+                    Yetkili.kullanici= txtKullaniciID.Text.ToLower();
                     Yetkili.Show();
                     this.Hide();
                 }
                 else
-                    MessageBox.Show("Hatalı Kullanıcı..."); 
+                    MessageBox.Show("Hatalı Kullanıcı...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information); 
             }
             else
             {
-                MessageBox.Show("Giriş Türü Seçiniz.");
+                MessageBox.Show("Giriş Türü Seçiniz.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

@@ -31,10 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmYetkili));
             this.btnYetkiliEVLA = new System.Windows.Forms.Button();
             this.btnYetkiliBilgi = new System.Windows.Forms.Button();
-            this.btnUyeler = new System.Windows.Forms.Button();
             this.btnCikis = new System.Windows.Forms.Button();
             this.btnKelimeEkle = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnYetkili = new System.Windows.Forms.Button();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
@@ -56,16 +55,11 @@
             this.label35 = new System.Windows.Forms.Label();
             this.picKelimeEkle = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
-            this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.button3 = new System.Windows.Forms.Button();
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtYetkiliNo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button12 = new System.Windows.Forms.Button();
+            this.btnYetkiliGuncelle = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.mskYTelefon = new System.Windows.Forms.MaskedTextBox();
@@ -82,6 +76,8 @@
             this.label20 = new System.Windows.Forms.Label();
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtUpKelimeID = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnWordUpdate = new System.Windows.Forms.Button();
@@ -104,8 +100,6 @@
             this.btnKelimeGuncelle = new System.Windows.Forms.Button();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.txtUpKelimeID = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -114,11 +108,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picKelimeEkle)).BeginInit();
-            this.xtraTabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.xtraTabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
@@ -139,7 +128,7 @@
             this.btnYetkiliEVLA.Location = new System.Drawing.Point(0, 0);
             this.btnYetkiliEVLA.Margin = new System.Windows.Forms.Padding(4);
             this.btnYetkiliEVLA.Name = "btnYetkiliEVLA";
-            this.btnYetkiliEVLA.Size = new System.Drawing.Size(264, 289);
+            this.btnYetkiliEVLA.Size = new System.Drawing.Size(264, 376);
             this.btnYetkiliEVLA.TabIndex = 19;
             this.btnYetkiliEVLA.Text = "English Vocabulary Learning App";
             this.btnYetkiliEVLA.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -162,23 +151,6 @@
             this.btnYetkiliBilgi.Text = "Bilgilerim";
             this.btnYetkiliBilgi.UseVisualStyleBackColor = true;
             this.btnYetkiliBilgi.Click += new System.EventHandler(this.btnYetkiliBilgi_Click);
-            // 
-            // btnUyeler
-            // 
-            this.btnUyeler.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnUyeler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUyeler.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUyeler.ForeColor = System.Drawing.Color.White;
-            this.btnUyeler.Image = ((System.Drawing.Image)(resources.GetObject("btnUyeler.Image")));
-            this.btnUyeler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUyeler.Location = new System.Drawing.Point(0, 464);
-            this.btnUyeler.Margin = new System.Windows.Forms.Padding(4);
-            this.btnUyeler.Name = "btnUyeler";
-            this.btnUyeler.Size = new System.Drawing.Size(264, 90);
-            this.btnUyeler.TabIndex = 20;
-            this.btnUyeler.Text = "Üyeler";
-            this.btnUyeler.UseVisualStyleBackColor = true;
-            this.btnUyeler.Click += new System.EventHandler(this.btnUyeler_Click);
             // 
             // btnCikis
             // 
@@ -205,7 +177,7 @@
             this.btnKelimeEkle.ForeColor = System.Drawing.Color.White;
             this.btnKelimeEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnKelimeEkle.Image")));
             this.btnKelimeEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKelimeEkle.Location = new System.Drawing.Point(0, 286);
+            this.btnKelimeEkle.Location = new System.Drawing.Point(0, 376);
             this.btnKelimeEkle.Margin = new System.Windows.Forms.Padding(4);
             this.btnKelimeEkle.Name = "btnKelimeEkle";
             this.btnKelimeEkle.Size = new System.Drawing.Size(264, 90);
@@ -214,19 +186,19 @@
             this.btnKelimeEkle.UseVisualStyleBackColor = true;
             this.btnKelimeEkle.Click += new System.EventHandler(this.btnKelimeEkle_Click);
             // 
-            // button5
+            // btnYetkili
             // 
-            this.button5.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(264, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(1157, 38);
-            this.button5.TabIndex = 22;
-            this.button5.Text = "Sayın Yetkili, Ayberk Çakar";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnYetkili.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnYetkili.FlatAppearance.BorderSize = 0;
+            this.btnYetkili.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYetkili.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnYetkili.ForeColor = System.Drawing.Color.White;
+            this.btnYetkili.Location = new System.Drawing.Point(264, 0);
+            this.btnYetkili.Name = "btnYetkili";
+            this.btnYetkili.Size = new System.Drawing.Size(1157, 38);
+            this.btnYetkili.TabIndex = 22;
+            this.btnYetkili.Text = "Sayın Yetkili, Ayberk Çakar";
+            this.btnYetkili.UseVisualStyleBackColor = false;
             // 
             // xtraTabControl1
             // 
@@ -238,7 +210,6 @@
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
             this.xtraTabPage2,
-            this.xtraTabPage3,
             this.xtraTabPage4,
             this.xtraTabPage5});
             // 
@@ -495,59 +466,6 @@
             this.button8.Text = "Kelime Ekle";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // xtraTabPage3
-            // 
-            this.xtraTabPage3.Controls.Add(this.panelControl2);
-            this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1151, 695);
-            this.xtraTabPage3.Text = "xtraTabPage3";
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.panelControl2.Appearance.Options.UseBackColor = true;
-            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.gridControl2);
-            this.panelControl2.Controls.Add(this.button3);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1151, 695);
-            this.panelControl2.TabIndex = 7;
-            // 
-            // gridControl2
-            // 
-            this.gridControl2.Location = new System.Drawing.Point(-1, 107);
-            this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1152, 588);
-            this.gridControl2.TabIndex = 57;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
-            // 
-            // gridView2
-            // 
-            this.gridView2.GridControl = this.gridControl2;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsView.ShowGroupPanel = false;
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(450, 10);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(316, 90);
-            this.button3.TabIndex = 56;
-            this.button3.Text = "Üyeler";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // xtraTabPage4
             // 
             this.xtraTabPage4.Controls.Add(this.panelControl4);
@@ -560,9 +478,9 @@
             this.panelControl4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.panelControl4.Appearance.Options.UseBackColor = true;
             this.panelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl4.Controls.Add(this.label1);
+            this.panelControl4.Controls.Add(this.txtYetkiliNo);
             this.panelControl4.Controls.Add(this.label2);
-            this.panelControl4.Controls.Add(this.button12);
+            this.panelControl4.Controls.Add(this.btnYetkiliGuncelle);
             this.panelControl4.Controls.Add(this.button11);
             this.panelControl4.Controls.Add(this.button13);
             this.panelControl4.Controls.Add(this.mskYTelefon);
@@ -583,43 +501,47 @@
             this.panelControl4.Size = new System.Drawing.Size(1151, 695);
             this.panelControl4.TabIndex = 7;
             // 
-            // label1
+            // txtYetkiliNo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(735, 238);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 22);
-            this.label1.TabIndex = 126;
+            this.txtYetkiliNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.txtYetkiliNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtYetkiliNo.Enabled = false;
+            this.txtYetkiliNo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtYetkiliNo.ForeColor = System.Drawing.Color.White;
+            this.txtYetkiliNo.Location = new System.Drawing.Point(738, 237);
+            this.txtYetkiliNo.Multiline = true;
+            this.txtYetkiliNo.Name = "txtYetkiliNo";
+            this.txtYetkiliNo.Size = new System.Drawing.Size(109, 29);
+            this.txtYetkiliNo.TabIndex = 126;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(645, 236);
+            this.label2.Location = new System.Drawing.Point(601, 236);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 24);
+            this.label2.Size = new System.Drawing.Size(107, 24);
             this.label2.TabIndex = 125;
-            this.label2.Text = "Yetki:";
+            this.label2.Text = "Yetkili No:";
             // 
-            // button12
+            // btnYetkiliGuncelle
             // 
-            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(406, 519);
-            this.button12.Margin = new System.Windows.Forms.Padding(4);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(373, 90);
-            this.button12.TabIndex = 124;
-            this.button12.Text = "Güncelle";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btnYetkiliGuncelle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnYetkiliGuncelle.FlatAppearance.BorderSize = 0;
+            this.btnYetkiliGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYetkiliGuncelle.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnYetkiliGuncelle.ForeColor = System.Drawing.Color.White;
+            this.btnYetkiliGuncelle.Image = ((System.Drawing.Image)(resources.GetObject("btnYetkiliGuncelle.Image")));
+            this.btnYetkiliGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnYetkiliGuncelle.Location = new System.Drawing.Point(406, 519);
+            this.btnYetkiliGuncelle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnYetkiliGuncelle.Name = "btnYetkiliGuncelle";
+            this.btnYetkiliGuncelle.Size = new System.Drawing.Size(373, 90);
+            this.btnYetkiliGuncelle.TabIndex = 124;
+            this.btnYetkiliGuncelle.Text = "Güncelle";
+            this.btnYetkiliGuncelle.UseVisualStyleBackColor = true;
+            this.btnYetkiliGuncelle.Click += new System.EventHandler(this.btnYetkiliGuncelle_Click);
             // 
             // button11
             // 
@@ -656,6 +578,7 @@
             this.button13.TabIndex = 122;
             this.button13.Text = "Şifre Göster / Gizle";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // mskYTelefon
             // 
@@ -830,6 +753,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1151, 695);
             this.panel1.TabIndex = 1;
+            // 
+            // txtUpKelimeID
+            // 
+            this.txtUpKelimeID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.txtUpKelimeID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpKelimeID.Enabled = false;
+            this.txtUpKelimeID.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUpKelimeID.ForeColor = System.Drawing.Color.White;
+            this.txtUpKelimeID.Location = new System.Drawing.Point(596, 463);
+            this.txtUpKelimeID.Multiline = true;
+            this.txtUpKelimeID.Name = "txtUpKelimeID";
+            this.txtUpKelimeID.Size = new System.Drawing.Size(60, 29);
+            this.txtUpKelimeID.TabIndex = 146;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.label19.Location = new System.Drawing.Point(493, 470);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(97, 22);
+            this.label19.TabIndex = 145;
+            this.label19.Text = "Kelime ID:";
             // 
             // gridControl1
             // 
@@ -1065,7 +1012,7 @@
             this.btnKelimeGuncelle.ForeColor = System.Drawing.Color.White;
             this.btnKelimeGuncelle.Image = ((System.Drawing.Image)(resources.GetObject("btnKelimeGuncelle.Image")));
             this.btnKelimeGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKelimeGuncelle.Location = new System.Drawing.Point(0, 374);
+            this.btnKelimeGuncelle.Location = new System.Drawing.Point(0, 464);
             this.btnKelimeGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnKelimeGuncelle.Name = "btnKelimeGuncelle";
             this.btnKelimeGuncelle.Size = new System.Drawing.Size(264, 90);
@@ -1088,44 +1035,19 @@
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 1;
             // 
-            // txtUpKelimeID
-            // 
-            this.txtUpKelimeID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.txtUpKelimeID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUpKelimeID.Enabled = false;
-            this.txtUpKelimeID.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUpKelimeID.ForeColor = System.Drawing.Color.White;
-            this.txtUpKelimeID.Location = new System.Drawing.Point(596, 463);
-            this.txtUpKelimeID.Multiline = true;
-            this.txtUpKelimeID.Name = "txtUpKelimeID";
-            this.txtUpKelimeID.Size = new System.Drawing.Size(60, 29);
-            this.txtUpKelimeID.TabIndex = 146;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.label19.Location = new System.Drawing.Point(493, 470);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(97, 22);
-            this.label19.TabIndex = 145;
-            this.label19.Text = "Kelime ID:";
-            // 
             // FrmYetkili
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1420, 736);
+            this.Controls.Add(this.btnYetkili);
             this.Controls.Add(this.btnKelimeGuncelle);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.btnKelimeEkle);
             this.Controls.Add(this.btnYetkiliEVLA);
             this.Controls.Add(this.btnYetkiliBilgi);
-            this.Controls.Add(this.btnUyeler);
             this.Controls.Add(this.btnCikis);
-            this.Controls.Add(this.button5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -1142,11 +1064,6 @@
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picKelimeEkle)).EndInit();
-            this.xtraTabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.xtraTabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
@@ -1165,22 +1082,18 @@
 
         private System.Windows.Forms.Button btnYetkiliEVLA;
         private System.Windows.Forms.Button btnYetkiliBilgi;
-        private System.Windows.Forms.Button btnUyeler;
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.Button btnKelimeEkle;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnYetkili;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
         private DevExpress.XtraEditors.PanelControl panelControl4;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnYetkiliGuncelle;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.MaskedTextBox mskYTelefon;
@@ -1210,7 +1123,6 @@
         private System.Windows.Forms.TextBox txtTuru;
         private System.Windows.Forms.TextBox txtIngilizce;
         private System.Windows.Forms.TextBox txtKelime;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox txtResim;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage5;
@@ -1236,9 +1148,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.GridControl gridControl2;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private System.Windows.Forms.TextBox txtUpKelimeID;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtYetkiliNo;
     }
 }

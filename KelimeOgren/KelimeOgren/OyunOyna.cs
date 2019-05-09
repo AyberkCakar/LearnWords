@@ -39,8 +39,7 @@ namespace KelimeOgren
                 return true;
             }
             else
-                return false;
-            
+                return false;      
         }
     }
 }

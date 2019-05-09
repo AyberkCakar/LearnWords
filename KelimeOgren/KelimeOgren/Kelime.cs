@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace KelimeOgren
 {
-    public class Kelime : IOrneklenebilir ,ITersCevir, ITamamlanan
+    public class Kelime : IOrneklenebilir
     {
         public int KelimeId { get; set; }
         public int KelimeKontrol { get; set; }
@@ -17,10 +17,6 @@ namespace KelimeOgren
         public string OrnCumle { get; set; }
         public string TurkceCumle { get; set; }
         public string Resim { get; set; }
-        public void TersCevir()
-        {
-
-        }
 
         public List<Kelime> Kelimeler = new List<Kelime>();
         public List<Kelime> OgrendigimKelimeler = new List<Kelime>();
@@ -49,7 +45,7 @@ namespace KelimeOgren
                 {
                     if (kelime.KelimeId == uye.Kontrol[i])
                     {
-                        break;
+                        continue;
                     }
                     else
                     {

@@ -94,7 +94,7 @@
             this.btnKayit.Name = "btnKayit";
             this.btnKayit.Size = new System.Drawing.Size(319, 52);
             this.btnKayit.TabIndex = 91;
-            this.btnKayit.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.btnKayit.Click += new System.EventHandler(this.btnKayit_Click);
             // 
             // btnGiris
             // 

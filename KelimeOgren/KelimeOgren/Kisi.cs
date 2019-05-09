@@ -15,5 +15,8 @@ namespace KelimeOgren
         public string KullaniciID { get; set; }
         public string Sifre { get; set; }
         public abstract void KisiEkle();
+        public abstract void KisiBilgiGetir(string kullaniciAdi);
+        public abstract void KisiBilgiGuncelle();
+
     }
 }

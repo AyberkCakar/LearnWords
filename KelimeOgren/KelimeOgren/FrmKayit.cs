@@ -48,7 +48,7 @@ namespace KelimeOgren
                 newUye.KullaniciID = txtKullaniciID.Text;
                 newUye.Sifre = txtSifre.Text;
                 newUye.KisiEkle();
-                MessageBox.Show("Üye Eklendi...");
+                MessageBox.Show("Üye Eklendi...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else if (rdbYetkili.Checked == true)
@@ -62,11 +62,11 @@ namespace KelimeOgren
                 newYetkili.KullaniciID = txtKullaniciID.Text;
                 newYetkili.Sifre = txtSifre.Text;
                 newYetkili.KisiEkle();
-                MessageBox.Show("Yetkili Eklendi...");
+                MessageBox.Show("Yetkili Eklendi...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else
-                MessageBox.Show("Kayıt türü seçiniz");
+                MessageBox.Show("Kayıt türü seçiniz", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

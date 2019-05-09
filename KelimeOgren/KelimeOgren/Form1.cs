@@ -16,13 +16,12 @@ namespace KelimeOgren
         {
             InitializeComponent();
         }
-        public string kullanici { get; set; }
+        public string kullanici;
         Kelime kelime = new Kelime();
         OyunOyna oyun1 = new OyunOyna();
         private void Form1_Load(object sender, EventArgs e)
         {
             Uye oyun = new Uye(kullanici);
-            btnUye.Text="Sayin Üyemiz,  "+kullanici+ "   Hoş Geldiniz...";
             RadioSıfırla();
             kelime.KelimeOgren(oyun);
             KelimeGetir(0);
@@ -38,7 +37,6 @@ namespace KelimeOgren
         private void btnKelimeOgren_Click(object sender, EventArgs e)
         {
             xtraTabControl1.SelectedTabPageIndex = 1;
-            KelimeOgrenmeKaydet(0);
         }
 
         private void btnOgrenmismiyim_Click(object sender, EventArgs e)
@@ -51,11 +49,13 @@ namespace KelimeOgren
         {
             xtraTabControl1.SelectedTabPageIndex = 3;
             GridTamamlananlarDoldur();
+            YıllıkIstatistik();
         }
 
         private void btnBilgi_Click(object sender, EventArgs e)
         {
             xtraTabControl1.SelectedTabPageIndex = 4;
+            UyeBilgiGetir(kullanici);
         }
 
         private void btnCikis_Click(object sender, EventArgs e)
@@ -341,6 +341,15 @@ namespace KelimeOgren
             oyun1.KullanıcıID = oyun.kullaniciAdi;
             oyun.OyunBilgileriniUpdate(oyun1);
         }
+
+        private void btnSifreGoster_Click(object sender, EventArgs e)
+        {
+            if (txtUSifre.UseSystemPasswordChar == false)
+                txtUSifre.UseSystemPasswordChar = true;
+            else if (txtUSifre.UseSystemPasswordChar == true)
+                txtUSifre.UseSystemPasswordChar = false;
+        }
+
         void RastgeleKelime(string kelime)
         {
             Kelime word = new Kelime();
@@ -372,6 +381,20 @@ namespace KelimeOgren
                 }
             }
         }
+
+        private void btnUyeGuncelle_Click(object sender, EventArgs e)
+        {
+            UyeBilgiGuncelle();
+            UyeBilgiGetir(kullanici);
+        }
+
+        private void btnOgrenmeyeBasla_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
+            btnOgrenmeyeBasla.Visible = false;
+            KelimeOgrenmeKaydet(0);
+        }
+
         void GridTamamlananlarDoldur()
         {
             DataTable tablo = new DataTable();
@@ -386,8 +409,162 @@ namespace KelimeOgren
                 tablo.Rows.Add(game.KelimeID, game.Kelime, game.Ingilizce, game.Resim, game.Dt,game.KelimeSeviyesi);
                 gridControl2.DataSource = tablo;
             }
-            oyun1.TamamlananKelimeler.Clear();
             gridView2.OptionsBehavior.Editable = false;
+        }
+
+        private void btnGrafikOlustur_Click(object sender, EventArgs e)
+        {
+            AylıkIstatislik(Convert.ToInt32(cmbYıl.SelectedItem));
+        }
+
+        void UyeBilgiGetir(string kullaniciAdi)
+        {
+            Uye UyeBilgi = new Uye(kullanici);
+            UyeBilgi.KisiBilgiGetir(kullanici);
+            txtUAd.Text = UyeBilgi.Ad;
+            txtUSoyad.Text = UyeBilgi.Soyad;
+            txtUMail.Text = UyeBilgi.Mail;
+            txtUSifre.Text = UyeBilgi.Sifre;
+            mskUTelefon.Text = UyeBilgi.Telefon;
+            lblUID.Text = UyeBilgi.KullaniciID;
+            txtUNo.Text = UyeBilgi.UyeNo.ToString();
+            btnUye.Text= "Sayın Üyemiz, " + UyeBilgi.Ad + " " + UyeBilgi.Soyad;
+        }
+        void UyeBilgiGuncelle()
+        {
+            Uye UyeBilgi = new Uye(kullanici);
+            UyeBilgi.Mail=txtUMail.Text;
+            UyeBilgi.Sifre= txtUSifre.Text;
+            UyeBilgi.Telefon= mskUTelefon.Text;
+            UyeBilgi.UyeNo = Convert.ToInt32(txtUNo.Text);
+            UyeBilgi.KisiBilgiGuncelle();
+            MessageBox.Show("Uye Bilgileri Güncellendi...","Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        void YıllıkIstatistik()
+        {
+            chartControl1.Series["Yıl"].Points.Clear();
+            int yıl2018 = 0,yıl2019=0, yıl2020 = 0, yıl2021 = 0, yıl2022 = 0, yıl2023 = 0, yıl2024 = 0;
+            foreach (OyunOyna game in oyun1.TamamlananKelimeler)
+            {
+                if(game.Dt.Year==2018)
+                {
+                    yıl2018++;
+                }
+                else if(game.Dt.Year == 2019)
+                {
+                    yıl2019++;
+                }
+                else if (game.Dt.Year == 2020)
+                {
+                    yıl2020++;
+                }
+                else if (game.Dt.Year == 2021)
+                {
+                    yıl2021++;
+                }
+                else if (game.Dt.Year == 2022)
+                {
+                    yıl2022++;
+                }
+                else if (game.Dt.Year == 2023)
+                {
+                    yıl2023++;
+                }
+                else if (game.Dt.Year == 2024)
+                {
+                    yıl2024++;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            chartControl1.Series["Yıl"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("2018", yıl2018));
+            chartControl1.Series["Yıl"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("2019", yıl2019));
+            chartControl1.Series["Yıl"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("2020", yıl2020));
+            chartControl1.Series["Yıl"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("2021", yıl2021));
+            chartControl1.Series["Yıl"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("2022", yıl2022));
+            chartControl1.Series["Yıl"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("2023", yıl2023));
+            chartControl1.Series["Yıl"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("2024", yıl2024));
+        }
+        void AylıkIstatislik(int Yıl)
+        {
+            chartControl2.Series["Ay"].Points.Clear();
+            int AyOcak = 0, AySubat = 0, AyMart = 0, AyNisan = 0, AyMayis = 0, AyHaziran = 0, AyTemmuz = 0, AyAgustos = 0, AyEylul = 0, AyEkim = 0, AyKasim = 0, AyAralik = 0;
+            foreach (OyunOyna game in oyun1.TamamlananKelimeler)
+            {
+                if(game.Dt.Year == Yıl)
+                {
+                    if (game.Dt.Month == 01)
+                    {
+                        AyOcak++;
+                    }
+                    else if (game.Dt.Month == 02)
+                    {
+                        AySubat++;
+                    }
+                    else if (game.Dt.Month == 03)
+                    {
+                        AyMart++;
+                    }
+                    else if (game.Dt.Month == 04)
+                    {
+                        AyNisan++;
+                    }
+                    else if (game.Dt.Month == 05)
+                    {
+                        AyMayis++;
+                    }
+                    else if (game.Dt.Month == 06)
+                    {
+                        AyHaziran++;
+                    }
+                    else if (game.Dt.Month == 07)
+                    {
+                        AyTemmuz++;
+                    }
+                    else if (game.Dt.Month == 08)
+                    {
+                        AyAgustos++;
+                    }
+                    else if (game.Dt.Month == 09)
+                    {
+                        AyEylul++;
+                    }
+                    else if (game.Dt.Month == 10)
+                    {
+                        AyEkim++;
+                    }
+                    else if (game.Dt.Month == 11)
+                    {
+                        AyKasim++;
+                    }
+                    else if (game.Dt.Month == 12)
+                    {
+                        AyAralik++;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("İstenilen Yıl Bilgisine Ulaşılamadı", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            chartControl2.Series["Ay"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Ocak", AyOcak));
+            chartControl2.Series["Ay"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Şubat", AySubat));
+            chartControl2.Series["Ay"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Mart", AyMart));
+            chartControl2.Series["Ay"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Nisan", AyNisan));
+            chartControl2.Series["Ay"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Mayıs", AyMayis));
+            chartControl2.Series["Ay"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Haziran", AyHaziran));
+            chartControl2.Series["Ay"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Temmuz", AyTemmuz));
+            chartControl2.Series["Ay"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Ağustos", AyAgustos));
+            chartControl2.Series["Ay"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Eylül", AyEylul));
+            chartControl2.Series["Ay"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Ekim", AyEkim));
+            chartControl2.Series["Ay"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Kasım", AyKasim));
+            chartControl2.Series["Ay"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Aralık", AyAralik));
         }
     }
 }
