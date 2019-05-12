@@ -20,6 +20,7 @@ namespace KelimeOgren
 
         public List<Kelime> Kelimeler = new List<Kelime>();
         public List<Kelime> OgrendigimKelimeler = new List<Kelime>();
+        public List<Kelime> TumKelimeler = new List<Kelime>();
         int say=0;
         public void KelimeOgren(Uye uye)
         {
@@ -31,7 +32,6 @@ namespace KelimeOgren
             SqlDataReader Dtr = select.ExecuteReader();
             while (Dtr.Read())
             {
-
                 Kelime kelime = new Kelime();
                 kelime.KelimeKontrol = say;
                 kelime.KelimeId = Convert.ToInt32(Dtr[0]);
@@ -53,9 +53,21 @@ namespace KelimeOgren
                         say++;
                         break;
                     }
-                        
                 }
-
+            }
+        }
+        public void TumKelime(Uye uye)
+        {
+            sqlBaglanti connect = new sqlBaglanti();
+            SqlCommand select = new SqlCommand("select * from Tbl_Kelime ", connect.baglanti());
+            SqlDataReader Dtr = select.ExecuteReader();
+            while (Dtr.Read())
+            {
+                Kelime kelime = new Kelime();
+                kelime.KelimeId = Convert.ToInt32(Dtr[0]);
+                kelime.Turkce = Dtr[1].ToString();
+                kelime.Ingilizce = Dtr[2].ToString();
+                TumKelimeler.Add(kelime);
             }
         }
         public void YetkiliKelime()

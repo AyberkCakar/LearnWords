@@ -16,19 +16,18 @@ namespace KelimeOgren
         {
             InitializeComponent();
         }
-        public string kullanici;
+        public string kullanici; // Giris Bilgileri için kullanıcı id tutuyoruz.
         Kelime kelime = new Kelime();
-        OyunOyna oyun1 = new OyunOyna();
+        OyunOyna Oyun = new OyunOyna();
         private void Form1_Load(object sender, EventArgs e)
         {
-            Uye oyun = new Uye(kullanici);
-            RadioSıfırla();
-            kelime.KelimeOgren(oyun);
-            KelimeGetir(0);
-            oyun.OyunBilgileriniGetir(oyun1);
-
+            Uye UyeOyun = new Uye(kullanici);
+            kelime.TumKelime(UyeOyun); //Form yüklendiğinde Kontrol Oyunundaki şıklar için bütün kelimeleri TümKelimeler List'ine çekiyoruz.
+            kelime.KelimeOgren(UyeOyun); // Form Yüklendiğinde üyenin öğrenmediği kelimeler List'e Yükleniyor.
+            KelimeGetir(0); // Form yüklenince ilk kelimeyi gerekli yerlere doldur.
+            UyeOyun.OyunBilgileriniGetir(Oyun); //Üyenin öğrendiği kelimeleri getir.
+            UyeBilgiGetir(kullanici); //Form Yüklendiğinde üyenin bilgilerini getir.
         }
-        int sayi, kontrol=0;
         private void btnEVLA_Click(object sender, EventArgs e)
         {
             xtraTabControl1.SelectedTabPageIndex = 0;
@@ -48,27 +47,28 @@ namespace KelimeOgren
         private void btnOgrendiklerim_Click(object sender, EventArgs e)
         {
             xtraTabControl1.SelectedTabPageIndex = 3;
-            GridTamamlananlarDoldur();
-            YıllıkIstatistik();
+            GridTamamlananlarDoldur();  //Tamamladığım kelimeleri ( seviye 5) Gridde doldur.
+            YıllıkIstatistik(); 
+            SonHaftaIstatislik();
         }
 
         private void btnBilgi_Click(object sender, EventArgs e)
         {
             xtraTabControl1.SelectedTabPageIndex = 4;
-            UyeBilgiGetir(kullanici);
+            UyeBilgiGetir(kullanici); //Üyenin Bilgilerini Butona tıklayınca Getir (Her seferinde update (yenileme) sağlam
         }
 
         private void btnCikis_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        int sayac = 0, MaxCount;
+        int kelimeKontrol = 0, MaxCount;
 
         void KelimeGetir(int say)
         {
             Kelime kelime = new Kelime();
             kelime= this.kelime.UyeKelimeOgren(say);
-            MaxCount = this.kelime.Kelimeler.Count();
+            MaxCount = this.kelime.TumKelimeler.Count();
             lblTur.Text =kelime.Turu;
             lblKelime.Text = kelime.Turkce;
             lblIng.Text = kelime.Ingilizce;
@@ -78,40 +78,40 @@ namespace KelimeOgren
         }
         void KelimeOgrenmeKaydet(int say)
         {
-            Uye oyun = new Uye(kullanici);
+            Uye UyeOyun = new Uye(kullanici);
             DateTime dt = DateTime.Today;
             Kelime kelime = new Kelime();
             kelime = this.kelime.UyeKelimeOgren(say);
-            oyun1.KelimeID = kelime.KelimeId;
-            oyun1.Kelime = kelime.Turkce;
-            oyun1.Ingilizce = kelime.Ingilizce;
-            oyun1.Resim = kelime.Resim;
-            oyun1.KullanıcıID = oyun.kullaniciAdi;
-            oyun1.Dt = dt;
-            oyun1.KelimeSeviyesi = 1;
-            oyun.OyunBilgisiGir(oyun1);
+            Oyun.KelimeID = kelime.KelimeId;
+            Oyun.Kelime = kelime.Turkce;
+            Oyun.Ingilizce = kelime.Ingilizce;
+            Oyun.Resim = kelime.Resim;
+            Oyun.KullanıcıID = UyeOyun.kullaniciAdi;
+            Oyun.Dt = dt;
+            Oyun.KelimeSeviyesi = 1;
+            UyeOyun.OyunBilgisiGir(Oyun);
         }
         private void btnOgrenBack_Click(object sender, EventArgs e)
         {
-            sayac--;
-            if(sayac==-1)
+            kelimeKontrol--;
+            if(kelimeKontrol ==-1)
             {
-                sayac = 0;
+                kelimeKontrol = 0;
             }
             else
             {
-                KelimeGetir(sayac);
+                KelimeGetir(kelimeKontrol );
             }  
         }
         private void btnOgrenNext_Click(object sender, EventArgs e)
         {
-            sayac++;
-            if (sayac >= kelime.Kelimeler.Count()  || sayac == kelime.Kelimeler.Count() )
-                sayac = kelime.Kelimeler.Count() - 1;
+            kelimeKontrol++;
+            if (kelimeKontrol >= kelime.Kelimeler.Count()  || kelimeKontrol == kelime.Kelimeler.Count() )
+                kelimeKontrol = kelime.Kelimeler.Count() - 1;
             else
             {
-                KelimeGetir(sayac);
-                KelimeOgrenmeKaydet(sayac);
+                KelimeGetir(kelimeKontrol);
+                KelimeOgrenmeKaydet(kelimeKontrol);
             }
         }
         int saniye = 15;
@@ -154,10 +154,11 @@ namespace KelimeOgren
         }
         string[] RastgeleKelimeler = new string[3];
         int kelimeID, Seviye;
+        int sayi, kontrol = 0;
         void KelimeOyunu()
         {
 
-            if (oyun1.Game.Count < kontrol)
+            if (Oyun.Game.Count < kontrol)
             {
                 btnKelimeNext.Enabled = false;
                 panel1.Visible = true;
@@ -166,7 +167,7 @@ namespace KelimeOgren
             else
             {
                 OyunOyna GameBasla = new OyunOyna();
-                GameBasla = this.oyun1.Oyun(kontrol);
+                GameBasla = this.Oyun.Oyun(kontrol);
                 RastgeleKelime(GameBasla.Ingilizce);
                 Random rd = new Random();
                 sayi = rd.Next(1, 5);
@@ -323,23 +324,23 @@ namespace KelimeOgren
         }
         void KelimeKontrolUpdateTrue(int KelimeID,int Kademe)
         {
-            Uye oyun = new Uye(kullanici);
+            Uye UyeOyun = new Uye(kullanici);
             DateTime dt = DateTime.Today;
-            oyun1.KelimeID = KelimeID;
-            oyun1.KelimeSeviyesi = Kademe + 1;
-            oyun1.Dt = Convert.ToDateTime(dt);
-            oyun1.KullanıcıID = oyun.kullaniciAdi;
-            oyun.OyunBilgileriniUpdate(oyun1);
+            Oyun.KelimeID = KelimeID;
+            Oyun.KelimeSeviyesi = Kademe + 1;
+            Oyun.Dt = Convert.ToDateTime(dt);
+            Oyun.KullanıcıID = UyeOyun.kullaniciAdi;
+            UyeOyun.OyunBilgileriniUpdate(Oyun);
         }
         void KelimeKontrolUpdateFalse(int KelimeID, int Kademe)
         {
-            Uye oyun = new Uye(kullanici);
+            Uye UyeOyun = new Uye(kullanici);
             DateTime dt = DateTime.Today;
-            oyun1.KelimeID = KelimeID;
-            oyun1.KelimeSeviyesi = 1;
-            oyun1.Dt = Convert.ToDateTime(dt);
-            oyun1.KullanıcıID = oyun.kullaniciAdi;
-            oyun.OyunBilgileriniUpdate(oyun1);
+            Oyun.KelimeID = KelimeID;
+            Oyun.KelimeSeviyesi = 1;
+            Oyun.Dt = Convert.ToDateTime(dt);
+            Oyun.KullanıcıID = UyeOyun.kullaniciAdi;
+            UyeOyun.OyunBilgileriniUpdate(Oyun);
         }
 
         private void btnSifreGoster_Click(object sender, EventArgs e)
@@ -352,14 +353,13 @@ namespace KelimeOgren
 
         void RastgeleKelime(string kelime)
         {
-            Kelime word = new Kelime();
-            word = this.kelime;
+            Kelime word = this.kelime;
             int randomm, sayac=0;
             for (int i = 0; i < 3; i++)
             {
                 Random random = new Random();
                 randomm = random.Next(0, MaxCount + 1);
-                foreach (Kelime klm in word.Kelimeler)
+                foreach (Kelime klm in word.TumKelimeler)
                 {
                     if (sayac == randomm)
                     {
@@ -404,7 +404,7 @@ namespace KelimeOgren
             tablo.Columns.Add("Resim", typeof(string));
             tablo.Columns.Add("Tarih", typeof(DateTime));
             tablo.Columns.Add("Kelime Seviyesi", typeof(string));
-            foreach (OyunOyna game in oyun1.TamamlananKelimeler)
+            foreach (OyunOyna game in Oyun.TamamlananKelimeler)
             {
                 tablo.Rows.Add(game.KelimeID, game.Kelime, game.Ingilizce, game.Resim, game.Dt,game.KelimeSeviyesi);
                 gridControl2.DataSource = tablo;
@@ -444,7 +444,7 @@ namespace KelimeOgren
         {
             chartControl1.Series["Yıl"].Points.Clear();
             int yıl2018 = 0,yıl2019=0, yıl2020 = 0, yıl2021 = 0, yıl2022 = 0, yıl2023 = 0, yıl2024 = 0;
-            foreach (OyunOyna game in oyun1.TamamlananKelimeler)
+            foreach (OyunOyna game in Oyun.TamamlananKelimeler)
             {
                 if(game.Dt.Year==2018)
                 {
@@ -491,7 +491,7 @@ namespace KelimeOgren
         {
             chartControl2.Series["Ay"].Points.Clear();
             int AyOcak = 0, AySubat = 0, AyMart = 0, AyNisan = 0, AyMayis = 0, AyHaziran = 0, AyTemmuz = 0, AyAgustos = 0, AyEylul = 0, AyEkim = 0, AyKasim = 0, AyAralik = 0;
-            foreach (OyunOyna game in oyun1.TamamlananKelimeler)
+            foreach (OyunOyna game in Oyun.TamamlananKelimeler)
             {
                 if(game.Dt.Year == Yıl)
                 {
@@ -550,7 +550,7 @@ namespace KelimeOgren
                 }
                 else
                 {
-                    MessageBox.Show("İstenilen Yıl Bilgisine Ulaşılamadı", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    continue;
                 }
             }
             chartControl2.Series["Ay"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Ocak", AyOcak));
@@ -565,6 +565,54 @@ namespace KelimeOgren
             chartControl2.Series["Ay"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Ekim", AyEkim));
             chartControl2.Series["Ay"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Kasım", AyKasim));
             chartControl2.Series["Ay"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Aralık", AyAralik));
+        }
+        void SonHaftaIstatislik()
+        {
+            DateTime today = DateTime.Now;
+            chartControl3.Series["Gün"].Points.Clear();
+            int GunPazartesi = 0, GunSali = 0, GunCarsamba = 0, GunPersembe = 0, GunCuma = 0, GunCumartesi = 0, GunPazar = 0;
+            foreach (OyunOyna game in Oyun.TamamlananKelimeler)
+            {
+                if (DayOfWeek.Monday == game.Dt.DayOfWeek)
+                {
+                    GunPazartesi++;
+                }
+                else if (DayOfWeek.Tuesday == game.Dt.DayOfWeek)
+                {
+                    GunSali++;
+                }
+                else if (DayOfWeek.Wednesday == game.Dt.DayOfWeek)
+                {
+                    GunCarsamba++;
+                }
+                else if (DayOfWeek.Thursday == game.Dt.DayOfWeek)
+                {
+                    GunPersembe++;
+                }
+                else if (DayOfWeek.Friday == game.Dt.DayOfWeek)
+                {
+                    GunCuma++;
+                }
+                else if (DayOfWeek.Saturday==game.Dt.DayOfWeek)
+                {
+                    GunCumartesi++;
+                }
+                else if (DayOfWeek.Sunday == game.Dt.DayOfWeek)
+                {
+                    GunPazar++;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            chartControl3.Series["Gün"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Pazartesi", GunPazartesi));
+            chartControl3.Series["Gün"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Salı", GunSali));
+            chartControl3.Series["Gün"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Çarşamba", GunCarsamba));
+            chartControl3.Series["Gün"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Perşembe", GunPersembe));
+            chartControl3.Series["Gün"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Cuma", GunCuma));
+            chartControl3.Series["Gün"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Cumartesi", GunCumartesi));
+            chartControl3.Series["Gün"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Pazar", GunPazar));
         }
     }
 }

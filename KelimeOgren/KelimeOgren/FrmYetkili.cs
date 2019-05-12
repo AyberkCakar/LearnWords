@@ -128,13 +128,13 @@ namespace KelimeOgren
         {
             openFileDialog1.ShowDialog();
             picUpdate.ImageLocation = openFileDialog1.FileName;
-            txtResim.Text = openFileDialog1.FileName;
+            txtUpResim.Text = openFileDialog1.FileName;
             kelime.Resim = openFileDialog1.FileName;
         }
 
         private void FrmYetkili_Load(object sender, EventArgs e)
         {
-
+            YetkiliBilgiGetir(kullanici);
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
