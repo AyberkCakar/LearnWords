@@ -14,32 +14,34 @@ namespace KelimeOgren
         public string Ingilizce { get; set; }
         public string Resim { get; set; }
         public string KullanıcıID { get; set; }
-        public DateTime Dt { get; set; }
+        public DateTime Date { get; set; }
         public int KelimeSeviyesi { get; set; }
-        public List<OyunOyna> Game = new List<OyunOyna>();
-        public List<OyunOyna> TamamlananKelimeler = new List<OyunOyna>();
+        public List<OyunOyna> Game = new List<OyunOyna>(); //Oynaya bileceği kelimelerin Listesi
+        public List<OyunOyna> TamamlananKelimeler = new List<OyunOyna>(); // Tamamen öğrenilen Kelimeler
         public OyunOyna Oyun(int _sayac)
         {
-            foreach (OyunOyna oyn in Game)
+            foreach (OyunOyna oyun in Game)
             {
-                if (oyn.KelimeSira == _sayac)
+                if (oyun.KelimeSira == _sayac)
                 {
-                    return oyn;
+                    return oyun;
                 }
             }
             return null;
         }
-        public bool ZamanHesapla(DateTime dt, int KelimeSeviyesi)
+        public bool ZamanHesapla(DateTime date, int KelimeSeviyesi) //Kelimelerin seviye'ye göre ki  Bekleme gün sayılarını kontrol ediyoruz.
         {
-            DateTime da = DateTime.Parse(dt.ToLongDateString());
-            TimeSpan fark = DateTime.Today - da;
-            int fa = Convert.ToInt32(fark.TotalDays.ToString());
-            if ((KelimeSeviyesi == 1 && fa >= 1 )|| (KelimeSeviyesi == 2 && fa >= 2) ||( KelimeSeviyesi == 3 &&fa >= 3 )|| (KelimeSeviyesi == 4 && fa >= 4))
+            DateTime zaman  = DateTime.Parse(date.ToLongDateString());
+            TimeSpan dateFark = DateTime.Today - zaman;
+            int gunFark = Convert.ToInt32(dateFark.TotalDays.ToString());
+            if ((KelimeSeviyesi == 1 && gunFark >= 1 )|| (KelimeSeviyesi == 2 && gunFark >= 2) ||( KelimeSeviyesi == 3 && gunFark >= 3 )|| (KelimeSeviyesi == 4 && gunFark >= 4))
             {
                 return true;
             }
             else
-                return false;      
+            {
+                return false;
+            }
         }
     }
 }

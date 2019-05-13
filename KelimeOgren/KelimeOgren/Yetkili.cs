@@ -46,7 +46,7 @@ namespace KelimeOgren
             update.ExecuteNonQuery();
             connect.baglanti().Close();
         }
-        public override void KisiEkle()
+        public override void KisiEkle() // Yeni yetkili kayıtı yap.
         {
             SqlCommand Ekle = new SqlCommand("insert into Tbl_Yetkili (YetkiliAd,Soyad,Telefon,Mail,KullaniciAdi,Sifre,Yetki) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)", connect.baglanti());
             Ekle.Parameters.AddWithValue("@p1", Ad);
@@ -59,7 +59,7 @@ namespace KelimeOgren
             Ekle.ExecuteNonQuery();
             connect.baglanti().Close();
         }
-        public override void KisiBilgiGetir(string kullaniciID)
+        public override void KisiBilgiGetir(string kullaniciID) //Yetkilinin Bilgilerini Getir.
         {
             SqlCommand UyeBilgiGetir = new SqlCommand("Select * From Tbl_Yetkili where KullaniciAdi=@p1", connect.baglanti());
             UyeBilgiGetir.Parameters.AddWithValue("@p1", kullaniciAdi);
@@ -76,7 +76,7 @@ namespace KelimeOgren
                 YetkiliNo = Convert.ToInt32(dr[0]);
             }
         }
-        public override void KisiBilgiGuncelle()
+        public override void KisiBilgiGuncelle() //Yetkili bilgilerini Güncelle
         {
             SqlCommand UyeBilgiGuncelle = new SqlCommand("update Tbl_Yetkili set Telefon =@a1,Mail=@a2,Sifre=@a3 where YetkiliID=@a4", connect.baglanti());
             UyeBilgiGuncelle.Parameters.AddWithValue("@a1", Telefon);

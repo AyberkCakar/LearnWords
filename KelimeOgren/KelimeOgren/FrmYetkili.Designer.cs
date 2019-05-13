@@ -41,8 +41,8 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.txtResim = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnYeniResimEkle = new System.Windows.Forms.Button();
+            this.btnYeniEkle = new System.Windows.Forms.Button();
             this.txtTurkceCumle = new System.Windows.Forms.TextBox();
             this.txtOrnCumle = new System.Windows.Forms.TextBox();
             this.txtTuru = new System.Windows.Forms.TextBox();
@@ -61,7 +61,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnYetkiliGuncelle = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
+            this.btnSifreGoster = new System.Windows.Forms.Button();
             this.mskYTelefon = new System.Windows.Forms.MaskedTextBox();
             this.txtYMail = new System.Windows.Forms.TextBox();
             this.txtYSoyad = new System.Windows.Forms.TextBox();
@@ -84,7 +84,7 @@
             this.picUpdate = new System.Windows.Forms.PictureBox();
             this.txtUpResim = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnResimGuncelle = new System.Windows.Forms.Button();
             this.txtUpTurkCumle = new System.Windows.Forms.TextBox();
             this.txtUpOrnCumle = new System.Windows.Forms.TextBox();
             this.txtUpTur = new System.Windows.Forms.TextBox();
@@ -197,7 +197,7 @@
             this.btnYetkili.Name = "btnYetkili";
             this.btnYetkili.Size = new System.Drawing.Size(1157, 38);
             this.btnYetkili.TabIndex = 22;
-            this.btnYetkili.Text = "Sayın Yetkili, Ayberk Çakar";
+            this.btnYetkili.Text = "Sayın Yetkili,";
             this.btnYetkili.UseVisualStyleBackColor = false;
             // 
             // xtraTabControl1
@@ -245,8 +245,8 @@
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.Controls.Add(this.txtResim);
             this.panelControl1.Controls.Add(this.label5);
-            this.panelControl1.Controls.Add(this.button2);
-            this.panelControl1.Controls.Add(this.button1);
+            this.panelControl1.Controls.Add(this.btnYeniResimEkle);
+            this.panelControl1.Controls.Add(this.btnYeniEkle);
             this.panelControl1.Controls.Add(this.txtTurkceCumle);
             this.panelControl1.Controls.Add(this.txtOrnCumle);
             this.panelControl1.Controls.Add(this.txtTuru);
@@ -288,41 +288,41 @@
             this.label5.TabIndex = 127;
             this.label5.Text = "Resim Ekle:";
             // 
-            // button2
+            // btnYeniResimEkle
             // 
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatAppearance.BorderSize = 3;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(218, 606);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(51, 57);
-            this.button2.TabIndex = 126;
-            this.button2.Text = "...";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnYeniResimEkle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnYeniResimEkle.FlatAppearance.BorderSize = 3;
+            this.btnYeniResimEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYeniResimEkle.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnYeniResimEkle.ForeColor = System.Drawing.Color.White;
+            this.btnYeniResimEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnYeniResimEkle.Location = new System.Drawing.Point(218, 606);
+            this.btnYeniResimEkle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnYeniResimEkle.Name = "btnYeniResimEkle";
+            this.btnYeniResimEkle.Size = new System.Drawing.Size(51, 57);
+            this.btnYeniResimEkle.TabIndex = 126;
+            this.btnYeniResimEkle.Text = "...";
+            this.btnYeniResimEkle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnYeniResimEkle.UseVisualStyleBackColor = true;
+            this.btnYeniResimEkle.Click += new System.EventHandler(this.btnYeniResimEkle_Click);
             // 
-            // button1
+            // btnYeniEkle
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(889, 573);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(238, 90);
-            this.button1.TabIndex = 125;
-            this.button1.Text = "Ekle";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnYeniEkle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnYeniEkle.FlatAppearance.BorderSize = 0;
+            this.btnYeniEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYeniEkle.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnYeniEkle.ForeColor = System.Drawing.Color.White;
+            this.btnYeniEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnYeniEkle.Image")));
+            this.btnYeniEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnYeniEkle.Location = new System.Drawing.Point(889, 573);
+            this.btnYeniEkle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnYeniEkle.Name = "btnYeniEkle";
+            this.btnYeniEkle.Size = new System.Drawing.Size(238, 90);
+            this.btnYeniEkle.TabIndex = 125;
+            this.btnYeniEkle.Text = "Ekle";
+            this.btnYeniEkle.UseVisualStyleBackColor = true;
+            this.btnYeniEkle.Click += new System.EventHandler(this.btnYeniEkle_Click);
             // 
             // txtTurkceCumle
             // 
@@ -482,7 +482,7 @@
             this.panelControl4.Controls.Add(this.label2);
             this.panelControl4.Controls.Add(this.btnYetkiliGuncelle);
             this.panelControl4.Controls.Add(this.button11);
-            this.panelControl4.Controls.Add(this.button13);
+            this.panelControl4.Controls.Add(this.btnSifreGoster);
             this.panelControl4.Controls.Add(this.mskYTelefon);
             this.panelControl4.Controls.Add(this.txtYMail);
             this.panelControl4.Controls.Add(this.txtYSoyad);
@@ -560,25 +560,25 @@
             this.button11.Text = "Hesap Bilgilerim";
             this.button11.UseVisualStyleBackColor = true;
             // 
-            // button13
+            // btnSifreGoster
             // 
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.Location = new System.Drawing.Point(761, 368);
-            this.button13.Margin = new System.Windows.Forms.Padding(4);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(176, 31);
-            this.button13.TabIndex = 122;
-            this.button13.Text = "Şifre Göster / Gizle";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.btnSifreGoster.FlatAppearance.BorderSize = 0;
+            this.btnSifreGoster.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnSifreGoster.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSifreGoster.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSifreGoster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSifreGoster.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSifreGoster.ForeColor = System.Drawing.Color.White;
+            this.btnSifreGoster.Image = ((System.Drawing.Image)(resources.GetObject("btnSifreGoster.Image")));
+            this.btnSifreGoster.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSifreGoster.Location = new System.Drawing.Point(761, 368);
+            this.btnSifreGoster.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSifreGoster.Name = "btnSifreGoster";
+            this.btnSifreGoster.Size = new System.Drawing.Size(176, 31);
+            this.btnSifreGoster.TabIndex = 122;
+            this.btnSifreGoster.Text = "Şifre Göster / Gizle";
+            this.btnSifreGoster.UseVisualStyleBackColor = true;
+            this.btnSifreGoster.Click += new System.EventHandler(this.btnSifreGoster_Click);
             // 
             // mskYTelefon
             // 
@@ -736,7 +736,7 @@
             this.panel1.Controls.Add(this.picUpdate);
             this.panel1.Controls.Add(this.txtUpResim);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.btnResimGuncelle);
             this.panel1.Controls.Add(this.txtUpTurkCumle);
             this.panel1.Controls.Add(this.txtUpOrnCumle);
             this.panel1.Controls.Add(this.txtUpTur);
@@ -850,23 +850,23 @@
             this.label6.TabIndex = 140;
             this.label6.Text = "Resim Ekle:";
             // 
-            // button6
+            // btnResimGuncelle
             // 
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button6.FlatAppearance.BorderSize = 3;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(188, 644);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(51, 47);
-            this.button6.TabIndex = 139;
-            this.button6.Text = "...";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnResimGuncelle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnResimGuncelle.FlatAppearance.BorderSize = 3;
+            this.btnResimGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResimGuncelle.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnResimGuncelle.ForeColor = System.Drawing.Color.White;
+            this.btnResimGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnResimGuncelle.Location = new System.Drawing.Point(188, 644);
+            this.btnResimGuncelle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnResimGuncelle.Name = "btnResimGuncelle";
+            this.btnResimGuncelle.Size = new System.Drawing.Size(51, 47);
+            this.btnResimGuncelle.TabIndex = 139;
+            this.btnResimGuncelle.Text = "...";
+            this.btnResimGuncelle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnResimGuncelle.UseVisualStyleBackColor = true;
+            this.btnResimGuncelle.Click += new System.EventHandler(this.btnResimGuncelle_Click);
             // 
             // txtUpTurkCumle
             // 
@@ -1095,7 +1095,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnYetkiliGuncelle;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button btnSifreGoster;
         private System.Windows.Forms.MaskedTextBox mskYTelefon;
         private System.Windows.Forms.TextBox txtYMail;
         private System.Windows.Forms.TextBox txtYSoyad;
@@ -1116,8 +1116,8 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.PictureBox picKelimeEkle;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnYeniResimEkle;
+        private System.Windows.Forms.Button btnYeniEkle;
         private System.Windows.Forms.TextBox txtTurkceCumle;
         private System.Windows.Forms.TextBox txtOrnCumle;
         private System.Windows.Forms.TextBox txtTuru;
@@ -1133,7 +1133,7 @@
         private System.Windows.Forms.PictureBox picUpdate;
         private System.Windows.Forms.TextBox txtUpResim;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnResimGuncelle;
         private System.Windows.Forms.TextBox txtUpTurkCumle;
         private System.Windows.Forms.TextBox txtUpOrnCumle;
         private System.Windows.Forms.TextBox txtUpTur;

@@ -684,7 +684,7 @@
         24K0xvbC9IJ7pVnWFyUzAzDT+hes8/KH1w+6ggAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnYeniEkle.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEsAAABLCAYAAAA4TnrqAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAF9VJREFUeF7tmwdQnNe1gM/E8ZvYzkuexy95k0le/DQpYzuWRC/L0kH0zrL0ztKW
@@ -1142,7 +1142,7 @@
         VOYqhax6lCD1hSVV9Yiuzn79VigHUqVrD6Z3CdP/AlVOSp7iXqj+AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button13.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnSifreGoster.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAABDlJREFUOE91k2tMm1UYx58E9AMkRjdwUK+Zftri1CyaEZZgBBYuuzlMXDa3ZBoT

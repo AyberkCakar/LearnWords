@@ -41,12 +41,12 @@ namespace KelimeOgren
             this.Close();
         }
         Kelime kelime = new Kelime();
-        private void button2_Click(object sender, EventArgs e)
+        private void btnYeniResimEkle_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            picKelimeEkle.ImageLocation = openFileDialog1.FileName;
-            txtResim.Text = openFileDialog1.FileName;
-            kelime.Resim = openFileDialog1.FileName;
+            openFileDialog1.ShowDialog(); //Resim seçme penceresini aç
+            picKelimeEkle.ImageLocation = openFileDialog1.FileName; //Seçilen resmi görüntüle
+            txtResim.Text = openFileDialog1.FileName;  //Seçilen resmin adresini aktar
+            kelime.Resim = openFileDialog1.FileName; //Seçilen resmin adresini aktar
         }
         void KelimeEkle()
         {
@@ -97,7 +97,7 @@ namespace KelimeOgren
             openFileDialog1.FileName = null;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnYeniEkle_Click(object sender, EventArgs e)
         {
             KelimeEkle();
             MessageBox.Show("Yeni Kelime Eklenmiştir...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -114,9 +114,9 @@ namespace KelimeOgren
             tablo.Columns.Add("Örnek Cümle", typeof(string));
             tablo.Columns.Add("Cümle Türkçe", typeof(string));
             tablo.Columns.Add("Resim", typeof(string));
-            foreach (Kelime klm in kelime.Kelimeler)
+            foreach (Kelime word in kelime.Kelimeler)
             {
-                tablo.Rows.Add(klm.KelimeId, klm.Turkce, klm.Ingilizce, klm.Turu, klm.OrnCumle, klm.TurkceCumle, klm.Resim);
+                tablo.Rows.Add(word.KelimeId, word.Turkce, word.Ingilizce, word.Turu, word.OrnCumle, word.TurkceCumle, word.Resim);
                 gridControl1.DataSource = tablo;
             }
             kelime.Kelimeler.Clear();
@@ -124,21 +124,20 @@ namespace KelimeOgren
         }
 
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnResimGuncelle_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            picUpdate.ImageLocation = openFileDialog1.FileName;
-            txtUpResim.Text = openFileDialog1.FileName;
-            kelime.Resim = openFileDialog1.FileName;
+            openFileDialog1.ShowDialog();  //Resim seçme penceresini aç
+            picUpdate.ImageLocation = openFileDialog1.FileName;  //Seçilen resmi görüntüle
+            txtUpResim.Text = openFileDialog1.FileName;  //Seçilen resmin adresini aktar
+            kelime.Resim = openFileDialog1.FileName; //Seçilen resmin adresini aktar
         }
-
         private void FrmYetkili_Load(object sender, EventArgs e)
         {
             YetkiliBilgiGetir(kullanici);
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
+        {                                                                   //Gridden seçilen satırı gerekli yerlere doldur.(Kelime bilgilerini göster)
             DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
             txtUpKelimeID.Text = Convert.ToInt32(dr[0]).ToString();
             txtUpKelime.Text = dr[1].ToString();
@@ -185,13 +184,16 @@ namespace KelimeOgren
             YetkiliBilgiGuncelle();
             YetkiliBilgiGetir(kullanici);
         }
-
-        private void button13_Click(object sender, EventArgs e)
+        private void btnSifreGoster_Click(object sender, EventArgs e)
         {
             if (txtYSifre.UseSystemPasswordChar == false)
+            {
                 txtYSifre.UseSystemPasswordChar = true;
+            }
             else if (txtYSifre.UseSystemPasswordChar == true)
+            {
                 txtYSifre.UseSystemPasswordChar = false;
+            }
         }
     }
 }

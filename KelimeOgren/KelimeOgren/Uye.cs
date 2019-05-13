@@ -18,33 +18,30 @@ namespace KelimeOgren
         public Uye()
         {
         }
-        public int[] Kontrol = new int[100];
-        public double UyeNo { get; set; }
+        public double UyeNo { get; set; } //Üyenin sırası
         sqlBaglanti connect = new sqlBaglanti();
-        public void OyunBilgileriniGetir(OyunOyna Oyunlar)
+        public void OyunBilgileriniGetir(OyunOyna Oyunlar)  //Kullanıcının id'sine göre öğrendiği kelimeleri getiriyoruz.
         {
-            
-            int sayac = 1;
+            int KelimeSayac = 1;
             SqlCommand command = new SqlCommand("Select * From Tbl_Oyun where KullaniciID= @a1 ", connect.baglanti());
             command.Parameters.AddWithValue("@a1", kullaniciAdi);
             SqlDataReader dr = command.ExecuteReader();
             while(dr.Read())
             {
                 OyunOyna Oyun = new OyunOyna();
-                Oyun.KelimeSira = sayac;
+                Oyun.KelimeSira = KelimeSayac;
                 Oyun.KelimeID = Convert.ToInt32( dr[0]);
                 Oyun.Kelime = dr[1].ToString();
                 Oyun.Ingilizce = dr[2].ToString();
                 Oyun.Resim = dr[3].ToString();
-                Oyun.Dt = Convert.ToDateTime(dr[5]);
+                Oyun.Date = Convert.ToDateTime(dr[5]);
                 Oyun.KelimeSeviyesi = Convert.ToInt32(dr[6]);
-                if(Oyun.ZamanHesapla(Oyun.Dt, Oyun.KelimeSeviyesi)==true)
+                if(Oyun.ZamanHesapla(Oyun.Date, Oyun.KelimeSeviyesi)==true) //Zaman Hesapla Methodu ile kontrol ediyoruz.Zamanının gelip gelmediğini
                 {
                     Oyunlar.Game.Add(Oyun);
-                    Kontrol[sayac] = Convert.ToInt32(Oyun.KelimeID);
-                    sayac++;
+                    KelimeSayac++;
                 }
-                else if(Oyun.KelimeSeviyesi == 5)
+                else if(Oyun.KelimeSeviyesi == 5) //Kelime seviyesi 5 olmuş ise Kelime öğrenildi(tamamlandı) kabul edilir.
                 {
                     Oyunlar.TamamlananKelimeler.Add(Oyun);
                 }
@@ -60,7 +57,7 @@ namespace KelimeOgren
             SqlCommand Update = new SqlCommand("Update Tbl_Oyun set Tarih=@p3,Kademe=@p4 where KullaniciID=@p2 and KelimeID=@p1",connect.baglanti());
             Update.Parameters.AddWithValue("@p1", Oyun.KelimeID);
             Update.Parameters.AddWithValue("@p2", Oyun.KullanıcıID);
-            Update.Parameters.AddWithValue("@p3", Oyun.Dt);
+            Update.Parameters.AddWithValue("@p3", Oyun.Date);
             Update.Parameters.AddWithValue("@p4", Oyun.KelimeSeviyesi);
             Update.ExecuteNonQuery();
             connect.baglanti().Close();
@@ -73,7 +70,7 @@ namespace KelimeOgren
             insert.Parameters.AddWithValue("@a3", Oyun.Ingilizce);
             insert.Parameters.AddWithValue("@a4", Oyun.Resim);
             insert.Parameters.AddWithValue("@a5", Oyun.KullanıcıID);
-            insert.Parameters.AddWithValue("@a6", Oyun.Dt);
+            insert.Parameters.AddWithValue("@a6", Oyun.Date);
             insert.Parameters.AddWithValue("@a7", Oyun.KelimeSeviyesi);
             insert.ExecuteNonQuery();
             connect.baglanti().Close();

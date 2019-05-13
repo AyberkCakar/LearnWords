@@ -18,22 +18,21 @@ namespace KelimeOgren
         public string TurkceCumle { get; set; }
         public string Resim { get; set; }
 
-        public List<Kelime> Kelimeler = new List<Kelime>();
-        public List<Kelime> OgrendigimKelimeler = new List<Kelime>();
-        public List<Kelime> TumKelimeler = new List<Kelime>();
-        int say=0;
-        public void KelimeOgren(Uye uye)
+        public List<Kelime> Kelimeler = new List<Kelime>(); //Kişinin Öğrenebileceği kelimeler
+        public List<Kelime> OgrendigimKelimeler = new List<Kelime>(); // Kisinin öğrenmeye başladığı kelimeler 
+        public List<Kelime> TumKelimeler = new List<Kelime>(); //Tüm Kelimeler
+        sqlBaglanti connect = new sqlBaglanti();
+        int kelimeSayac=0;
+        public void KelimeOgren(Uye uye) //Üyenin kullanıcıID'sine göre öğrenmediği kelimeleri List'e alıyoruz.
         {
             OyunOyna oyun = new OyunOyna();
-            uye.OyunBilgileriniGetir(oyun);
-            sqlBaglanti connect = new sqlBaglanti();
             SqlCommand select = new SqlCommand("select * from Tbl_Kelime where not KelimeId in (select KelimeID from Tbl_Oyun where KullaniciID=@a1) ", connect.baglanti());
             select.Parameters.AddWithValue("@a1", uye.kullaniciAdi);
             SqlDataReader Dtr = select.ExecuteReader();
             while (Dtr.Read())
             {
                 Kelime kelime = new Kelime();
-                kelime.KelimeKontrol = say;
+                kelime.KelimeKontrol = kelimeSayac;
                 kelime.KelimeId = Convert.ToInt32(Dtr[0]);
                 kelime.Turkce = Dtr[1].ToString();
                 kelime.Ingilizce = Dtr[2].ToString();
@@ -41,24 +40,12 @@ namespace KelimeOgren
                 kelime.OrnCumle = Dtr[4].ToString();
                 kelime.TurkceCumle = Dtr[5].ToString();
                 kelime.Resim = Dtr[6].ToString();
-                for(int i=say;i<uye.Kontrol.Length;i++)
-                {
-                    if (kelime.KelimeId == uye.Kontrol[i])
-                    {
-                        continue;
-                    }
-                    else
-                    {
-                        Kelimeler.Add(kelime);
-                        say++;
-                        break;
-                    }
-                }
+                Kelimeler.Add(kelime);
+                kelimeSayac++;
             }
         }
-        public void TumKelime(Uye uye)
+        public void TumKelime(Uye uye) // Üye Oyun oynarken rastgele şık oluşturmak için bütün kelimeler liste alınır.
         {
-            sqlBaglanti connect = new sqlBaglanti();
             SqlCommand select = new SqlCommand("select * from Tbl_Kelime ", connect.baglanti());
             SqlDataReader Dtr = select.ExecuteReader();
             while (Dtr.Read())
@@ -70,15 +57,14 @@ namespace KelimeOgren
                 TumKelimeler.Add(kelime);
             }
         }
-        public void YetkiliKelime()
+        public void YetkiliKelime() //Yetkili tüm kelimeleri görür
         {
-            sqlBaglanti connect = new sqlBaglanti();
             SqlCommand select = new SqlCommand("select * from Tbl_Kelime order by KelimeId" , connect.baglanti());
             SqlDataReader Dtr = select.ExecuteReader();
             while (Dtr.Read())
             {
                 Kelime kelime = new Kelime();
-                kelime.KelimeKontrol = say;
+                kelime.KelimeKontrol = kelimeSayac;
                 kelime.KelimeId = Convert.ToInt32(Dtr[0]);
                 kelime.Turkce = Dtr[1].ToString();
                 kelime.Ingilizce = Dtr[2].ToString();
@@ -89,14 +75,16 @@ namespace KelimeOgren
                 Kelimeler.Add(kelime);
             }
         }
-        public Kelime UyeKelimeOgren(int _sayac)
+        public Kelime UyeKelimeOgren(int _sayac) //Butonun KontrolSayacındaki değere eşit olan Kelimeyi alıyorum.
         {
-            foreach(Kelime klm in Kelimeler)
+            foreach(Kelime kelime in Kelimeler)
             {
-                if (klm.KelimeKontrol==_sayac)
+                if (kelime.KelimeKontrol == _sayac)
                 {
-                    return klm;
-                }                
+                    return kelime;
+                }
+                else
+                    continue;
             }
             return null;
          }

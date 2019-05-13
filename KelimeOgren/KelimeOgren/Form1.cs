@@ -87,22 +87,11 @@ namespace KelimeOgren
             Oyun.Ingilizce = kelime.Ingilizce;
             Oyun.Resim = kelime.Resim;
             Oyun.KullanıcıID = UyeOyun.kullaniciAdi;
-            Oyun.Dt = dt;
+            Oyun.Date = dt;
             Oyun.KelimeSeviyesi = 1;
             UyeOyun.OyunBilgisiGir(Oyun);
         }
-        private void btnOgrenBack_Click(object sender, EventArgs e)
-        {
-            kelimeKontrol--;
-            if(kelimeKontrol ==-1)
-            {
-                kelimeKontrol = 0;
-            }
-            else
-            {
-                KelimeGetir(kelimeKontrol );
-            }  
-        }
+
         private void btnOgrenNext_Click(object sender, EventArgs e)
         {
             kelimeKontrol++;
@@ -328,7 +317,7 @@ namespace KelimeOgren
             DateTime dt = DateTime.Today;
             Oyun.KelimeID = KelimeID;
             Oyun.KelimeSeviyesi = Kademe + 1;
-            Oyun.Dt = Convert.ToDateTime(dt);
+            Oyun.Date = Convert.ToDateTime(dt);
             Oyun.KullanıcıID = UyeOyun.kullaniciAdi;
             UyeOyun.OyunBilgileriniUpdate(Oyun);
         }
@@ -338,7 +327,7 @@ namespace KelimeOgren
             DateTime dt = DateTime.Today;
             Oyun.KelimeID = KelimeID;
             Oyun.KelimeSeviyesi = 1;
-            Oyun.Dt = Convert.ToDateTime(dt);
+            Oyun.Date = Convert.ToDateTime(dt);
             Oyun.KullanıcıID = UyeOyun.kullaniciAdi;
             UyeOyun.OyunBilgileriniUpdate(Oyun);
         }
@@ -406,7 +395,7 @@ namespace KelimeOgren
             tablo.Columns.Add("Kelime Seviyesi", typeof(string));
             foreach (OyunOyna game in Oyun.TamamlananKelimeler)
             {
-                tablo.Rows.Add(game.KelimeID, game.Kelime, game.Ingilizce, game.Resim, game.Dt,game.KelimeSeviyesi);
+                tablo.Rows.Add(game.KelimeID, game.Kelime, game.Ingilizce, game.Resim, game.Date,game.KelimeSeviyesi);
                 gridControl2.DataSource = tablo;
             }
             gridView2.OptionsBehavior.Editable = false;
@@ -440,37 +429,40 @@ namespace KelimeOgren
             UyeBilgi.KisiBilgiGuncelle();
             MessageBox.Show("Uye Bilgileri Güncellendi...","Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+
+
         void YıllıkIstatistik()
         {
             chartControl1.Series["Yıl"].Points.Clear();
             int yıl2018 = 0,yıl2019=0, yıl2020 = 0, yıl2021 = 0, yıl2022 = 0, yıl2023 = 0, yıl2024 = 0;
             foreach (OyunOyna game in Oyun.TamamlananKelimeler)
             {
-                if(game.Dt.Year==2018)
+                if(game.Date.Year==2018)
                 {
                     yıl2018++;
                 }
-                else if(game.Dt.Year == 2019)
+                else if(game.Date.Year == 2019)
                 {
                     yıl2019++;
                 }
-                else if (game.Dt.Year == 2020)
+                else if (game.Date.Year == 2020)
                 {
                     yıl2020++;
                 }
-                else if (game.Dt.Year == 2021)
+                else if (game.Date.Year == 2021)
                 {
                     yıl2021++;
                 }
-                else if (game.Dt.Year == 2022)
+                else if (game.Date.Year == 2022)
                 {
                     yıl2022++;
                 }
-                else if (game.Dt.Year == 2023)
+                else if (game.Date.Year == 2023)
                 {
                     yıl2023++;
                 }
-                else if (game.Dt.Year == 2024)
+                else if (game.Date.Year == 2024)
                 {
                     yıl2024++;
                 }
@@ -493,53 +485,53 @@ namespace KelimeOgren
             int AyOcak = 0, AySubat = 0, AyMart = 0, AyNisan = 0, AyMayis = 0, AyHaziran = 0, AyTemmuz = 0, AyAgustos = 0, AyEylul = 0, AyEkim = 0, AyKasim = 0, AyAralik = 0;
             foreach (OyunOyna game in Oyun.TamamlananKelimeler)
             {
-                if(game.Dt.Year == Yıl)
+                if(game.Date.Year == Yıl)
                 {
-                    if (game.Dt.Month == 01)
+                    if (game.Date.Month == 01)
                     {
                         AyOcak++;
                     }
-                    else if (game.Dt.Month == 02)
+                    else if (game.Date.Month == 02)
                     {
                         AySubat++;
                     }
-                    else if (game.Dt.Month == 03)
+                    else if (game.Date.Month == 03)
                     {
                         AyMart++;
                     }
-                    else if (game.Dt.Month == 04)
+                    else if (game.Date.Month == 04)
                     {
                         AyNisan++;
                     }
-                    else if (game.Dt.Month == 05)
+                    else if (game.Date.Month == 05)
                     {
                         AyMayis++;
                     }
-                    else if (game.Dt.Month == 06)
+                    else if (game.Date.Month == 06)
                     {
                         AyHaziran++;
                     }
-                    else if (game.Dt.Month == 07)
+                    else if (game.Date.Month == 07)
                     {
                         AyTemmuz++;
                     }
-                    else if (game.Dt.Month == 08)
+                    else if (game.Date.Month == 08)
                     {
                         AyAgustos++;
                     }
-                    else if (game.Dt.Month == 09)
+                    else if (game.Date.Month == 09)
                     {
                         AyEylul++;
                     }
-                    else if (game.Dt.Month == 10)
+                    else if (game.Date.Month == 10)
                     {
                         AyEkim++;
                     }
-                    else if (game.Dt.Month == 11)
+                    else if (game.Date.Month == 11)
                     {
                         AyKasim++;
                     }
-                    else if (game.Dt.Month == 12)
+                    else if (game.Date.Month == 12)
                     {
                         AyAralik++;
                     }
@@ -568,36 +560,35 @@ namespace KelimeOgren
         }
         void SonHaftaIstatislik()
         {
-            DateTime today = DateTime.Now;
             chartControl3.Series["Gün"].Points.Clear();
             int GunPazartesi = 0, GunSali = 0, GunCarsamba = 0, GunPersembe = 0, GunCuma = 0, GunCumartesi = 0, GunPazar = 0;
             foreach (OyunOyna game in Oyun.TamamlananKelimeler)
             {
-                if (DayOfWeek.Monday == game.Dt.DayOfWeek)
+                if (DayOfWeek.Monday == game.Date.DayOfWeek)
                 {
                     GunPazartesi++;
                 }
-                else if (DayOfWeek.Tuesday == game.Dt.DayOfWeek)
+                else if (DayOfWeek.Tuesday == game.Date.DayOfWeek)
                 {
                     GunSali++;
                 }
-                else if (DayOfWeek.Wednesday == game.Dt.DayOfWeek)
+                else if (DayOfWeek.Wednesday == game.Date.DayOfWeek)
                 {
                     GunCarsamba++;
                 }
-                else if (DayOfWeek.Thursday == game.Dt.DayOfWeek)
+                else if (DayOfWeek.Thursday == game.Date.DayOfWeek)
                 {
                     GunPersembe++;
                 }
-                else if (DayOfWeek.Friday == game.Dt.DayOfWeek)
+                else if (DayOfWeek.Friday == game.Date.DayOfWeek)
                 {
                     GunCuma++;
                 }
-                else if (DayOfWeek.Saturday==game.Dt.DayOfWeek)
+                else if (DayOfWeek.Saturday==game.Date.DayOfWeek)
                 {
                     GunCumartesi++;
                 }
-                else if (DayOfWeek.Sunday == game.Dt.DayOfWeek)
+                else if (DayOfWeek.Sunday == game.Date.DayOfWeek)
                 {
                     GunPazar++;
                 }

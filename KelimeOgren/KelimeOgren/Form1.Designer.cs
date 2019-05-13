@@ -36,6 +36,9 @@
             DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.StackedBarSeriesView stackedBarSeriesView2 = new DevExpress.XtraCharts.StackedBarSeriesView();
+            DevExpress.XtraCharts.XYDiagram xyDiagram3 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.StackedBarSeriesView stackedBarSeriesView3 = new DevExpress.XtraCharts.StackedBarSeriesView();
             DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn chartControlCommandGalleryItemGroup2DColumn1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn();
             DevExpress.XtraCharts.UI.CreateBarChartItem createBarChartItem1 = new DevExpress.XtraCharts.UI.CreateBarChartItem();
             DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem createFullStackedBarChartItem1 = new DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem();
@@ -250,9 +253,6 @@
             DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt chartControlCommandGalleryItemGroupGantt2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt();
             DevExpress.XtraCharts.UI.CreateGanttChartItem createGanttChartItem2 = new DevExpress.XtraCharts.UI.CreateGanttChartItem();
             DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem createSideBySideGanttChartItem2 = new DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem();
-            DevExpress.XtraCharts.XYDiagram xyDiagram3 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.StackedBarSeriesView stackedBarSeriesView3 = new DevExpress.XtraCharts.StackedBarSeriesView();
             this.cmbYıl = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnEVLA = new System.Windows.Forms.Button();
@@ -275,7 +275,6 @@
             this.lblTur = new System.Windows.Forms.Label();
             this.lblIng = new System.Windows.Forms.Label();
             this.lblKelime = new System.Windows.Forms.Label();
-            this.btnOgrenBack = new DevExpress.XtraEditors.SimpleButton();
             this.btnOgrenNext = new DevExpress.XtraEditors.SimpleButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -318,6 +317,8 @@
             this.btnGrafikOlustur = new DevExpress.XtraEditors.SimpleButton();
             this.label6 = new System.Windows.Forms.Label();
             this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
+            this.xtraTabPage9 = new DevExpress.XtraTab.XtraTabPage();
+            this.chartControl3 = new DevExpress.XtraCharts.ChartControl();
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.btnSifreGoster = new System.Windows.Forms.Button();
@@ -353,8 +354,6 @@
             this.commandBarGalleryDropDown12 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.commandBarGalleryDropDown13 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.commandBarGalleryDropDown14 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
-            this.xtraTabPage9 = new DevExpress.XtraTab.XtraTabPage();
-            this.chartControl3 = new DevExpress.XtraCharts.ChartControl();
             ((System.ComponentModel.ISupportInitialize)(this.cmbYıl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -393,6 +392,11 @@
             ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesView2)).BeginInit();
+            this.xtraTabPage9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesView3)).BeginInit();
             this.xtraTabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
@@ -411,11 +415,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown14)).BeginInit();
-            this.xtraTabPage9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesView3)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbYıl
@@ -620,7 +619,6 @@
             this.panelControl1.Controls.Add(this.lblTur);
             this.panelControl1.Controls.Add(this.lblIng);
             this.panelControl1.Controls.Add(this.lblKelime);
-            this.panelControl1.Controls.Add(this.btnOgrenBack);
             this.panelControl1.Controls.Add(this.btnOgrenNext);
             this.panelControl1.Controls.Add(this.label4);
             this.panelControl1.Controls.Add(this.label3);
@@ -733,26 +731,6 @@
             this.lblKelime.Size = new System.Drawing.Size(60, 24);
             this.lblKelime.TabIndex = 62;
             this.lblKelime.Text = "Kitap";
-            // 
-            // btnOgrenBack
-            // 
-            this.btnOgrenBack.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.btnOgrenBack.Appearance.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.btnOgrenBack.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnOgrenBack.Appearance.Options.UseBackColor = true;
-            this.btnOgrenBack.Appearance.Options.UseFont = true;
-            this.btnOgrenBack.Appearance.Options.UseForeColor = true;
-            this.btnOgrenBack.AppearancePressed.BackColor = System.Drawing.Color.Gray;
-            this.btnOgrenBack.AppearancePressed.Options.UseBackColor = true;
-            this.btnOgrenBack.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.btnOgrenBack.Image = ((System.Drawing.Image)(resources.GetObject("btnOgrenBack.Image")));
-            this.btnOgrenBack.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnOgrenBack.Location = new System.Drawing.Point(40, 577);
-            this.btnOgrenBack.Name = "btnOgrenBack";
-            this.btnOgrenBack.Size = new System.Drawing.Size(123, 108);
-            this.btnOgrenBack.TabIndex = 61;
-            this.btnOgrenBack.Text = "Back";
-            this.btnOgrenBack.Click += new System.EventHandler(this.btnOgrenBack_Click);
             // 
             // btnOgrenNext
             // 
@@ -1323,6 +1301,64 @@
         series2};
             this.chartControl2.Size = new System.Drawing.Size(711, 651);
             this.chartControl2.TabIndex = 0;
+            // 
+            // xtraTabPage9
+            // 
+            this.xtraTabPage9.Controls.Add(this.chartControl3);
+            this.xtraTabPage9.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage9.Image")));
+            this.xtraTabPage9.Name = "xtraTabPage9";
+            this.xtraTabPage9.Size = new System.Drawing.Size(954, 651);
+            this.xtraTabPage9.Text = "Son Haftalık İstatistik";
+            // 
+            // chartControl3
+            // 
+            this.chartControl3.AppearanceNameSerializable = "Dark";
+            this.chartControl3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.chartControl3.BorderOptions.Color = System.Drawing.Color.RosyBrown;
+            this.chartControl3.DataBindings = null;
+            xyDiagram3.AxisX.MinorCount = 1;
+            xyDiagram3.AxisX.NumericScaleOptions.AutoGrid = false;
+            xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram3.AxisX.VisualRange.Auto = false;
+            xyDiagram3.AxisX.VisualRange.AutoSideMargins = false;
+            xyDiagram3.AxisX.VisualRange.MaxValueSerializable = "7";
+            xyDiagram3.AxisX.VisualRange.MinValueSerializable = "0";
+            xyDiagram3.AxisX.VisualRange.SideMarginsValue = 0.4D;
+            xyDiagram3.AxisX.WholeRange.Auto = false;
+            xyDiagram3.AxisX.WholeRange.AutoSideMargins = false;
+            xyDiagram3.AxisX.WholeRange.MaxValueSerializable = "7";
+            xyDiagram3.AxisX.WholeRange.MinValueSerializable = "0";
+            xyDiagram3.AxisX.WholeRange.SideMarginsValue = 0.5D;
+            xyDiagram3.AxisY.MinorCount = 1;
+            xyDiagram3.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram3.AxisY.VisualRange.Auto = false;
+            xyDiagram3.AxisY.VisualRange.AutoSideMargins = false;
+            xyDiagram3.AxisY.VisualRange.MaxValueSerializable = "100";
+            xyDiagram3.AxisY.VisualRange.MinValueSerializable = "0";
+            xyDiagram3.AxisY.VisualRange.SideMarginsValue = 0D;
+            xyDiagram3.AxisY.WholeRange.Auto = false;
+            xyDiagram3.AxisY.WholeRange.AutoSideMargins = false;
+            xyDiagram3.AxisY.WholeRange.MaxValueSerializable = "100";
+            xyDiagram3.AxisY.WholeRange.MinValueSerializable = "0";
+            xyDiagram3.AxisY.WholeRange.SideMarginsValue = 0D;
+            xyDiagram3.DefaultPane.BackColor = System.Drawing.Color.Transparent;
+            xyDiagram3.DefaultPane.BorderColor = System.Drawing.Color.White;
+            xyDiagram3.PaneLayoutDirection = DevExpress.XtraCharts.PaneLayoutDirection.Horizontal;
+            this.chartControl3.Diagram = xyDiagram3;
+            this.chartControl3.EmptyChartText.TextColor = System.Drawing.Color.White;
+            this.chartControl3.Legend.Name = "Default Legend";
+            this.chartControl3.Location = new System.Drawing.Point(2, 0);
+            this.chartControl3.Name = "chartControl3";
+            this.chartControl3.PaletteName = "Aspect";
+            series3.Name = "Gün";
+            stackedBarSeriesView3.ColorEach = true;
+            stackedBarSeriesView3.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Hatch;
+            series3.View = stackedBarSeriesView3;
+            this.chartControl3.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series3};
+            this.chartControl3.Size = new System.Drawing.Size(951, 651);
+            this.chartControl3.SmallChartText.TextColor = System.Drawing.Color.White;
+            this.chartControl3.TabIndex = 1;
             // 
             // xtraTabPage5
             // 
@@ -2767,64 +2803,6 @@
             this.commandBarGalleryDropDown14.Name = "commandBarGalleryDropDown14";
             this.commandBarGalleryDropDown14.Ribbon = this.ribbonControl1;
             // 
-            // xtraTabPage9
-            // 
-            this.xtraTabPage9.Controls.Add(this.chartControl3);
-            this.xtraTabPage9.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage9.Image")));
-            this.xtraTabPage9.Name = "xtraTabPage9";
-            this.xtraTabPage9.Size = new System.Drawing.Size(954, 651);
-            this.xtraTabPage9.Text = "Son Haftalık İstatistik";
-            // 
-            // chartControl3
-            // 
-            this.chartControl3.AppearanceNameSerializable = "Dark";
-            this.chartControl3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.chartControl3.BorderOptions.Color = System.Drawing.Color.RosyBrown;
-            this.chartControl3.DataBindings = null;
-            xyDiagram3.AxisX.MinorCount = 1;
-            xyDiagram3.AxisX.NumericScaleOptions.AutoGrid = false;
-            xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram3.AxisX.VisualRange.Auto = false;
-            xyDiagram3.AxisX.VisualRange.AutoSideMargins = false;
-            xyDiagram3.AxisX.VisualRange.MaxValueSerializable = "7";
-            xyDiagram3.AxisX.VisualRange.MinValueSerializable = "0";
-            xyDiagram3.AxisX.VisualRange.SideMarginsValue = 0.4D;
-            xyDiagram3.AxisX.WholeRange.Auto = false;
-            xyDiagram3.AxisX.WholeRange.AutoSideMargins = false;
-            xyDiagram3.AxisX.WholeRange.MaxValueSerializable = "7";
-            xyDiagram3.AxisX.WholeRange.MinValueSerializable = "0";
-            xyDiagram3.AxisX.WholeRange.SideMarginsValue = 0.5D;
-            xyDiagram3.AxisY.MinorCount = 1;
-            xyDiagram3.AxisY.VisibleInPanesSerializable = "-1";
-            xyDiagram3.AxisY.VisualRange.Auto = false;
-            xyDiagram3.AxisY.VisualRange.AutoSideMargins = false;
-            xyDiagram3.AxisY.VisualRange.MaxValueSerializable = "100";
-            xyDiagram3.AxisY.VisualRange.MinValueSerializable = "0";
-            xyDiagram3.AxisY.VisualRange.SideMarginsValue = 0D;
-            xyDiagram3.AxisY.WholeRange.Auto = false;
-            xyDiagram3.AxisY.WholeRange.AutoSideMargins = false;
-            xyDiagram3.AxisY.WholeRange.MaxValueSerializable = "100";
-            xyDiagram3.AxisY.WholeRange.MinValueSerializable = "0";
-            xyDiagram3.AxisY.WholeRange.SideMarginsValue = 0D;
-            xyDiagram3.DefaultPane.BackColor = System.Drawing.Color.Transparent;
-            xyDiagram3.DefaultPane.BorderColor = System.Drawing.Color.White;
-            xyDiagram3.PaneLayoutDirection = DevExpress.XtraCharts.PaneLayoutDirection.Horizontal;
-            this.chartControl3.Diagram = xyDiagram3;
-            this.chartControl3.EmptyChartText.TextColor = System.Drawing.Color.White;
-            this.chartControl3.Legend.Name = "Default Legend";
-            this.chartControl3.Location = new System.Drawing.Point(2, 0);
-            this.chartControl3.Name = "chartControl3";
-            this.chartControl3.PaletteName = "Aspect";
-            series3.Name = "Gün";
-            stackedBarSeriesView3.ColorEach = true;
-            stackedBarSeriesView3.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Hatch;
-            series3.View = stackedBarSeriesView3;
-            this.chartControl3.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series3};
-            this.chartControl3.Size = new System.Drawing.Size(951, 651);
-            this.chartControl3.SmallChartText.TextColor = System.Drawing.Color.White;
-            this.chartControl3.TabIndex = 1;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2889,6 +2867,11 @@
             ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).EndInit();
+            this.xtraTabPage9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl3)).EndInit();
             this.xtraTabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
@@ -2908,11 +2891,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown14)).EndInit();
-            this.xtraTabPage9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2937,7 +2915,6 @@
         private System.Windows.Forms.Label lblTur;
         private System.Windows.Forms.Label lblIng;
         private System.Windows.Forms.Label lblKelime;
-        private DevExpress.XtraEditors.SimpleButton btnOgrenBack;
         private DevExpress.XtraEditors.SimpleButton btnOgrenNext;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

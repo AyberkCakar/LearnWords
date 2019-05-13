@@ -20,7 +20,9 @@ namespace KelimeOgren
         private void textBox1_Click(object sender, EventArgs e)
         {
             if (txtKullaniciID.Text == "Kullanıcı ID")
+            {
                 txtKullaniciID.Text = "";
+            } 
             if (txtSifre.Text == "")
             {
                 txtSifre.Text = "Sifre";
@@ -30,11 +32,12 @@ namespace KelimeOgren
         private void textBox2_Click(object sender, EventArgs e)
         {
             if(txtSifre.Text=="Sifre")
+            {
                 txtSifre.Text = "";
+            }
             if(txtKullaniciID.Text=="")
             {
                 txtKullaniciID.Text = "Kullanıcı ID";
-                
             }
         }
 
@@ -49,7 +52,7 @@ namespace KelimeOgren
 
         private void btnKayit_Click(object sender, EventArgs e)
         {
-            FrmKayit frKayit = new FrmKayit();
+            FrmKayit frKayit = new FrmKayit(); //Kayıt sayfası açılsın
             frKayit.Show();
         }
 
@@ -67,8 +70,9 @@ namespace KelimeOgren
                     this.Hide();
                 }
                 else
-                    MessageBox.Show("Hatalı Kullanıcı...","Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                {
+                    MessageBox.Show("Hatalı Kullanıcı...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }    
             }
             else if( rdbYetkili.Checked ==true)
             {
@@ -81,7 +85,9 @@ namespace KelimeOgren
                     this.Hide();
                 }
                 else
-                    MessageBox.Show("Hatalı Kullanıcı...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                {
+                    MessageBox.Show("Hatalı Kullanıcı...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }     
             }
             else
             {
