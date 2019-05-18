@@ -1319,15 +1319,7 @@
             xyDiagram3.AxisX.MinorCount = 1;
             xyDiagram3.AxisX.NumericScaleOptions.AutoGrid = false;
             xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram3.AxisX.VisualRange.Auto = false;
-            xyDiagram3.AxisX.VisualRange.AutoSideMargins = false;
-            xyDiagram3.AxisX.VisualRange.MaxValueSerializable = "7";
-            xyDiagram3.AxisX.VisualRange.MinValueSerializable = "0";
-            xyDiagram3.AxisX.VisualRange.SideMarginsValue = 0.4D;
-            xyDiagram3.AxisX.WholeRange.Auto = false;
             xyDiagram3.AxisX.WholeRange.AutoSideMargins = false;
-            xyDiagram3.AxisX.WholeRange.MaxValueSerializable = "7";
-            xyDiagram3.AxisX.WholeRange.MinValueSerializable = "0";
             xyDiagram3.AxisX.WholeRange.SideMarginsValue = 0.5D;
             xyDiagram3.AxisY.MinorCount = 1;
             xyDiagram3.AxisY.VisibleInPanesSerializable = "-1";

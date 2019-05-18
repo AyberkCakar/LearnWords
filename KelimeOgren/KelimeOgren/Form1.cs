@@ -568,37 +568,30 @@ namespace KelimeOgren
                 {
                     GunPazartesi++;
                 }
-                else if (haftaninIlkGunu.AddDays(0).Day == game.Date.Day)
+                else if (haftaninIlkGunu.AddDays(1).Day == game.Date.Day)
                 {
                     GunSali++;
                 }
-                else if (haftaninIlkGunu.AddDays(1).Day == game.Date.Day)
+                else if (haftaninIlkGunu.AddDays(2).Day == game.Date.Day)
                 {
                     GunCarsamba++;
                 }
-                else if (haftaninIlkGunu.AddDays(2).Day == game.Date.Day)
+                else if (haftaninIlkGunu.AddDays(3).Day == game.Date.Day)
                 {
                     GunPersembe++;
                 }
-                else if (haftaninIlkGunu.AddDays(3).Day == game.Date.Day)
+                else if (haftaninIlkGunu.AddDays(4).Day == game.Date.Day)
                 {
                     GunCuma++;
                 }
-                else if (haftaninIlkGunu.AddDays(4).Day == game.Date.Day)
+                else if (haftaninIlkGunu.AddDays(5).Day == game.Date.Day)
                 {
                     GunCumartesi++;
                 }
-                else if (haftaninIlkGunu.AddDays(5).Day == game.Date.Day)
+                else if (haftaninIlkGunu.AddDays(6).Day == game.Date.Day)
                 {
                     GunPazar++;
                 }
-                else
-                {
-                    continue;
-                }
-
-
-
             }
             chartControl3.Series["Gün"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Pazartesi", GunPazartesi));
             chartControl3.Series["Gün"].Points.Add(new DevExpress.XtraCharts.SeriesPoint("Salı", GunSali));
