@@ -1,4 +1,4 @@
-# KelimeOgren
+# LearnWords
 <h2>
   Proje Bilgileri
   </h2>
